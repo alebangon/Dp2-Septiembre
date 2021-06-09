@@ -67,7 +67,8 @@ public class CreateTasksManagerTest extends AcmePlannerTest {
 		super.fill(By.id("optionalLink"), optionalLink);
 		super.clickOnSubmitButton("Create task");
 		super.checkErrorsExist();
-	
+		super.clickOnMenu("Manager", "My tasks");
+
 		
 		
 	}
@@ -96,18 +97,6 @@ public class CreateTasksManagerTest extends AcmePlannerTest {
 		super.clickAndGo(By.linkText("Sign out"));
 	}
 
-	protected void signUp(final String username, final String password, final String name, final String surname, final String email) {
-		super.navigateHome();
-		super.clickAndGo(By.linkText("Sign in"));
-		super.fill(By.id("username"), username);
-		super.fill(By.id("password"), password);
-		super.fill(By.id("confirmation"), password);
-		super.fill(By.id("identity.name"), name);
-		super.fill(By.id("identity.surname"), surname);
-		super.fill(By.id("identity.email"), email);
-		super.clickAndGo(By.id("accept$proxy"));
-		super.clickOnSubmitButton("Sign up");
-	}
 
 }
 

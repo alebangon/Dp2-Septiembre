@@ -35,7 +35,6 @@ public class PublishShoutAnonymousTest extends AcmePlannerTest {
 		super.clickOnMenu("Anonymous", "List shouts");
 		super.checkColumnHasValue(2, 1, author);
         super.checkColumnHasValue(2, 2, text);
-        super.checkColumnHasValue(2, 3, info);
         super.clickOnMenu("Anonymous", "List shouts");
 		
 	}

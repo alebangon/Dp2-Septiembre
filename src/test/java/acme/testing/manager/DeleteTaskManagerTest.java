@@ -32,6 +32,7 @@ public class DeleteTaskManagerTest extends AcmePlannerTest {
 		super.clickOnMenu("Manager", "My tasks");
 		super.clickOnListingRecord(iter);
 		super.clickOnSubmitButton("Delete");
+		super.checkNotPanicExists();
 
 	}
 
