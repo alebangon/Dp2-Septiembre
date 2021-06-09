@@ -119,4 +119,36 @@
 			<acme:print value="${maximumTaskWorloads}"/>
 		</td>
 	</tr>
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.deviationEUR"/>
+		</th>
+		<td>
+			<acme:print value="${devEUR}"/>
+		</td>
+	</tr>
+		<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.deviationUSD"/>
+		</th>
+		<td>
+			<acme:print value="${devUSD}"/>
+		</td>
+	</tr>
+			<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.averageEUR"/>
+		</th>
+		<td>
+			<acme:print value="${avgEUR}"/>
+		</td>
+	</tr>
+			<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.averageUSD"/>
+		</th>
+		<td>
+			<acme:print value="${avgUSD}"/>
+		</td>
+	</tr>
 </table>

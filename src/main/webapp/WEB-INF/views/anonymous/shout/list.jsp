@@ -19,6 +19,12 @@
 	<acme:list-column code="anonymous.shout.list.label.moment" path="moment" width="20%"/>
 	<acme:list-column code="anonymous.shout.list.label.author" path="author" width="20%"/>
 	<acme:list-column code="anonymous.shout.list.label.text" path="text" width="60%"/>
+    <acme:list-column code="anonymous.shout.form.label.bow" path="gloetsId.bow"/>
+    <acme:list-column code="anonymous.shout.form.label.budget" path="gloetsId.budget"/>
+    <acme:list-column code="anonymous.shout.form.label.deadline" path="gloetsId.deadline"/>
+    <acme:list-column code="anonymous.shout.form.label.important" path="gloetsId.important"/>
 </acme:list>
+	
+
 
 

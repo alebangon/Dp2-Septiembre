@@ -1,0 +1,3 @@
+timestamp,test-class,test-method,time,description,result
+2021-06-09 18:45:51.904,acme.testing.anonymous.PublishShoutAnonymousTest,positivePublishShout,2931,"[1] author=Antonio, text=Me gusta la cocacola, info=https://www.cocacola.es/es/home/, bow=www-123456-ww, budget=EUR 123",Record index 2 is out of range
+2021-06-09 18:45:54.181,acme.testing.anonymous.PublishShoutAnonymousTest,negativePublishShout,2042,"[1] author=Antonio, text=Me gusta la cocacola, info=https://www.cocacola.es/es/home/, bow=www-123456-ww, budget=EUR -123",OK

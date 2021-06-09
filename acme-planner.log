@@ -297,3 +297,955 @@ ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: acme.fra
 ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP GET /Acme-Planner/WEB-INF/views/framework/page.jsp HTTP/1.1
 ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
 ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:45): Access is not authorised
+INFO [acme.Launcher] Starting Launcher using Java 1.8.0_281 on DESKTOP-GA4H6FR with PID 8840 (C:\Users\pablo\OneDrive\Desktop\Workspace-21.1\Projects\dp2-repository-group-26-2\target\classes started by pablo in C:\Users\pablo\OneDrive\Desktop\Workspace-21.1\Projects\dp2-repository-group-26-2)
+INFO [acme.Launcher] The following profiles are active: development,populator
+INFO [acme.Launcher] Started Launcher in 5.525 seconds (JVM running for 6.181)
+INFO [acme.framework.utilities.DatabasePopulator] Populating initial data
+INFO [acme.framework.utilities.DatabasePopulator] Recreating schema
+INFO [acme.framework.utilities.DatabasePopulator] Populating entities from classpath:/WEB-INF/population/initial-data.xml
+INFO [acme.framework.utilities.DatabasePopulator] Validating your entities.
+INFO [acme.framework.utilities.DatabasePopulator] Validating anonymousUserAccount ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating anonymousAnonymous ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating administratorUserAccount ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating administratorAdministrator ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating administratorAuthenticated ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word1 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word2 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word3 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word4 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word5 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word6 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word7 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word8 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word9 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word10 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word11 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word12 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word13 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word14 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word15 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating spamN1 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Sorting your entities topologically.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 0 for anonymousUserAccount.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 1 for anonymousAnonymous.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 2 for administratorUserAccount.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 3 for administratorAdministrator.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 4 for administratorAuthenticated.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 5 for word1.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 6 for word2.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 7 for word3.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 8 for word4.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 9 for word5.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 10 for word6.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 11 for word7.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 12 for word8.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 13 for word9.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 14 for word10.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 15 for word11.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 16 for word12.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 17 for word13.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 18 for word14.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 19 for word15.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 20 for spamN1.
+INFO [acme.framework.utilities.DatabasePopulator] Persiting your entities.
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting anonymousUserAccount = acme.framework.entities.UserAccount{id=1, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting anonymousAnonymous = acme.framework.entities.Anonymous{id=2, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorUserAccount = acme.framework.entities.UserAccount{id=3, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorAdministrator = acme.framework.entities.Administrator{id=4, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorAuthenticated = acme.framework.entities.Authenticated{id=5, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word1 = acme.entities.words.Word{id=6, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word2 = acme.entities.words.Word{id=7, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word3 = acme.entities.words.Word{id=8, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word4 = acme.entities.words.Word{id=9, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word5 = acme.entities.words.Word{id=10, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word6 = acme.entities.words.Word{id=11, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word7 = acme.entities.words.Word{id=12, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word8 = acme.entities.words.Word{id=13, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word9 = acme.entities.words.Word{id=14, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word10 = acme.entities.words.Word{id=15, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word11 = acme.entities.words.Word{id=16, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word12 = acme.entities.words.Word{id=17, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word13 = acme.entities.words.Word{id=18, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word14 = acme.entities.words.Word{id=19, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word15 = acme.entities.words.Word{id=20, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting spamN1 = acme.entities.spam.Spam{id=21, version=0}
+INFO [acme.framework.configuration.ShutdownConfiguration] The system is shutting down...
+ERROR [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing table [gloets]
+WARN [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing table [gloets]
+ERROR [org.springframework.boot.SpringApplication] at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788): Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing table [gloets]
+at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421): [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing table [gloets]
+at org.hibernate.tool.schema.internal.AbstractSchemaValidator.validateTable(AbstractSchemaValidator.java:121): Schema-validation: missing table [gloets]
+INFO [acme.Launcher] Starting Launcher using Java 1.8.0_281 on DESKTOP-GA4H6FR with PID 3292 (C:\Users\pablo\OneDrive\Desktop\Workspace-21.1\Projects\dp2-repository-group-26-2\target\classes started by pablo in C:\Users\pablo\OneDrive\Desktop\Workspace-21.1\Projects\dp2-repository-group-26-2)
+INFO [acme.Launcher] The following profiles are active: development,populator
+INFO [acme.Launcher] Started Launcher in 4.679 seconds (JVM running for 5.089)
+INFO [acme.framework.utilities.DatabasePopulator] Populating initial data
+INFO [acme.framework.utilities.DatabasePopulator] Recreating schema
+INFO [acme.framework.utilities.DatabasePopulator] Populating entities from classpath:/WEB-INF/population/initial-data.xml
+INFO [acme.framework.utilities.DatabasePopulator] Validating your entities.
+INFO [acme.framework.utilities.DatabasePopulator] Validating anonymousUserAccount ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating anonymousAnonymous ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating administratorUserAccount ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating administratorAdministrator ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating administratorAuthenticated ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word1 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word2 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word3 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word4 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word5 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word6 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word7 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word8 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word9 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word10 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word11 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word12 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word13 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word14 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word15 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating spamN1 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Sorting your entities topologically.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 0 for anonymousUserAccount.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 1 for anonymousAnonymous.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 2 for administratorUserAccount.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 3 for administratorAdministrator.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 4 for administratorAuthenticated.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 5 for word1.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 6 for word2.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 7 for word3.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 8 for word4.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 9 for word5.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 10 for word6.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 11 for word7.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 12 for word8.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 13 for word9.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 14 for word10.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 15 for word11.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 16 for word12.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 17 for word13.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 18 for word14.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 19 for word15.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 20 for spamN1.
+INFO [acme.framework.utilities.DatabasePopulator] Persiting your entities.
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting anonymousUserAccount = acme.framework.entities.UserAccount{id=1, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting anonymousAnonymous = acme.framework.entities.Anonymous{id=2, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorUserAccount = acme.framework.entities.UserAccount{id=3, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorAdministrator = acme.framework.entities.Administrator{id=4, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorAuthenticated = acme.framework.entities.Authenticated{id=5, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word1 = acme.entities.words.Word{id=6, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word2 = acme.entities.words.Word{id=7, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word3 = acme.entities.words.Word{id=8, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word4 = acme.entities.words.Word{id=9, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word5 = acme.entities.words.Word{id=10, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word6 = acme.entities.words.Word{id=11, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word7 = acme.entities.words.Word{id=12, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word8 = acme.entities.words.Word{id=13, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word9 = acme.entities.words.Word{id=14, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word10 = acme.entities.words.Word{id=15, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word11 = acme.entities.words.Word{id=16, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word12 = acme.entities.words.Word{id=17, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word13 = acme.entities.words.Word{id=18, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word14 = acme.entities.words.Word{id=19, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word15 = acme.entities.words.Word{id=20, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting spamN1 = acme.entities.spam.Spam{id=21, version=0}
+INFO [acme.framework.configuration.ShutdownConfiguration] The system is shutting down...
+INFO [acme.Launcher] Starting Launcher using Java 1.8.0_281 on DESKTOP-GA4H6FR with PID 12704 (C:\Users\pablo\OneDrive\Desktop\Workspace-21.1\Projects\dp2-repository-group-26-2\target\classes started by pablo in C:\Users\pablo\OneDrive\Desktop\Workspace-21.1\Projects\dp2-repository-group-26-2)
+INFO [acme.Launcher] The following profiles are active: development,populator
+INFO [acme.Launcher] Started Launcher in 4.673 seconds (JVM running for 5.087)
+INFO [acme.framework.utilities.DatabasePopulator] Populating initial data
+INFO [acme.framework.utilities.DatabasePopulator] Recreating schema
+INFO [acme.framework.utilities.DatabasePopulator] Populating entities from classpath:/WEB-INF/population/initial-data.xml
+INFO [acme.framework.utilities.DatabasePopulator] Validating your entities.
+INFO [acme.framework.utilities.DatabasePopulator] Validating anonymousUserAccount ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating anonymousAnonymous ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating administratorUserAccount ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating administratorAdministrator ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating administratorAuthenticated ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word1 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word2 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word3 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word4 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word5 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word6 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word7 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word8 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word9 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word10 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word11 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word12 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word13 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word14 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word15 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating spamN1 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Sorting your entities topologically.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 0 for anonymousUserAccount.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 1 for anonymousAnonymous.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 2 for administratorUserAccount.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 3 for administratorAdministrator.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 4 for administratorAuthenticated.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 5 for word1.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 6 for word2.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 7 for word3.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 8 for word4.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 9 for word5.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 10 for word6.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 11 for word7.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 12 for word8.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 13 for word9.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 14 for word10.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 15 for word11.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 16 for word12.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 17 for word13.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 18 for word14.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 19 for word15.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 20 for spamN1.
+INFO [acme.framework.utilities.DatabasePopulator] Persiting your entities.
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting anonymousUserAccount = acme.framework.entities.UserAccount{id=1, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting anonymousAnonymous = acme.framework.entities.Anonymous{id=2, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorUserAccount = acme.framework.entities.UserAccount{id=3, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorAdministrator = acme.framework.entities.Administrator{id=4, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorAuthenticated = acme.framework.entities.Authenticated{id=5, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word1 = acme.entities.words.Word{id=6, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word2 = acme.entities.words.Word{id=7, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word3 = acme.entities.words.Word{id=8, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word4 = acme.entities.words.Word{id=9, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word5 = acme.entities.words.Word{id=10, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word6 = acme.entities.words.Word{id=11, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word7 = acme.entities.words.Word{id=12, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word8 = acme.entities.words.Word{id=13, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word9 = acme.entities.words.Word{id=14, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word10 = acme.entities.words.Word{id=15, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word11 = acme.entities.words.Word{id=16, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word12 = acme.entities.words.Word{id=17, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word13 = acme.entities.words.Word{id=18, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word14 = acme.entities.words.Word{id=19, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word15 = acme.entities.words.Word{id=20, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting spamN1 = acme.entities.spam.Spam{id=21, version=0}
+INFO [acme.framework.configuration.ShutdownConfiguration] The system is shutting down...
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/Acme-Planner].[jsp]] at org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:42): /WEB-INF/views/anonymous/shout/form.jsp (line: [20], column: [89]) The JSP specification requires that an attribute name is preceded by whitespace
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/Acme-Planner].[jsp]] at org.apache.tiles.request.servlet.ServletUtil.wrapServletException(ServletUtil.java:63): JSPException including path '../anonymous/shout/form.jsp'.
+at org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:42): /WEB-INF/views/anonymous/shout/form.jsp (line: [20], column: [89]) The JSP specification requires that an attribute name is preceded by whitespace
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/Acme-Planner].[dispatcherServlet]] at org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:42): /WEB-INF/views/anonymous/shout/form.jsp (line: [20], column: [89]) The JSP specification requires that an attribute name is preceded by whitespace
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP GET /Acme-Planner/master/panic HTTP/1.1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014): Request processing failed; nested exception is org.apache.tiles.request.render.CannotRenderException: JSPException including path '../anonymous/shout/form.jsp'.
+org.apache.tiles.impl.BasicTilesContainer.render(BasicTilesContainer.java:399): JSPException including path '../anonymous/shout/form.jsp'.
+org.apache.tiles.request.servlet.ServletUtil.wrapServletException(ServletUtil.java:63): JSPException including path '../anonymous/shout/form.jsp'.
+org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:42): /WEB-INF/views/anonymous/shout/form.jsp (line: [20], column: [89]) The JSP specification requires that an attribute name is preceded by whitespace
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/Acme-Planner].[jsp]] at org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:42): /WEB-INF/views/anonymous/shout/form.jsp (line: [20], column: [89]) The JSP specification requires that an attribute name is preceded by whitespace
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/Acme-Planner].[jsp]] at org.apache.tiles.request.servlet.ServletUtil.wrapServletException(ServletUtil.java:63): JSPException including path '../anonymous/shout/form.jsp'.
+at org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:42): /WEB-INF/views/anonymous/shout/form.jsp (line: [20], column: [89]) The JSP specification requires that an attribute name is preceded by whitespace
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/Acme-Planner].[dispatcherServlet]] at org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:42): /WEB-INF/views/anonymous/shout/form.jsp (line: [20], column: [89]) The JSP specification requires that an attribute name is preceded by whitespace
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP GET /Acme-Planner/master/panic HTTP/1.1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014): Request processing failed; nested exception is org.apache.tiles.request.render.CannotRenderException: JSPException including path '../anonymous/shout/form.jsp'.
+org.apache.tiles.impl.BasicTilesContainer.render(BasicTilesContainer.java:399): JSPException including path '../anonymous/shout/form.jsp'.
+org.apache.tiles.request.servlet.ServletUtil.wrapServletException(ServletUtil.java:63): JSPException including path '../anonymous/shout/form.jsp'.
+org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:42): /WEB-INF/views/anonymous/shout/form.jsp (line: [20], column: [89]) The JSP specification requires that an attribute name is preceded by whitespace
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/Acme-Planner].[jsp]] at java.net.URLClassLoader.findClass(URLClassLoader.java:382): org.apache.jsp.WEB_002dINF.views.anonymous.shout.form_jsp
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/Acme-Planner].[jsp]] at org.apache.tiles.request.servlet.ServletUtil.wrapServletException(ServletUtil.java:61): JSPException including path '../anonymous/shout/form.jsp'.
+at java.net.URLClassLoader.findClass(URLClassLoader.java:382): org.apache.jsp.WEB_002dINF.views.anonymous.shout.form_jsp
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/Acme-Planner].[dispatcherServlet]] at java.net.URLClassLoader.findClass(URLClassLoader.java:382): org.apache.jsp.WEB_002dINF.views.anonymous.shout.form_jsp
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP GET /Acme-Planner/master/panic HTTP/1.1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014): Request processing failed; nested exception is org.apache.tiles.request.render.CannotRenderException: JSPException including path '../anonymous/shout/form.jsp'.
+org.apache.tiles.impl.BasicTilesContainer.render(BasicTilesContainer.java:399): JSPException including path '../anonymous/shout/form.jsp'.
+org.apache.tiles.request.servlet.ServletUtil.wrapServletException(ServletUtil.java:61): JSPException including path '../anonymous/shout/form.jsp'.
+java.net.URLClassLoader.findClass(URLClassLoader.java:382): org.apache.jsp.WEB_002dINF.views.anonymous.shout.form_jsp
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/Acme-Planner].[jsp]] at org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:42): /WEB-INF/views/anonymous/shout/form.jsp (line: [20], column: [89]) The JSP specification requires that an attribute name is preceded by whitespace
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/Acme-Planner].[jsp]] at org.apache.tiles.request.servlet.ServletUtil.wrapServletException(ServletUtil.java:63): JSPException including path '../anonymous/shout/form.jsp'.
+at org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:42): /WEB-INF/views/anonymous/shout/form.jsp (line: [20], column: [89]) The JSP specification requires that an attribute name is preceded by whitespace
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/Acme-Planner].[dispatcherServlet]] at org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:42): /WEB-INF/views/anonymous/shout/form.jsp (line: [20], column: [89]) The JSP specification requires that an attribute name is preceded by whitespace
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP GET /Acme-Planner/master/panic HTTP/1.1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014): Request processing failed; nested exception is org.apache.tiles.request.render.CannotRenderException: JSPException including path '../anonymous/shout/form.jsp'.
+org.apache.tiles.impl.BasicTilesContainer.render(BasicTilesContainer.java:399): JSPException including path '../anonymous/shout/form.jsp'.
+org.apache.tiles.request.servlet.ServletUtil.wrapServletException(ServletUtil.java:63): JSPException including path '../anonymous/shout/form.jsp'.
+org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:42): /WEB-INF/views/anonymous/shout/form.jsp (line: [20], column: [89]) The JSP specification requires that an attribute name is preceded by whitespace
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/Acme-Planner].[jsp]] at java.net.URLClassLoader.findClass(URLClassLoader.java:382): org.apache.jsp.WEB_002dINF.views.anonymous.shout.form_jsp
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/Acme-Planner].[jsp]] at org.apache.tiles.request.servlet.ServletUtil.wrapServletException(ServletUtil.java:61): JSPException including path '../anonymous/shout/form.jsp'.
+at java.net.URLClassLoader.findClass(URLClassLoader.java:382): org.apache.jsp.WEB_002dINF.views.anonymous.shout.form_jsp
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/Acme-Planner].[dispatcherServlet]] at java.net.URLClassLoader.findClass(URLClassLoader.java:382): org.apache.jsp.WEB_002dINF.views.anonymous.shout.form_jsp
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP GET /Acme-Planner/master/panic HTTP/1.1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014): Request processing failed; nested exception is org.apache.tiles.request.render.CannotRenderException: JSPException including path '../anonymous/shout/form.jsp'.
+org.apache.tiles.impl.BasicTilesContainer.render(BasicTilesContainer.java:399): JSPException including path '../anonymous/shout/form.jsp'.
+org.apache.tiles.request.servlet.ServletUtil.wrapServletException(ServletUtil.java:61): JSPException including path '../anonymous/shout/form.jsp'.
+java.net.URLClassLoader.findClass(URLClassLoader.java:382): org.apache.jsp.WEB_002dINF.views.anonymous.shout.form_jsp
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/Acme-Planner].[jsp]] at org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:42): /WEB-INF/views/anonymous/shout/form.jsp (line: [20], column: [89]) The JSP specification requires that an attribute name is preceded by whitespace
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/Acme-Planner].[jsp]] at org.apache.tiles.request.servlet.ServletUtil.wrapServletException(ServletUtil.java:63): JSPException including path '../anonymous/shout/form.jsp'.
+at org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:42): /WEB-INF/views/anonymous/shout/form.jsp (line: [20], column: [89]) The JSP specification requires that an attribute name is preceded by whitespace
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/Acme-Planner].[dispatcherServlet]] at org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:42): /WEB-INF/views/anonymous/shout/form.jsp (line: [20], column: [89]) The JSP specification requires that an attribute name is preceded by whitespace
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP GET /Acme-Planner/master/panic HTTP/1.1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014): Request processing failed; nested exception is org.apache.tiles.request.render.CannotRenderException: JSPException including path '../anonymous/shout/form.jsp'.
+org.apache.tiles.impl.BasicTilesContainer.render(BasicTilesContainer.java:399): JSPException including path '../anonymous/shout/form.jsp'.
+org.apache.tiles.request.servlet.ServletUtil.wrapServletException(ServletUtil.java:63): JSPException including path '../anonymous/shout/form.jsp'.
+org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:42): /WEB-INF/views/anonymous/shout/form.jsp (line: [20], column: [89]) The JSP specification requires that an attribute name is preceded by whitespace
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/Acme-Planner].[jsp]] at org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:42): /WEB-INF/views/anonymous/shout/form.jsp (line: [20], column: [89]) The JSP specification requires that an attribute name is preceded by whitespace
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/Acme-Planner].[jsp]] at org.apache.tiles.request.servlet.ServletUtil.wrapServletException(ServletUtil.java:63): JSPException including path '../anonymous/shout/form.jsp'.
+at org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:42): /WEB-INF/views/anonymous/shout/form.jsp (line: [20], column: [89]) The JSP specification requires that an attribute name is preceded by whitespace
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/Acme-Planner].[dispatcherServlet]] at org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:42): /WEB-INF/views/anonymous/shout/form.jsp (line: [20], column: [89]) The JSP specification requires that an attribute name is preceded by whitespace
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP GET /Acme-Planner/master/panic HTTP/1.1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014): Request processing failed; nested exception is org.apache.tiles.request.render.CannotRenderException: JSPException including path '../anonymous/shout/form.jsp'.
+org.apache.tiles.impl.BasicTilesContainer.render(BasicTilesContainer.java:399): JSPException including path '../anonymous/shout/form.jsp'.
+org.apache.tiles.request.servlet.ServletUtil.wrapServletException(ServletUtil.java:63): JSPException including path '../anonymous/shout/form.jsp'.
+org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:42): /WEB-INF/views/anonymous/shout/form.jsp (line: [20], column: [89]) The JSP specification requires that an attribute name is preceded by whitespace
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/Acme-Planner].[jsp]] at org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:42): /WEB-INF/views/anonymous/shout/form.jsp (line: [20], column: [89]) The JSP specification requires that an attribute name is preceded by whitespace
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/Acme-Planner].[jsp]] at org.apache.tiles.request.servlet.ServletUtil.wrapServletException(ServletUtil.java:63): JSPException including path '../anonymous/shout/form.jsp'.
+at org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:42): /WEB-INF/views/anonymous/shout/form.jsp (line: [20], column: [89]) The JSP specification requires that an attribute name is preceded by whitespace
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/Acme-Planner].[dispatcherServlet]] at org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:42): /WEB-INF/views/anonymous/shout/form.jsp (line: [20], column: [89]) The JSP specification requires that an attribute name is preceded by whitespace
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP GET /Acme-Planner/master/panic HTTP/1.1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014): Request processing failed; nested exception is org.apache.tiles.request.render.CannotRenderException: JSPException including path '../anonymous/shout/form.jsp'.
+org.apache.tiles.impl.BasicTilesContainer.render(BasicTilesContainer.java:399): JSPException including path '../anonymous/shout/form.jsp'.
+org.apache.tiles.request.servlet.ServletUtil.wrapServletException(ServletUtil.java:63): JSPException including path '../anonymous/shout/form.jsp'.
+org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:42): /WEB-INF/views/anonymous/shout/form.jsp (line: [20], column: [89]) The JSP specification requires that an attribute name is preceded by whitespace
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/Acme-Planner].[jsp]] at java.net.URLClassLoader.findClass(URLClassLoader.java:382): org.apache.jsp.WEB_002dINF.views.anonymous.shout.form_jsp
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/Acme-Planner].[jsp]] at org.apache.tiles.request.servlet.ServletUtil.wrapServletException(ServletUtil.java:61): JSPException including path '../anonymous/shout/form.jsp'.
+at java.net.URLClassLoader.findClass(URLClassLoader.java:382): org.apache.jsp.WEB_002dINF.views.anonymous.shout.form_jsp
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/Acme-Planner].[dispatcherServlet]] at java.net.URLClassLoader.findClass(URLClassLoader.java:382): org.apache.jsp.WEB_002dINF.views.anonymous.shout.form_jsp
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP GET /Acme-Planner/master/panic HTTP/1.1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014): Request processing failed; nested exception is org.apache.tiles.request.render.CannotRenderException: JSPException including path '../anonymous/shout/form.jsp'.
+org.apache.tiles.impl.BasicTilesContainer.render(BasicTilesContainer.java:399): JSPException including path '../anonymous/shout/form.jsp'.
+org.apache.tiles.request.servlet.ServletUtil.wrapServletException(ServletUtil.java:61): JSPException including path '../anonymous/shout/form.jsp'.
+java.net.URLClassLoader.findClass(URLClassLoader.java:382): org.apache.jsp.WEB_002dINF.views.anonymous.shout.form_jsp
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/Acme-Planner].[jsp]] at org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:42): /WEB-INF/views/anonymous/shout/form.jsp (line: [20], column: [89]) The JSP specification requires that an attribute name is preceded by whitespace
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/Acme-Planner].[jsp]] at org.apache.tiles.request.servlet.ServletUtil.wrapServletException(ServletUtil.java:63): JSPException including path '../anonymous/shout/form.jsp'.
+at org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:42): /WEB-INF/views/anonymous/shout/form.jsp (line: [20], column: [89]) The JSP specification requires that an attribute name is preceded by whitespace
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/Acme-Planner].[dispatcherServlet]] at org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:42): /WEB-INF/views/anonymous/shout/form.jsp (line: [20], column: [89]) The JSP specification requires that an attribute name is preceded by whitespace
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP GET /Acme-Planner/master/panic HTTP/1.1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014): Request processing failed; nested exception is org.apache.tiles.request.render.CannotRenderException: JSPException including path '../anonymous/shout/form.jsp'.
+org.apache.tiles.impl.BasicTilesContainer.render(BasicTilesContainer.java:399): JSPException including path '../anonymous/shout/form.jsp'.
+org.apache.tiles.request.servlet.ServletUtil.wrapServletException(ServletUtil.java:63): JSPException including path '../anonymous/shout/form.jsp'.
+org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:42): /WEB-INF/views/anonymous/shout/form.jsp (line: [20], column: [89]) The JSP specification requires that an attribute name is preceded by whitespace
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/Acme-Planner].[jsp]] at org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:42): /WEB-INF/views/anonymous/shout/form.jsp (line: [20], column: [89]) The JSP specification requires that an attribute name is preceded by whitespace
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/Acme-Planner].[jsp]] at org.apache.tiles.request.servlet.ServletUtil.wrapServletException(ServletUtil.java:63): JSPException including path '../anonymous/shout/form.jsp'.
+at org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:42): /WEB-INF/views/anonymous/shout/form.jsp (line: [20], column: [89]) The JSP specification requires that an attribute name is preceded by whitespace
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/Acme-Planner].[dispatcherServlet]] at org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:42): /WEB-INF/views/anonymous/shout/form.jsp (line: [20], column: [89]) The JSP specification requires that an attribute name is preceded by whitespace
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP GET /Acme-Planner/master/panic HTTP/1.1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014): Request processing failed; nested exception is org.apache.tiles.request.render.CannotRenderException: JSPException including path '../anonymous/shout/form.jsp'.
+org.apache.tiles.impl.BasicTilesContainer.render(BasicTilesContainer.java:399): JSPException including path '../anonymous/shout/form.jsp'.
+org.apache.tiles.request.servlet.ServletUtil.wrapServletException(ServletUtil.java:63): JSPException including path '../anonymous/shout/form.jsp'.
+org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:42): /WEB-INF/views/anonymous/shout/form.jsp (line: [20], column: [89]) The JSP specification requires that an attribute name is preceded by whitespace
+INFO [acme.Launcher] Starting Launcher using Java 1.8.0_281 on DESKTOP-GA4H6FR with PID 12100 (C:\Users\pablo\OneDrive\Desktop\Workspace-21.1\Projects\dp2-repository-group-26-2\target\classes started by pablo in C:\Users\pablo\OneDrive\Desktop\Workspace-21.1\Projects\dp2-repository-group-26-2)
+INFO [acme.Launcher] The following profiles are active: development,populator
+INFO [acme.Launcher] Started Launcher in 4.697 seconds (JVM running for 5.108)
+INFO [acme.framework.utilities.DatabasePopulator] Populating initial data
+INFO [acme.framework.utilities.DatabasePopulator] Recreating schema
+INFO [acme.framework.utilities.DatabasePopulator] Populating entities from classpath:/WEB-INF/population/initial-data.xml
+INFO [acme.framework.utilities.DatabasePopulator] Validating your entities.
+INFO [acme.framework.utilities.DatabasePopulator] Validating anonymousUserAccount ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating anonymousAnonymous ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating administratorUserAccount ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating administratorAdministrator ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating administratorAuthenticated ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word1 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word2 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word3 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word4 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word5 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word6 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word7 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word8 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word9 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word10 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word11 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word12 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word13 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word14 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word15 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating spamN1 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Sorting your entities topologically.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 0 for anonymousUserAccount.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 1 for anonymousAnonymous.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 2 for administratorUserAccount.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 3 for administratorAdministrator.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 4 for administratorAuthenticated.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 5 for word1.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 6 for word2.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 7 for word3.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 8 for word4.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 9 for word5.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 10 for word6.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 11 for word7.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 12 for word8.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 13 for word9.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 14 for word10.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 15 for word11.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 16 for word12.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 17 for word13.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 18 for word14.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 19 for word15.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 20 for spamN1.
+INFO [acme.framework.utilities.DatabasePopulator] Persiting your entities.
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting anonymousUserAccount = acme.framework.entities.UserAccount{id=1, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting anonymousAnonymous = acme.framework.entities.Anonymous{id=2, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorUserAccount = acme.framework.entities.UserAccount{id=3, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorAdministrator = acme.framework.entities.Administrator{id=4, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorAuthenticated = acme.framework.entities.Authenticated{id=5, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word1 = acme.entities.words.Word{id=6, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word2 = acme.entities.words.Word{id=7, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word3 = acme.entities.words.Word{id=8, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word4 = acme.entities.words.Word{id=9, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word5 = acme.entities.words.Word{id=10, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word6 = acme.entities.words.Word{id=11, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word7 = acme.entities.words.Word{id=12, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word8 = acme.entities.words.Word{id=13, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word9 = acme.entities.words.Word{id=14, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word10 = acme.entities.words.Word{id=15, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word11 = acme.entities.words.Word{id=16, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word12 = acme.entities.words.Word{id=17, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word13 = acme.entities.words.Word{id=18, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word14 = acme.entities.words.Word{id=19, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word15 = acme.entities.words.Word{id=20, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting spamN1 = acme.entities.spam.Spam{id=21, version=0}
+INFO [acme.framework.configuration.ShutdownConfiguration] The system is shutting down...
+INFO [acme.Launcher] Starting Launcher using Java 1.8.0_281 on DESKTOP-GA4H6FR with PID 1416 (C:\Users\pablo\OneDrive\Desktop\Workspace-21.1\Projects\dp2-repository-group-26-2\target\classes started by pablo in C:\Users\pablo\OneDrive\Desktop\Workspace-21.1\Projects\dp2-repository-group-26-2)
+INFO [acme.Launcher] The following profiles are active: development,populator
+INFO [acme.Launcher] Started Launcher in 4.687 seconds (JVM running for 5.092)
+INFO [acme.framework.utilities.DatabasePopulator] Populating initial data
+INFO [acme.framework.utilities.DatabasePopulator] Recreating schema
+INFO [acme.framework.utilities.DatabasePopulator] Populating entities from classpath:/WEB-INF/population/initial-data.xml
+INFO [acme.framework.utilities.DatabasePopulator] Validating your entities.
+INFO [acme.framework.utilities.DatabasePopulator] Validating anonymousUserAccount ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating anonymousAnonymous ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating administratorUserAccount ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating administratorAdministrator ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating administratorAuthenticated ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word1 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word2 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word3 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word4 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word5 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word6 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word7 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word8 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word9 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word10 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word11 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word12 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word13 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word14 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word15 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating spamN1 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Sorting your entities topologically.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 0 for anonymousUserAccount.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 1 for anonymousAnonymous.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 2 for administratorUserAccount.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 3 for administratorAdministrator.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 4 for administratorAuthenticated.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 5 for word1.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 6 for word2.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 7 for word3.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 8 for word4.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 9 for word5.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 10 for word6.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 11 for word7.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 12 for word8.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 13 for word9.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 14 for word10.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 15 for word11.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 16 for word12.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 17 for word13.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 18 for word14.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 19 for word15.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 20 for spamN1.
+INFO [acme.framework.utilities.DatabasePopulator] Persiting your entities.
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting anonymousUserAccount = acme.framework.entities.UserAccount{id=1, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting anonymousAnonymous = acme.framework.entities.Anonymous{id=2, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorUserAccount = acme.framework.entities.UserAccount{id=3, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorAdministrator = acme.framework.entities.Administrator{id=4, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorAuthenticated = acme.framework.entities.Authenticated{id=5, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word1 = acme.entities.words.Word{id=6, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word2 = acme.entities.words.Word{id=7, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word3 = acme.entities.words.Word{id=8, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word4 = acme.entities.words.Word{id=9, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word5 = acme.entities.words.Word{id=10, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word6 = acme.entities.words.Word{id=11, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word7 = acme.entities.words.Word{id=12, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word8 = acme.entities.words.Word{id=13, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word9 = acme.entities.words.Word{id=14, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word10 = acme.entities.words.Word{id=15, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word11 = acme.entities.words.Word{id=16, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word12 = acme.entities.words.Word{id=17, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word13 = acme.entities.words.Word{id=18, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word14 = acme.entities.words.Word{id=19, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word15 = acme.entities.words.Word{id=20, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting spamN1 = acme.entities.spam.Spam{id=21, version=0}
+INFO [acme.framework.configuration.ShutdownConfiguration] The system is shutting down...
+INFO [acme.Launcher] Starting Launcher using Java 1.8.0_281 on DESKTOP-GA4H6FR with PID 11384 (C:\Users\pablo\OneDrive\Desktop\Workspace-21.1\Projects\dp2-repository-group-26-2\target\classes started by pablo in C:\Users\pablo\OneDrive\Desktop\Workspace-21.1\Projects\dp2-repository-group-26-2)
+INFO [acme.Launcher] The following profiles are active: development,populator
+INFO [acme.Launcher] Started Launcher in 4.66 seconds (JVM running for 5.071)
+INFO [acme.framework.utilities.DatabasePopulator] Populating initial data
+INFO [acme.framework.utilities.DatabasePopulator] Recreating schema
+INFO [acme.framework.utilities.DatabasePopulator] Populating entities from classpath:/WEB-INF/population/initial-data.xml
+INFO [acme.framework.utilities.DatabasePopulator] Validating your entities.
+INFO [acme.framework.utilities.DatabasePopulator] Validating anonymousUserAccount ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating anonymousAnonymous ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating administratorUserAccount ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating administratorAdministrator ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating administratorAuthenticated ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word1 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word2 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word3 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word4 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word5 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word6 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word7 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word8 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word9 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word10 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word11 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word12 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word13 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word14 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word15 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating spamN1 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Sorting your entities topologically.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 0 for anonymousUserAccount.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 1 for anonymousAnonymous.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 2 for administratorUserAccount.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 3 for administratorAdministrator.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 4 for administratorAuthenticated.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 5 for word1.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 6 for word2.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 7 for word3.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 8 for word4.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 9 for word5.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 10 for word6.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 11 for word7.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 12 for word8.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 13 for word9.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 14 for word10.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 15 for word11.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 16 for word12.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 17 for word13.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 18 for word14.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 19 for word15.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 20 for spamN1.
+INFO [acme.framework.utilities.DatabasePopulator] Persiting your entities.
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting anonymousUserAccount = acme.framework.entities.UserAccount{id=1, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting anonymousAnonymous = acme.framework.entities.Anonymous{id=2, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorUserAccount = acme.framework.entities.UserAccount{id=3, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorAdministrator = acme.framework.entities.Administrator{id=4, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorAuthenticated = acme.framework.entities.Authenticated{id=5, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word1 = acme.entities.words.Word{id=6, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word2 = acme.entities.words.Word{id=7, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word3 = acme.entities.words.Word{id=8, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word4 = acme.entities.words.Word{id=9, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word5 = acme.entities.words.Word{id=10, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word6 = acme.entities.words.Word{id=11, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word7 = acme.entities.words.Word{id=12, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word8 = acme.entities.words.Word{id=13, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word9 = acme.entities.words.Word{id=14, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word10 = acme.entities.words.Word{id=15, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word11 = acme.entities.words.Word{id=16, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word12 = acme.entities.words.Word{id=17, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word13 = acme.entities.words.Word{id=18, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word14 = acme.entities.words.Word{id=19, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word15 = acme.entities.words.Word{id=20, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting spamN1 = acme.entities.spam.Spam{id=21, version=0}
+INFO [acme.framework.configuration.ShutdownConfiguration] The system is shutting down...
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP POST /Acme-Planner/WEB-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.handleNoMatch(RequestMappingInfoHandlerMapping.java:250): Request method 'POST' not supported
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP POST /Acme-Planner/WEB-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:571): Could not commit JPA transaction; nested exception is javax.persistence.RollbackException: Error while committing the transaction
+org.hibernate.internal.ExceptionConverterImpl.convertCommitException(ExceptionConverterImpl.java:81): Error while committing the transaction
+org.hibernate.cfg.beanvalidation.BeanValidationEventListener.validate(BeanValidationEventListener.java:140): Validation failed for classes [acme.entities.gloets.Gloets] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must match "^yy/mmdd/\w{2,4}$"', propertyPath=bow, rootBeanClass=class acme.entities.gloets.Gloets, messageTemplate='{javax.validation.constraints.Pattern.message}'}
+]
+INFO [acme.Launcher] Starting Launcher using Java 1.8.0_281 on DESKTOP-GA4H6FR with PID 2272 (C:\Users\pablo\OneDrive\Desktop\Workspace-21.1\Projects\dp2-repository-group-26-2\target\classes started by pablo in C:\Users\pablo\OneDrive\Desktop\Workspace-21.1\Projects\dp2-repository-group-26-2)
+INFO [acme.Launcher] The following profiles are active: development,populator
+INFO [acme.Launcher] Started Launcher in 4.873 seconds (JVM running for 5.285)
+INFO [acme.framework.utilities.DatabasePopulator] Populating initial data
+INFO [acme.framework.utilities.DatabasePopulator] Recreating schema
+INFO [acme.framework.utilities.DatabasePopulator] Populating entities from classpath:/WEB-INF/population/initial-data.xml
+INFO [acme.framework.utilities.DatabasePopulator] Validating your entities.
+INFO [acme.framework.utilities.DatabasePopulator] Validating anonymousUserAccount ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating anonymousAnonymous ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating administratorUserAccount ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating administratorAdministrator ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating administratorAuthenticated ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word1 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word2 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word3 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word4 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word5 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word6 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word7 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word8 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word9 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word10 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word11 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word12 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word13 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word14 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word15 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating spamN1 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Sorting your entities topologically.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 0 for anonymousUserAccount.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 1 for anonymousAnonymous.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 2 for administratorUserAccount.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 3 for administratorAdministrator.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 4 for administratorAuthenticated.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 5 for word1.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 6 for word2.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 7 for word3.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 8 for word4.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 9 for word5.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 10 for word6.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 11 for word7.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 12 for word8.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 13 for word9.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 14 for word10.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 15 for word11.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 16 for word12.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 17 for word13.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 18 for word14.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 19 for word15.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 20 for spamN1.
+INFO [acme.framework.utilities.DatabasePopulator] Persiting your entities.
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting anonymousUserAccount = acme.framework.entities.UserAccount{id=1, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting anonymousAnonymous = acme.framework.entities.Anonymous{id=2, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorUserAccount = acme.framework.entities.UserAccount{id=3, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorAdministrator = acme.framework.entities.Administrator{id=4, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorAuthenticated = acme.framework.entities.Authenticated{id=5, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word1 = acme.entities.words.Word{id=6, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word2 = acme.entities.words.Word{id=7, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word3 = acme.entities.words.Word{id=8, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word4 = acme.entities.words.Word{id=9, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word5 = acme.entities.words.Word{id=10, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word6 = acme.entities.words.Word{id=11, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word7 = acme.entities.words.Word{id=12, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word8 = acme.entities.words.Word{id=13, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word9 = acme.entities.words.Word{id=14, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word10 = acme.entities.words.Word{id=15, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word11 = acme.entities.words.Word{id=16, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word12 = acme.entities.words.Word{id=17, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word13 = acme.entities.words.Word{id=18, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word14 = acme.entities.words.Word{id=19, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word15 = acme.entities.words.Word{id=20, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting spamN1 = acme.entities.spam.Spam{id=21, version=0}
+INFO [acme.framework.configuration.ShutdownConfiguration] The system is shutting down...
+WARN [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+ERROR [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter] ***************************
+APPLICATION FAILED TO START
+***************************
+Description:
+Web server failed to start. Port 8080 was already in use.
+Action:
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+INFO [acme.Launcher] Starting Launcher using Java 1.8.0_281 on DESKTOP-GA4H6FR with PID 14396 (C:\Users\pablo\OneDrive\Desktop\Workspace-21.1\Projects\dp2-repository-group-26-2\target\classes started by pablo in C:\Users\pablo\OneDrive\Desktop\Workspace-21.1\Projects\dp2-repository-group-26-2)
+INFO [acme.Launcher] The following profiles are active: development,populator
+INFO [acme.Launcher] Started Launcher in 4.861 seconds (JVM running for 5.275)
+INFO [acme.framework.utilities.DatabasePopulator] Populating initial data
+INFO [acme.framework.utilities.DatabasePopulator] Recreating schema
+INFO [acme.framework.utilities.DatabasePopulator] Populating entities from classpath:/WEB-INF/population/initial-data.xml
+INFO [acme.framework.utilities.DatabasePopulator] Validating your entities.
+INFO [acme.framework.utilities.DatabasePopulator] Validating anonymousUserAccount ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating anonymousAnonymous ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating administratorUserAccount ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating administratorAdministrator ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating administratorAuthenticated ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word1 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word2 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word3 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word4 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word5 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word6 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word7 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word8 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word9 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word10 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word11 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word12 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word13 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word14 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word15 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating spamN1 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Sorting your entities topologically.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 0 for anonymousUserAccount.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 1 for anonymousAnonymous.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 2 for administratorUserAccount.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 3 for administratorAdministrator.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 4 for administratorAuthenticated.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 5 for word1.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 6 for word2.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 7 for word3.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 8 for word4.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 9 for word5.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 10 for word6.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 11 for word7.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 12 for word8.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 13 for word9.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 14 for word10.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 15 for word11.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 16 for word12.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 17 for word13.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 18 for word14.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 19 for word15.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 20 for spamN1.
+INFO [acme.framework.utilities.DatabasePopulator] Persiting your entities.
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting anonymousUserAccount = acme.framework.entities.UserAccount{id=1, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting anonymousAnonymous = acme.framework.entities.Anonymous{id=2, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorUserAccount = acme.framework.entities.UserAccount{id=3, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorAdministrator = acme.framework.entities.Administrator{id=4, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorAuthenticated = acme.framework.entities.Authenticated{id=5, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word1 = acme.entities.words.Word{id=6, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word2 = acme.entities.words.Word{id=7, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word3 = acme.entities.words.Word{id=8, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word4 = acme.entities.words.Word{id=9, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word5 = acme.entities.words.Word{id=10, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word6 = acme.entities.words.Word{id=11, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word7 = acme.entities.words.Word{id=12, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word8 = acme.entities.words.Word{id=13, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word9 = acme.entities.words.Word{id=14, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word10 = acme.entities.words.Word{id=15, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word11 = acme.entities.words.Word{id=16, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word12 = acme.entities.words.Word{id=17, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word13 = acme.entities.words.Word{id=18, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word14 = acme.entities.words.Word{id=19, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word15 = acme.entities.words.Word{id=20, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting spamN1 = acme.entities.spam.Spam{id=21, version=0}
+INFO [acme.framework.configuration.ShutdownConfiguration] The system is shutting down...
+INFO [acme.Launcher] Starting Launcher using Java 1.8.0_281 on DESKTOP-GA4H6FR with PID 8196 (C:\Users\pablo\OneDrive\Desktop\Workspace-21.1\Projects\dp2-repository-group-26-2\target\classes started by pablo in C:\Users\pablo\OneDrive\Desktop\Workspace-21.1\Projects\dp2-repository-group-26-2)
+INFO [acme.Launcher] The following profiles are active: development,populator
+INFO [acme.Launcher] Started Launcher in 4.876 seconds (JVM running for 5.29)
+INFO [acme.framework.utilities.DatabasePopulator] Populating initial data
+INFO [acme.framework.utilities.DatabasePopulator] Recreating schema
+INFO [acme.framework.utilities.DatabasePopulator] Populating entities from classpath:/WEB-INF/population/initial-data.xml
+INFO [acme.framework.utilities.DatabasePopulator] Validating your entities.
+INFO [acme.framework.utilities.DatabasePopulator] Validating anonymousUserAccount ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating anonymousAnonymous ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating administratorUserAccount ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating administratorAdministrator ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating administratorAuthenticated ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word1 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word2 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word3 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word4 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word5 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word6 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word7 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word8 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word9 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word10 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word11 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word12 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word13 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word14 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word15 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating spamN1 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Sorting your entities topologically.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 0 for anonymousUserAccount.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 1 for anonymousAnonymous.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 2 for administratorUserAccount.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 3 for administratorAdministrator.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 4 for administratorAuthenticated.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 5 for word1.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 6 for word2.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 7 for word3.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 8 for word4.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 9 for word5.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 10 for word6.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 11 for word7.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 12 for word8.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 13 for word9.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 14 for word10.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 15 for word11.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 16 for word12.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 17 for word13.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 18 for word14.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 19 for word15.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 20 for spamN1.
+INFO [acme.framework.utilities.DatabasePopulator] Persiting your entities.
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting anonymousUserAccount = acme.framework.entities.UserAccount{id=1, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting anonymousAnonymous = acme.framework.entities.Anonymous{id=2, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorUserAccount = acme.framework.entities.UserAccount{id=3, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorAdministrator = acme.framework.entities.Administrator{id=4, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorAuthenticated = acme.framework.entities.Authenticated{id=5, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word1 = acme.entities.words.Word{id=6, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word2 = acme.entities.words.Word{id=7, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word3 = acme.entities.words.Word{id=8, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word4 = acme.entities.words.Word{id=9, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word5 = acme.entities.words.Word{id=10, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word6 = acme.entities.words.Word{id=11, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word7 = acme.entities.words.Word{id=12, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word8 = acme.entities.words.Word{id=13, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word9 = acme.entities.words.Word{id=14, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word10 = acme.entities.words.Word{id=15, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word11 = acme.entities.words.Word{id=16, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word12 = acme.entities.words.Word{id=17, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word13 = acme.entities.words.Word{id=18, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word14 = acme.entities.words.Word{id=19, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word15 = acme.entities.words.Word{id=20, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting spamN1 = acme.entities.spam.Spam{id=21, version=0}
+INFO [acme.framework.configuration.ShutdownConfiguration] The system is shutting down...
+INFO [acme.Launcher] Starting Launcher using Java 1.8.0_281 on DESKTOP-GA4H6FR with PID 4960 (C:\Users\pablo\OneDrive\Desktop\Workspace-21.1\Projects\dp2-repository-group-26-2\target\classes started by pablo in C:\Users\pablo\OneDrive\Desktop\Workspace-21.1\Projects\dp2-repository-group-26-2)
+INFO [acme.Launcher] The following profiles are active: development,populator
+INFO [acme.Launcher] Started Launcher in 4.939 seconds (JVM running for 5.358)
+INFO [acme.framework.utilities.DatabasePopulator] Populating initial data
+INFO [acme.framework.utilities.DatabasePopulator] Recreating schema
+INFO [acme.framework.utilities.DatabasePopulator] Populating entities from classpath:/WEB-INF/population/initial-data.xml
+INFO [acme.framework.utilities.DatabasePopulator] Validating your entities.
+INFO [acme.framework.utilities.DatabasePopulator] Validating anonymousUserAccount ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating anonymousAnonymous ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating administratorUserAccount ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating administratorAdministrator ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating administratorAuthenticated ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word1 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word2 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word3 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word4 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word5 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word6 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word7 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word8 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word9 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word10 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word11 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word12 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word13 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word14 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word15 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating spamN1 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Sorting your entities topologically.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 0 for anonymousUserAccount.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 1 for anonymousAnonymous.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 2 for administratorUserAccount.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 3 for administratorAdministrator.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 4 for administratorAuthenticated.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 5 for word1.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 6 for word2.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 7 for word3.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 8 for word4.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 9 for word5.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 10 for word6.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 11 for word7.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 12 for word8.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 13 for word9.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 14 for word10.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 15 for word11.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 16 for word12.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 17 for word13.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 18 for word14.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 19 for word15.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 20 for spamN1.
+INFO [acme.framework.utilities.DatabasePopulator] Persiting your entities.
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting anonymousUserAccount = acme.framework.entities.UserAccount{id=1, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting anonymousAnonymous = acme.framework.entities.Anonymous{id=2, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorUserAccount = acme.framework.entities.UserAccount{id=3, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorAdministrator = acme.framework.entities.Administrator{id=4, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorAuthenticated = acme.framework.entities.Authenticated{id=5, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word1 = acme.entities.words.Word{id=6, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word2 = acme.entities.words.Word{id=7, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word3 = acme.entities.words.Word{id=8, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word4 = acme.entities.words.Word{id=9, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word5 = acme.entities.words.Word{id=10, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word6 = acme.entities.words.Word{id=11, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word7 = acme.entities.words.Word{id=12, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word8 = acme.entities.words.Word{id=13, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word9 = acme.entities.words.Word{id=14, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word10 = acme.entities.words.Word{id=15, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word11 = acme.entities.words.Word{id=16, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word12 = acme.entities.words.Word{id=17, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word13 = acme.entities.words.Word{id=18, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word14 = acme.entities.words.Word{id=19, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word15 = acme.entities.words.Word{id=20, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting spamN1 = acme.entities.spam.Spam{id=21, version=0}
+INFO [acme.framework.configuration.ShutdownConfiguration] The system is shutting down...
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP POST /Acme-Planner/WEB-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: java.lang.NullPointerException
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP POST /Acme-Planner/WEB-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: java.lang.NullPointerException
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP POST /Acme-Planner/WEB-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: java.lang.NullPointerException
+INFO [acme.Launcher] Starting Launcher using Java 1.8.0_281 on DESKTOP-GA4H6FR with PID 14536 (C:\Users\pablo\OneDrive\Desktop\Workspace-21.1\Projects\dp2-repository-group-26-2\target\classes started by pablo in C:\Users\pablo\OneDrive\Desktop\Workspace-21.1\Projects\dp2-repository-group-26-2)
+INFO [acme.Launcher] The following profiles are active: development,populator
+INFO [acme.Launcher] Started Launcher in 4.811 seconds (JVM running for 5.226)
+INFO [acme.framework.utilities.DatabasePopulator] Populating initial data
+INFO [acme.framework.utilities.DatabasePopulator] Recreating schema
+INFO [acme.framework.utilities.DatabasePopulator] Populating entities from classpath:/WEB-INF/population/initial-data.xml
+INFO [acme.framework.utilities.DatabasePopulator] Validating your entities.
+INFO [acme.framework.utilities.DatabasePopulator] Validating anonymousUserAccount ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating anonymousAnonymous ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating administratorUserAccount ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating administratorAdministrator ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating administratorAuthenticated ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word1 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word2 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word3 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word4 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word5 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word6 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word7 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word8 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word9 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word10 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word11 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word12 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word13 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word14 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating word15 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating spamN1 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Sorting your entities topologically.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 0 for anonymousUserAccount.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 1 for anonymousAnonymous.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 2 for administratorUserAccount.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 3 for administratorAdministrator.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 4 for administratorAuthenticated.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 5 for word1.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 6 for word2.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 7 for word3.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 8 for word4.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 9 for word5.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 10 for word6.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 11 for word7.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 12 for word8.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 13 for word9.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 14 for word10.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 15 for word11.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 16 for word12.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 17 for word13.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 18 for word14.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 19 for word15.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 20 for spamN1.
+INFO [acme.framework.utilities.DatabasePopulator] Persiting your entities.
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting anonymousUserAccount = acme.framework.entities.UserAccount{id=1, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting anonymousAnonymous = acme.framework.entities.Anonymous{id=2, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorUserAccount = acme.framework.entities.UserAccount{id=3, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorAdministrator = acme.framework.entities.Administrator{id=4, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorAuthenticated = acme.framework.entities.Authenticated{id=5, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word1 = acme.entities.words.Word{id=6, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word2 = acme.entities.words.Word{id=7, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word3 = acme.entities.words.Word{id=8, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word4 = acme.entities.words.Word{id=9, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word5 = acme.entities.words.Word{id=10, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word6 = acme.entities.words.Word{id=11, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word7 = acme.entities.words.Word{id=12, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word8 = acme.entities.words.Word{id=13, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word9 = acme.entities.words.Word{id=14, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word10 = acme.entities.words.Word{id=15, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word11 = acme.entities.words.Word{id=16, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word12 = acme.entities.words.Word{id=17, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word13 = acme.entities.words.Word{id=18, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word14 = acme.entities.words.Word{id=19, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting word15 = acme.entities.words.Word{id=20, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting spamN1 = acme.entities.spam.Spam{id=21, version=0}
+INFO [acme.framework.configuration.ShutdownConfiguration] The system is shutting down...
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP POST /Acme-Planner/WEB-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: java.lang.NullPointerException
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP POST /Acme-Planner/WEB-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: java.lang.NullPointerException

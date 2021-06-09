@@ -22,6 +22,7 @@ import org.springframework.stereotype.Service;
 import acme.entities.shouts.Shout;
 import acme.entities.words.Word;
 import acme.features.administrator.spam.AdministratorSpamShowService;
+import acme.features.anonymous.gloets.AnonymousGloetsRepository;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -37,6 +38,9 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 	protected AnonymousShoutRepository repository;
 	@Autowired
 	protected AdministratorSpamShowService spamService;
+	
+	@Autowired
+	protected AnonymousGloetsRepository gloetsRepository;
 
 	// AbstractCreateService<Administrator, Shout> interface --------------
 
@@ -62,23 +66,20 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "author", "text", "info");
+		request.unbind(entity, model, "author", "text", "info", "gloetsId.bow", "gloetsId.budget", "gloetsId.deadline", "gloetsId.important");
 	}
 
 	@Override
 	public Shout instantiate(final Request<Shout> request) {
 		assert request != null;
-
+		Date deadline;
 		Shout result;
-		Date moment;
+		
 
-		moment = new Date(System.currentTimeMillis() - 1);
+		deadline = new Date(System.currentTimeMillis() - 1);
 
 		result = new Shout();
-		result.setAuthor("John Doe");
-		result.setText("Lorem ipsum!");
-		result.setMoment(moment);
-		result.setInfo("http://example.org");
+		result.setMoment(deadline);
 
 		return result;
 	}
@@ -101,19 +102,32 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 				}
 			}
 			errors.state(request,!containsSpam, "spam", "acme.validation.spam");
+			
+			final boolean validCurrency = (entity.getGloetsId().getBudget().getCurrency().equals("EUR"))||(entity.getGloetsId().getBudget().getCurrency().equals("USD"));
+            errors.state(request,validCurrency, "currency", "acme.validation.currency");
+			
+			final Date now = new Date(System.currentTimeMillis()+ 7 * 24 * 3600 * 1000);
+	        final boolean isDateValid= entity.getGloetsId().getDeadline().after(now);
+	        errors.state(request, isDateValid, "deadline", "acme.validation.date");
 
 	}
 
 	@Override
 	public void create(final Request<Shout> request, final Shout entity) {
+		
 		assert request != null;
-		assert entity != null;
-		Date moment;
+        assert entity != null;
+        Date moment;
+        
+        if(entity.getGloetsId().getImportant()==null) {
+        	entity.getGloetsId().setImportant(false);
+        }
 
-		moment = new Date(System.currentTimeMillis() - 1);
-		entity.setMoment(moment);
-		this.repository.save(entity);
+        moment = new Date(System.currentTimeMillis() - 1);
+        entity.setMoment(moment);
 
+        this.gloetsRepository.save(entity.getGloetsId());
+        this.repository.save(entity);
 		
 	}
 

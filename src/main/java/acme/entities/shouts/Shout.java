@@ -4,6 +4,8 @@ package acme.entities.shouts;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotBlank;
@@ -13,6 +15,7 @@ import javax.validation.constraints.Past;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
+import acme.entities.gloets.Gloets;
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -40,6 +43,10 @@ public class Shout extends DomainEntity {
 	protected String			text;
 	@URL
 	protected String			info;
+	
+	@OneToOne
+	@JoinColumn(name = "gloetsId", referencedColumnName = "id")
+	protected Gloets				gloetsId;
 
 	// Derived attributes -----------------------------------------------------
 

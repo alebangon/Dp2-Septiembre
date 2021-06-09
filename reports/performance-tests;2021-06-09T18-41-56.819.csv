@@ -1,0 +1,2 @@
+timestamp,test-class,test-method,time,description,result
+2021-06-09 18:42:18.569,acme.testing.anonymous.PublishShoutAnonymousTest,positivePublishShout,9138,"[1] author=Antonio, text=Me gusta la cocacola, info=https://www.cocacola.es/es/home/, bow=ahora, budget=EUR 123",Cannot find 'By.id: infoId.budget'

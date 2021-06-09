@@ -17,3 +17,7 @@ anonymous.shout.form.button.return = Return
 anonymous.shout.list.label.moment = Moment
 anonymous.shout.list.label.author = Author
 anonymous.shout.list.label.text = Text
+anonymous.shout.form.label.bow = Bow
+anonymous.shout.form.label.budget = Budget
+anonymous.shout.form.label.deadline = Deadline
+anonymous.shout.form.label.important = Important

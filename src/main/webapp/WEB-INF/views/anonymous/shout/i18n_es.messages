@@ -17,3 +17,7 @@ anonymous.shout.form.button.return = Volver
 anonymous.shout.list.label.moment = Momento
 anonymous.shout.list.label.author = Autor
 anonymous.shout.list.label.text = Texto
+anonymous.shout.list.label.bow = Arco
+anonymous.shout.list.label.budget = Presupuesto
+anonymous.shout.list.label.deadline = Fecha límite
+anonymous.shout.list.label.important = Importante
