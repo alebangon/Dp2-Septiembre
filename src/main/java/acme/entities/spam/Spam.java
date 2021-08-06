@@ -19,7 +19,6 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.OneToMany;
-import javax.validation.constraints.Digits;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 
@@ -39,9 +38,8 @@ public class Spam extends DomainEntity {
 
 	// Attributes -------------------------------------------------------------
 
-    @Min(0)
+    @Min(1)
     @Max(100)
-    @Digits(integer = 3, fraction = 2)
     protected Double threshold;
 
     @OneToMany(fetch=FetchType.EAGER, cascade = CascadeType.ALL)

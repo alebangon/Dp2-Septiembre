@@ -92,18 +92,24 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		final String infoWords = entity.getInfo().trim().replace(" ", "").toLowerCase();
 		final String textWords = entity.getText().trim().replace(" ", "").toLowerCase();
  		final List<Word> listSpam = this.spamService.findAll().getSpamWordsList();
+ 		final Double threshold= this.spamService.findAll().getThreshold();
  		final String allWords = autorWords+infoWords+textWords;
- 		boolean containsSpam = false;
+ 		Double frecuency=0.0;
 			for(final Word word: listSpam) {
-				containsSpam = StringUtils.contains(allWords, word.getSpamWord());
-				if(containsSpam) {
-					break;
-				}
+				if(StringUtils.contains(autorWords, word.getSpamWord())){
+					frecuency=frecuency +1.0;
+				}else if(StringUtils.contains(infoWords, word.getSpamWord())){
+					frecuency=frecuency +1.0;
+				}else if(StringUtils.contains(textWords, word.getSpamWord())){
+					frecuency=frecuency +1.0;
+				}}
+		final Boolean pasaumbral= allWords.length()*(threshold/100.00)<frecuency;
+				
+		if(pasaumbral==true) {		
+			errors.state(request,!pasaumbral, "spam", "anonymous.shout.error.shout-spam");
+
+		}
 			}
-			errors.state(request,!containsSpam, "spam", "acme.validation.spam");
-
-	}
-
 	@Override
 	public void create(final Request<Shout> request, final Shout entity) {
 		assert request != null;

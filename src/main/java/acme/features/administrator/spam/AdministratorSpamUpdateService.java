@@ -73,6 +73,18 @@ public class AdministratorSpamUpdateService implements AbstractUpdateService<Adm
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+
+		final List<Word> spamWordsList = entity.getSpamWordsList();
+		if(spamWordsList.isEmpty()) {
+			errors.state(request, false, "spamWordsList", "administrator.word.error.empty");
+
+		}
+		final Double Threshold = entity.getThreshold();
+		if(Threshold.equals(0)||Threshold.equals(null)	) {
+			errors.state(request, false, "threshold", "administrator.threshold.error.empty");
+
+		}
+	
 			
 	}
 
