@@ -50,7 +50,7 @@ public class Task extends DomainEntity {
 	@URL
 	protected String optionalLink;
 	
-	
+	@NotNull
 	protected Boolean isPublic;
 	
 	@ManyToOne
