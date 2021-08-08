@@ -61,12 +61,19 @@ public class AdministratorSpamUpdateService implements AbstractUpdateService<Adm
 
 	@Override
 	public void unbind(final Request<Spam> request, final Spam entity, final Model model) {
-		assert request != null;
-		assert entity != null;
-		assert model != null;
+		
+			assert request != null;
+			assert entity != null;
+			assert model != null;
 
-		request.unbind(entity, model, "threshold", "spamWordsList");
-	}
+			StringBuilder s = new StringBuilder(500);
+			s = s.append(entity.getSpamWordsList().get(0).getSpamWord());
+			for (final Word w : entity.getSpamWordsList().subList(1, entity.getSpamWordsList().size())) {
+				s = s.append(", " + w.getSpamWord());
+			}
+			model.setAttribute("lista", s);
+			request.unbind(entity, model, "threshold", "spamWordsList");
+		}
 	
 	@Override
 	public void validate(final Request<Spam> request, final Spam entity, final Errors errors) {
