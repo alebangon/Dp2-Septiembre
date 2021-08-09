@@ -15,6 +15,10 @@
 	<import
 		resource="classpath:/WEB-INF/population/conversion-service.xml" />
 	<!-- Manager user -->
+	<bean name="managerAuthenticated" class="acme.entities.roles.Manager">
+		<property name="userAccount" ref="managerUserAccount" />
+
+	</bean>
 
 	<bean name="managerUserAccount" class="acme.framework.entities.UserAccount">
 		<property name="username" value="manager" />
@@ -29,15 +33,14 @@
 		</property>
 		<property name="roles">
 			<list>
-				<ref bean="manager" />
 				<ref bean="managerAuthenticated" />
 			</list>
 		</property>
+
+		
 	</bean>
 
-	<bean name="managerAuthenticated" class="acme.framework.entities.Authenticated">
-		<property name="userAccount" ref="managerUserAccount" />
-	</bean>
+
 	
 	
 	<!-- Tasks -->
@@ -48,7 +51,7 @@
 		<property name="isPublic" value="true" />
 		<property name="description" value="Description of task 01" />
 		<property name="optionalLink" value="https://www.google.com" />
-		<property name="managerId" ref="managerManager"/>
+		<property name="managerId" ref="managerAuthenticated"/>
 
 	</bean>
 
@@ -59,7 +62,7 @@
 		<property name="isPublic" value="true" />
 		<property name="description" value="Description of task 02" />
 		<property name="optionalLink" value="https://www.google.com" />
-		<property name="managerId" ref="managerManager"/>
+		<property name="managerId" ref="managerAuthenticated"/>
 	</bean>
 
 	<bean id="task03" class="acme.entities.tasks.Task">
@@ -69,7 +72,7 @@
 		<property name="isPublic" value="true" />
 		<property name="description" value="Description of task 03" />
 		<property name="optionalLink" value="https://www.google.com" />
-		<property name="managerId" ref="managerManager"/>
+		<property name="managerId" ref="managerAuthenticated"/>
 	</bean> 
 	
 	<bean id="task04" class="acme.entities.tasks.Task">
@@ -79,7 +82,7 @@
 		<property name="isPublic" value="true" />
 		<property name="description" value="Description of task 04" />
 		<property name="optionalLink" value="https://www.google.com" />
-		<property name="managerId" ref="managerManager"/>
+		<property name="managerId" ref="managerAuthenticated"/>
 	</bean> 
 
 
