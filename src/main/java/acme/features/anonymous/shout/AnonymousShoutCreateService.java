@@ -15,7 +15,6 @@ package acme.features.anonymous.shout;
 import java.util.Date;
 import java.util.List;
 
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -88,22 +87,37 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-		final String autorWords = entity.getAuthor().trim().replace(" ", "").toLowerCase();
-		final String infoWords = entity.getInfo().trim().replace(" ", "").toLowerCase();
-		final String textWords = entity.getText().trim().replace(" ", "").toLowerCase();
+		
+		final String[] autorWords = entity.getAuthor().split(" ");
+		final String[] infoWords = entity.getInfo().split(" ");
+		final String[] textWords = entity.getText().split(" ");
  		final List<Word> listSpam = this.spamService.findAll().getSpamWordsList();
- 		final String allWords = autorWords+infoWords+textWords;
- 		boolean containsSpam = false;
-			for(final Word word: listSpam) {
-				containsSpam = StringUtils.contains(allWords, word.getSpamWord());
-				if(containsSpam) {
-					break;
+ 		final Double threshold= this.spamService.findAll().getThreshold();
+ 		Double frecuency=0.0;
+ 		Boolean pasaumbral= false;
+			for(Word word: listSpam) {
+				for (String st : autorWords) {
+					if(st.contains(word.getSpamWord())){
+						frecuency=1.0+frecuency;
+						}
+					}
+				for (String st : infoWords) {
+					if(st.contains(word.getSpamWord())){
+						frecuency=1.0+frecuency;
+						}
+					}
+				for (String st : textWords) {
+					if(st.contains(word.getSpamWord())){
+						frecuency=1.0+frecuency;
+						}
 				}
-			}
-			errors.state(request,!containsSpam, "spam", "acme.validation.spam");
+				}
+			
+	        pasaumbral= (autorWords.length+infoWords.length+textWords.length)*(threshold/100.00)>frecuency;
+			errors.state(request,  pasaumbral, "spam", "anonymous.shout.error.shout-spam");
 
-	}
-
+		}
+			
 	@Override
 	public void create(final Request<Shout> request, final Shout entity) {
 		assert request != null;
