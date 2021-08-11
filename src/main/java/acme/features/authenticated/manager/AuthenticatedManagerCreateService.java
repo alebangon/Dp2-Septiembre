@@ -1,8 +1,19 @@
+/*
+ * AuthenticatedManagerCreateService.java
+ *
+ * Copyright (C) 2012-2021 Rafael Corchuelo.
+ *
+ * In keeping with the traditional purpose of furthering education and research, it is
+ * the policy of the copyright owner to permit non-commercial use and redistribution of
+ * this software. It has been tested carefully, but it is not guaranteed for any particular
+ * purposes. The copyright owner does not offer any warranties or representations, nor do
+ * they accept any liabilities with respect to them.
+ */
+
 package acme.features.authenticated.manager;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.util.Assert;
 
 import acme.entities.roles.Manager;
 import acme.framework.components.Errors;
@@ -24,7 +35,7 @@ public class AuthenticatedManagerCreateService implements AbstractCreateService<
 	@Autowired
 	protected AuthenticatedManagerRepository repository;
 
-	// AbstractCreateService<Authenticated, Consumer> ---------------------------
+	// AbstractCreateService<Authenticated, Provider> interface ---------------
 
 
 	@Override
@@ -32,13 +43,6 @@ public class AuthenticatedManagerCreateService implements AbstractCreateService<
 		assert request != null;
 
 		return true;
-	}
-
-	@Override
-	public void validate(final Request<Manager> request, final Manager entity, final Errors errors) {
-		assert request != null;
-		assert entity != null;
-		assert errors != null;
 	}
 
 	@Override
@@ -62,8 +66,6 @@ public class AuthenticatedManagerCreateService implements AbstractCreateService<
 	@Override
 	public Manager instantiate(final Request<Manager> request) {
 		assert request != null;
-		
-		
 
 		Manager result;
 		Principal principal;
@@ -73,21 +75,25 @@ public class AuthenticatedManagerCreateService implements AbstractCreateService<
 		principal = request.getPrincipal();
 		userAccountId = principal.getAccountId();
 		userAccount = this.repository.findOneUserAccountById(userAccountId);
-		
-		result = new Manager();
 
+		result = new Manager();
 		result.setUserAccount(userAccount);
-		
-		Assert.state(result.getUserAccount().getRoles().size() < 2, "default.error.not-authorised");
 
 		return result;
+	}
+
+	@Override
+	public void validate(final Request<Manager> request, final Manager entity, final Errors errors) {
+		assert request != null;
+		assert entity != null;
+		assert errors != null;
 	}
 
 	@Override
 	public void create(final Request<Manager> request, final Manager entity) {
 		assert request != null;
 		assert entity != null;
-	
+
 		this.repository.save(entity);
 	}
 

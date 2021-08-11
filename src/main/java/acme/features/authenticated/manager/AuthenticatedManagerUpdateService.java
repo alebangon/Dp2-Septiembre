@@ -1,3 +1,15 @@
+/*
+ * AuthenticatedManagerUpdateService.java
+ *
+ * Copyright (C) 2012-2021 Rafael Corchuelo.
+ *
+ * In keeping with the traditional purpose of furthering education and research, it is
+ * the policy of the copyright owner to permit non-commercial use and redistribution of
+ * this software. It has been tested carefully, but it is not guaranteed for any particular
+ * purposes. The copyright owner does not offer any warranties or representations, nor do
+ * they accept any liabilities with respect to them.
+ */
+
 package acme.features.authenticated.manager;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +34,7 @@ public class AuthenticatedManagerUpdateService implements AbstractUpdateService<
 	@Autowired
 	protected AuthenticatedManagerRepository repository;
 
-	// AbstractUpdateService<Authenticated, Manager> interface -----------------
+	// AbstractUpdateService<Authenticated, Provider> interface ---------------
 
 
 	@Override
@@ -30,13 +42,6 @@ public class AuthenticatedManagerUpdateService implements AbstractUpdateService<
 		assert request != null;
 
 		return true;
-	}
-
-	@Override
-	public void validate(final Request<Manager> request, final Manager entity, final Errors errors) {
-		assert request != null;
-		assert entity != null;
-		assert errors != null;
 	}
 
 	@Override
@@ -71,6 +76,13 @@ public class AuthenticatedManagerUpdateService implements AbstractUpdateService<
 		result = this.repository.findOneManagerByUserAccountId(userAccountId);
 
 		return result;
+	}
+
+	@Override
+	public void validate(final Request<Manager> request, final Manager entity, final Errors errors) {
+		assert request != null;
+		assert entity != null;
+		assert errors != null;
 	}
 
 	@Override

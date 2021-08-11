@@ -29,15 +29,17 @@
 		</property>
 		<property name="roles">
 			<list>
-				<ref bean="managerManager" />
-				<!-- <ref bean="managerAuthenticated" /> -->
+				<ref bean="manager" />
+				<ref bean="managerAuthenticated" />
 			</list>
 		</property>
 	</bean>
 
-	<bean name="managerManager" class="acme.framework.entities.Manager">
+	<bean name="managerAuthenticated" class="acme.framework.entities.Authenticated">
 		<property name="userAccount" ref="managerUserAccount" />
 	</bean>
+	
+	
 	<!-- Tasks -->
 	<bean id="task01" class="acme.entities.tasks.Task">
 		<property name="title" value="Title of task 01" />

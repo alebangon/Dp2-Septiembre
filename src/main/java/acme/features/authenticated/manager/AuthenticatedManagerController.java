@@ -1,3 +1,15 @@
+/*
+ * AuthenticatedManagerController.java
+ *
+ * Copyright (C) 2012-2021 Rafael Corchuelo.
+ *
+ * In keeping with the traditional purpose of furthering education and research, it is
+ * the policy of the copyright owner to permit non-commercial use and redistribution of
+ * this software. It has been tested carefully, but it is not guaranteed for any particular
+ * purposes. The copyright owner does not offer any warranties or representations, nor do
+ * they accept any liabilities with respect to them.
+ */
+
 package acme.features.authenticated.manager;
 
 import javax.annotation.PostConstruct;
@@ -17,18 +29,19 @@ public class AuthenticatedManagerController extends AbstractController<Authentic
 
 	// Internal state ---------------------------------------------------------
 
-		@Autowired
-		protected AuthenticatedManagerCreateService	createService;
+	@Autowired
+	protected AuthenticatedManagerCreateService	createService;
 
-		@Autowired
-		protected AuthenticatedManagerUpdateService	updateService;
+	@Autowired
+	protected AuthenticatedManagerUpdateService	updateService;
 
-		// Constructors -----------------------------------------------------------
+	// Constructors -----------------------------------------------------------
 
 
-		@PostConstruct
-		protected void initialise() {
-			super.addBasicCommand(BasicCommand.CREATE, this.createService);
-			super.addBasicCommand(BasicCommand.UPDATE, this.updateService);
-		}
+	@PostConstruct
+	protected void initialise() {
+		super.addBasicCommand(BasicCommand.CREATE, this.createService);
+		super.addBasicCommand(BasicCommand.UPDATE, this.updateService);
+	}
+
 }
