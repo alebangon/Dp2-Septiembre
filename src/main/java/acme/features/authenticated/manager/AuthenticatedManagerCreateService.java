@@ -14,6 +14,7 @@ package acme.features.authenticated.manager;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.Assert;
 
 import acme.entities.roles.Manager;
 import acme.framework.components.Errors;
@@ -78,6 +79,8 @@ public class AuthenticatedManagerCreateService implements AbstractCreateService<
 
 		result = new Manager();
 		result.setUserAccount(userAccount);
+		
+		Assert.state(result.getUserAccount().getRoles().size() < 2, "default.error.not-authorised");
 
 		return result;
 	}
