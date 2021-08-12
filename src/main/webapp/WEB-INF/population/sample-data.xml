@@ -15,10 +15,6 @@
 	<import
 		resource="classpath:/WEB-INF/population/conversion-service.xml" />
 	<!-- Manager user -->
-	<bean name="managerAuthenticated" class="acme.entities.roles.Manager">
-		<property name="userAccount" ref="managerUserAccount" />
-
-	</bean>
 
 	<bean name="managerUserAccount" class="acme.framework.entities.UserAccount">
 		<property name="username" value="manager" />
@@ -38,6 +34,12 @@
 		</property>
 
 		
+	</bean>
+	
+	<bean name="managerAuthenticated" class="acme.entities.roles.Manager">
+		<property name="userAccount" ref="managerUserAccount" />
+		<property name="company" value="managerComp" />
+		<property name="sector" value="managerSector" />
 	</bean>
 
 
