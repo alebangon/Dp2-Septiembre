@@ -33,8 +33,9 @@ public class SpamListUpdateTest extends AcmePlannerTest {
 		super.clickOnMenu("Administrator", "Spam filter");
 
 
-	
-		assert super.exists(By.id("lista"));
+		super.checkInputBoxHasValue("lista", lista);
+		super.checkInputBoxHasValue("threshold", threshold);
+
 	}
 	/**
 	 * 

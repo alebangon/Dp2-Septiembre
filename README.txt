@@ -1,6 +1,6 @@
-Repository: https://github.com/ezepersos/dp2-repository-group-26-Acme-Planner
-Release: https://github.com/ezepersos/dp2-repository-group-26-Acme-Planner/releases/tag/1.0
-Deployment URL: http://app-360639b9-fff7-48d9-9e1c-ba91e4587578.cleverapps.io/Acme-Planner
+Repository: https://github.com/alebangon/dp2-repository-group-26-2
+Release: https://github.com/alebangon/dp2-repository-group-26-2/releases/tag/3.0
+Deployment URL: http://app-35325b07-16cb-41cd-9495-3d224da6be6e.cleverapps.io/Acme-Planner/master/welcome
 
 This is Acme Planner, the project repository of group 26 of the design and testing course.
-Customized from the Starter-project and in which the tasks of this sprint 2 are worked on.
+Customized from the Starter-project and in which the tasks of this sprint 4 are worked on.
