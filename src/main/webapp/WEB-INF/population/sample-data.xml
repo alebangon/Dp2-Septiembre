@@ -17,6 +17,8 @@
 	<!-- Manager user -->
 	<bean name="managerAuthenticated" class="acme.entities.roles.Manager">
 		<property name="userAccount" ref="managerUserAccount" />
+		<property name="company" value="managerCompany" />
+		<property name="sector" value="managerSector" />
 
 	</bean>
 

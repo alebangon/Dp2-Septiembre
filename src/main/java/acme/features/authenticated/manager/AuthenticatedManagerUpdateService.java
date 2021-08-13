@@ -34,7 +34,7 @@ public class AuthenticatedManagerUpdateService implements AbstractUpdateService<
 	@Autowired
 	protected AuthenticatedManagerRepository repository;
 
-	// AbstractUpdateService<Authenticated, Provider> interface ---------------
+	// AbstractUpdateService<Authenticated, Manager> interface ---------------
 
 
 	@Override
