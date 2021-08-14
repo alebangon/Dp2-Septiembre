@@ -14,7 +14,36 @@
 
 	<import
 		resource="classpath:/WEB-INF/population/conversion-service.xml" />
+	<!--  Usuario autenticado -->
+	<bean name="authenticatedUserAccount"
+		class="acme.framework.entities.UserAccount">
+		<property name="username" value="authenticated" />
+		<property name="password" value="authenticated" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="auten" />
+				<property name="surname" value="ticado" />
+				<property name="email" value="auticado@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="authenticated" />
+			</list>
+		</property>
+	</bean>
+
+	<bean name="authenticated"
+		class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="authenticatedUserAccount" />
+	</bean>	
+		
 	<!-- Manager user -->
+	<bean name="managerAuthenticated" class="acme.entities.roles.Manager">
+		<property name="userAccount" ref="managerUserAccount" />
+		<property name="company" value="managerCompany" />
+		<property name="sector" value="managerSector" />
 
 	<bean name="managerUserAccount" class="acme.framework.entities.UserAccount">
 		<property name="username" value="manager" />

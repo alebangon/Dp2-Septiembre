@@ -23,7 +23,8 @@ public class Manager extends UserRole {
 
 	@NotBlank
 	protected String			sector;
-	
 
+
+		// Derived attributes -----------------------------------------------------
 
 }
