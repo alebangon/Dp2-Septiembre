@@ -44,6 +44,7 @@
 		<property name="userAccount" ref="managerUserAccount" />
 		<property name="company" value="managerCompany" />
 		<property name="sector" value="managerSector" />
+	</bean>
 
 	<bean name="managerUserAccount" class="acme.framework.entities.UserAccount">
 		<property name="username" value="manager" />
@@ -65,12 +66,6 @@
 		
 	</bean>
 	
-	<bean name="managerAuthenticated" class="acme.entities.roles.Manager">
-		<property name="userAccount" ref="managerUserAccount" />
-		<property name="company" value="managerComp" />
-		<property name="sector" value="managerSector" />
-	</bean>
-
 
 	
 	
