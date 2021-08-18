@@ -115,14 +115,14 @@
 
 	
 		<bean id="shout01" class="acme.entities.shouts.Shout">
-		<property name="moment" value="2021/05/19 19:39"/>
+		<property name="moment" value="2021/08/16 19:39"/>
 		<property name="author" value="John Doe"/>
 		<property name="text" value="I'm happy!"/>
 		<property name="info"><null/></property>	
 	</bean>
 	
 	<bean id="shout02" class="acme.entities.shouts.Shout">
-		<property name="moment" value="2021/05/19 15:55"/>
+		<property name="moment" value="2021/08/16 15:55"/>
 		<property name="author" value="Jane Doe"/>
 		<property name="text" value="I'm the master of my room!"/>
 		<property name="info" value="http://www.example.org"/>		
