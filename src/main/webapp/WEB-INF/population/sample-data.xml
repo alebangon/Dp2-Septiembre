@@ -14,7 +14,38 @@
 
 	<import
 		resource="classpath:/WEB-INF/population/conversion-service.xml" />
+	<!--  Usuario autenticado -->
+	<bean name="authenticatedUserAccount"
+		class="acme.framework.entities.UserAccount">
+		<property name="username" value="authenticated" />
+		<property name="password" value="authenticated" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="auten" />
+				<property name="surname" value="ticado" />
+				<property name="email" value="auticado@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="authenticated" />
+			</list>
+		</property>
+	</bean>
+
+	<bean name="authenticated"
+		class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="authenticatedUserAccount" />
+	</bean>	
+		
 	<!-- Manager user -->
+	<bean name="managerAuthenticated" class="acme.entities.roles.Manager">
+		<property name="userAccount" ref="managerUserAccount" />
+		<property name="company" value="managerCompany" />
+		<property name="sector" value="managerSector" />
+
+	</bean>
 
 	<bean name="managerUserAccount" class="acme.framework.entities.UserAccount">
 		<property name="username" value="manager" />
@@ -29,15 +60,16 @@
 		</property>
 		<property name="roles">
 			<list>
-				<ref bean="managerManager" />
-				<!-- <ref bean="managerAuthenticated" /> -->
+				<ref bean="managerAuthenticated" />
 			</list>
 		</property>
+
+		
 	</bean>
 
-	<bean name="managerManager" class="acme.framework.entities.Manager">
-		<property name="userAccount" ref="managerUserAccount" />
-	</bean>
+
+	
+	
 	<!-- Tasks -->
 	<bean id="task01" class="acme.entities.tasks.Task">
 		<property name="title" value="Title of task 01" />
@@ -46,7 +78,7 @@
 		<property name="isPublic" value="true" />
 		<property name="description" value="Description of task 01" />
 		<property name="optionalLink" value="https://www.google.com" />
-		<property name="managerId" ref="managerManager"/>
+		<property name="managerId" ref="managerAuthenticated"/>
 
 	</bean>
 
@@ -57,7 +89,7 @@
 		<property name="isPublic" value="true" />
 		<property name="description" value="Description of task 02" />
 		<property name="optionalLink" value="https://www.google.com" />
-		<property name="managerId" ref="managerManager"/>
+		<property name="managerId" ref="managerAuthenticated"/>
 	</bean>
 
 	<bean id="task03" class="acme.entities.tasks.Task">
@@ -67,7 +99,7 @@
 		<property name="isPublic" value="true" />
 		<property name="description" value="Description of task 03" />
 		<property name="optionalLink" value="https://www.google.com" />
-		<property name="managerId" ref="managerManager"/>
+		<property name="managerId" ref="managerAuthenticated"/>
 	</bean> 
 	
 	<bean id="task04" class="acme.entities.tasks.Task">
@@ -77,7 +109,7 @@
 		<property name="isPublic" value="true" />
 		<property name="description" value="Description of task 04" />
 		<property name="optionalLink" value="https://www.google.com" />
-		<property name="managerId" ref="managerManager"/>
+		<property name="managerId" ref="managerAuthenticated"/>
 	</bean> 
 
 
