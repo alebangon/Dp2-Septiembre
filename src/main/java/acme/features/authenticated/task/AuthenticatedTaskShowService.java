@@ -45,6 +45,7 @@ public class AuthenticatedTaskShowService implements AbstractShowService<Authent
 
 		id = request.getModel().getInteger("id");
 		result = this.repository.findById(id);
+//Aqui falta algo, nesesito ayuda
 
 		return result;
 	}
