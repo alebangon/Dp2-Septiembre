@@ -1,5 +1,5 @@
 /*
- * AuthenticatedShoutListService.java
+ * AuthenticatedTaskListService.java
  *
  * Copyright (C) 2012-2021 Rafael Corchuelo.
  *
@@ -32,7 +32,7 @@ public class AuthenticatedTaskListService implements AbstractListService<Authent
 	protected AuthenticatedTaskRepository repository;
 
 
-	// AbstractListService<Administrator, Task> interface --------------
+	// AbstractListService<Authenticated, Task> interface --------------
 	@Override
 	public boolean authorise(final Request<Task> request) {
 		assert request != null;

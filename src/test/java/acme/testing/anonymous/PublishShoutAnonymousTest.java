@@ -7,33 +7,58 @@ import org.openqa.selenium.By;
 
 import acme.testing.AcmePlannerTest;
 
-public class ListShoutTest extends AcmePlannerTest {
+public class PublishShoutAnonymousTest extends AcmePlannerTest {
 
 	// Internal state ---------------------------------------------------------
 
 	// Lifecycle management ---------------------------------------------------
 
+	
 	// Test cases -------------------------------------------------------------
 	/**
 	 * 
 	 * Caso positivo:
 	 *
-	 * Se comprueba que la lista donde se muestran los shouts se despliega acorde a lo esperado.
+	 * Se crea un shout haciendo que sus atributos cumplan las restricciones y validadores pertinentes
+	 * Se comprueba la correcta creación del shout.
 	 */
-	
 	@ParameterizedTest
-	@CsvFileSource(resources = "/listShout/positive.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/publishShout/positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
-	public void positiveListShout(final int recordIndex, final String moment, final String author, final String text) {
+	public void positivePublishShout(final String author, final String text, final String info) {
 		super.navigateHome();
+		super.clickOnMenu("Anonymous", "Shout!");
+		super.fill(By.id("author"), author);
+		super.fill(By.id("text"), text);
+		super.fill(By.id("info"), info);
+		super.clickOnSubmitButton("Shout!");
 		super.clickOnMenu("Anonymous", "List shouts");
-		super.checkColumnHasValue(recordIndex, 0, moment);
-		super.checkColumnHasValue(recordIndex, 1, author);
-		super.checkColumnHasValue(recordIndex, 2, text);
-		super.navigateHome();
+		super.checkColumnHasValue(2, 1, author);
+        super.checkColumnHasValue(2, 2, text);
+        super.clickOnMenu("Anonymous", "List shouts");
 		
 	}
 	
+	/**
+	 * 
+	 * Caso negativo:
+	 *
+	 * Se crea un shout haciendo uno de sus atributos incumpla la restricción de NotNull.
+	 * Se comprueba que no se crea dicho shout y aparece el error esperado.
+	 */
+	@ParameterizedTest
+	@CsvFileSource(resources = "/publishShout/negative.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@Order(10)
+	public void negativePublishShout(final String author, final String text, final String info) {
+		super.navigateHome();
+		super.clickOnMenu("Anonymous", "Shout!");
+		super.fill(By.id("author"), author);
+		super.fill(By.id("text"), text);
+		super.fill(By.id("info"), info);
+		super.clickOnSubmitButton("Shout!");
+		super.checkErrorsExist();
+		
+	}
 
 	// Ancillary methods ------------------------------------------------------
 

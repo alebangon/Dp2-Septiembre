@@ -31,6 +31,7 @@ public class ShowTasksTest extends AcmePlannerTest {
 	@Order(10)
 	public void positiveShowTask(final String title, final String executionPeriodInit, final String executionPeriodEnd,
 		final String description, final String optionalLink, final int iter) {
+		this.signUp("usser", "password", "name", "sur", "name@mail.com");
 		this.signIn("usser", "password");
 		super.clickAndGo(By.linkText("Account"));
 		super.clickAndGo(By.linkText("Task list"));

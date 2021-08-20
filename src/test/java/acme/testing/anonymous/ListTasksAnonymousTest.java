@@ -7,7 +7,7 @@ import org.openqa.selenium.By;
 
 import acme.testing.AcmePlannerTest;
 
-public class ShowTasksTest extends AcmePlannerTest {
+public class ListTasksAnonymousTest extends AcmePlannerTest {
 
 
 
@@ -22,24 +22,21 @@ public class ShowTasksTest extends AcmePlannerTest {
 	/**
 	 * 
 	 * Caso positivo:
-	 * En el que un usuario anonimo accede a los detalles de una tarea y se muestran
-	 * los detalles de la misma correspondientes a lo que debería mostrar
-	 * según la base de datos.
+	 * En el que un usuario anonimo accede a la lista de tareas y se muestran
+	 * las tareas que puede ver este tipo de usuario.
 	*/
 
 	@ParameterizedTest
-	@CsvFileSource(resources = "/showTasksAnonymous/positive.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/listTasksAnonymous/positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
-	public void positiveShowTask(final String title, final String executionPeriodInit, final String executionPeriodEnd,
+	public void positiveListTasks(final String title, final String executionPeriodInit, final String executionPeriodEnd,
 		final String description, final String optionalLink, final int iter) {
 		super.navigateHome();
 		super.clickOnMenu("Anonymous", "List tasks");
-		super.clickOnListingRecord(iter);
-		super.checkInputBoxHasValue("title", title);
-		super.checkInputBoxHasValue("executionPeriodInit", executionPeriodInit);
-		super.checkInputBoxHasValue("executionPeriodEnd", executionPeriodEnd);
-		super.checkInputBoxHasValue("description", description);
-		super.checkInputBoxHasValue("optionalLink", optionalLink);
+		super.checkColumnHasValue(iter, 0, title);
+		super.checkColumnHasValue(iter, 1, executionPeriodInit);
+		super.checkColumnHasValue(iter, 2, executionPeriodEnd);
+		super.checkColumnHasValue(iter, 3, description);
 		super.navigateHome();
 		
 	}
@@ -67,3 +64,4 @@ public class ShowTasksTest extends AcmePlannerTest {
 
 
 }
+

@@ -30,6 +30,7 @@ public class UpdateTaskManagerTest extends AcmePlannerTest {
 	@Order(10)
 	public void positiveUpdateTaskManager(final String title, final String executionPeriodInit, final String executionPeriodEnd,
 		final String description, final String optionalLink, final int iter) {
+		
 		this.signIn("manager", "manager");
 		super.navigateHome();
 		super.clickOnMenu("Manager", "My tasks");
