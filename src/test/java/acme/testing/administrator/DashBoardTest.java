@@ -27,7 +27,8 @@ public class DashBoardTest extends AcmePlannerTest {
 	 * Se comprueban que las funcionalidades que hay en el service devuelvan el 
 	 * número correcto.
 	 */
-
+	//realizamos una consulta a nuestra dashboard y vemos si se corresponden los valores a los que buscamos
+	
 	@ParameterizedTest
 	@CsvFileSource(resources = "/dashboard/positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(20)
@@ -59,7 +60,7 @@ public class DashBoardTest extends AcmePlannerTest {
 	 * El usuario manager no debería ver el dashboard
 	 * 
 	 */
-
+	//en este caso intentamos realizar una consulta como manager y nos da un error
 	@Test
 	@Order(30)
 	protected void assertDashboardForManagerIsForbidden() {
@@ -77,6 +78,7 @@ public class DashBoardTest extends AcmePlannerTest {
 	 * El usuario anonimo no debería ver el dashboard
 	 * 
 	 */
+	//en este caso intentamos realizar una consulta como anonymous y nos da un error
 
 	@Test
 	@Order(30)
@@ -97,6 +99,8 @@ public class DashBoardTest extends AcmePlannerTest {
 
 	@Test
 	@Order(30)
+	//en este caso intentamos realizar una consulta como usuario y nos da un error
+
 	protected void assertDashboardForAuthenticatedIsForbidden() {
 		super.navigateHome();
 		this.signUp("username", "password", "name", "surname", "email@example.com");
