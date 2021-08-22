@@ -45,7 +45,7 @@ public class BecomeManagerTest extends AcmePlannerTest {
 	public void testBecomeManagerNegative(final String company, final String sector) {
 
 		super.signIn("authenticated", "authenticated");
-		super.clickOnMenu("Account", "Become a manager");
+		super.clickOnMenu("Authenticated", "Become a manager");
 
 		super.fillInputBoxIn("company", company);
 		super.fillInputBoxIn("sector", sector);
