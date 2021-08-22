@@ -27,7 +27,4 @@ public class Manager extends UserRole {
 
 		// Derived attributes -----------------------------------------------------
 
-		// Relationships ----------------------------------------------------------
-
-
 }
