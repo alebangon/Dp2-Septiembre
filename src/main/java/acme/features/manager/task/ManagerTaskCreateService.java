@@ -15,7 +15,6 @@ package acme.features.manager.task;
 import java.util.Date;
 import java.util.List;
 
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -90,18 +89,32 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-		final String title = entity.getTitle().trim().replace(" ", "").toLowerCase();
-		final String desc = entity.getDescription().trim().replace(" ", "").toLowerCase();
+
+		
+		final String[] descWords = entity.getDescription().split(" ");
+		final String[] titleWords = entity.getTitle().split(" ");
  		final List<Word> listSpam = this.spamService.findAll().getSpamWordsList();
- 		final String allWords = title+desc;
- 		boolean containsSpam = false;
+ 		final Double threshold= this.spamService.findAll().getThreshold();
+ 		Double frecuency=0.0;
+ 		Boolean pasaumbral= false;
 			for(final Word word: listSpam) {
-				containsSpam = StringUtils.contains(allWords, word.getSpamWord());
-				if(containsSpam) {
-					break;
+				for (final String st : descWords) {
+					if(st.contains(word.getSpamWord())){
+						frecuency=1.0+frecuency;
+						}
+					}
+				for (final String st : titleWords) {
+					if(st.contains(word.getSpamWord())){
+						frecuency=1.0+frecuency;
+						}
+					}
+
 				}
-			}
-			errors.state(request,!containsSpam, "spam", "acme.validation.spam.task");
+			
+			pasaumbral= (descWords.length+titleWords.length)*(threshold/100.00)>frecuency;
+			errors.state(request,  pasaumbral, "spam", "acme.validation.spam");
+		
+		
 		final Date start = request.getModel().getDate("executionPeriodEnd");
 		final Date end = request.getModel().getDate("executionPeriodInit");
 		final Date now = new Date(System.currentTimeMillis());
