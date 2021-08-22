@@ -9,6 +9,10 @@ import acme.testing.AcmePlannerTest;
 
 public class BecomeManagerTest extends AcmePlannerTest {
 
+	/*
+	 * Tested Feature: usuario se da de alta y se hace manager con éxito
+	 * Expected results: cuenta authenticated creada y hecha manager sin errores
+	 */
 
 	@ParameterizedTest
 	@CsvFileSource(resources = "/becomeManager/positive.csv", encoding = "utf-8", numLinesToSkip = 1)
@@ -36,7 +40,7 @@ public class BecomeManagerTest extends AcmePlannerTest {
 	}
 	
 	/*
-	 * Tested Feature: usuario se hace manager
+	 * Tested Feature: usuario se hace manager sin éxito
 	 * Violated constraints: los campos no pueden estar en blanco
 	 * Expected results: fallos en formato
 	 */
