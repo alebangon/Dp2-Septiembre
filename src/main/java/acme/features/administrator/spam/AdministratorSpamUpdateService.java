@@ -87,7 +87,7 @@ public class AdministratorSpamUpdateService implements AbstractUpdateService<Adm
 
 		}
 		final Double Threshold = entity.getThreshold();
-		if(Threshold.equals(0)||Threshold.equals(null)	) {
+		if(Threshold==(0)||Threshold==null	) {
 			errors.state(request, false, "threshold", "administrator.threshold.error.empty");
 
 		}
