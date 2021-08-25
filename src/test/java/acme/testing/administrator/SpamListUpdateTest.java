@@ -23,6 +23,8 @@ public class SpamListUpdateTest extends AcmePlannerTest {
 	 * y debe realizar una actualización de la lista de estas palabras en 
 	 * la base de datos
 	 */
+	
+	//accemos un acceso a nuestra pagina de ediciónd del treshold y la spam list y vemos que se han cambiado estos datos
 	@ParameterizedTest
 	@CsvFileSource(resources = "/UpdateSpamList/positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
@@ -44,6 +46,8 @@ public class SpamListUpdateTest extends AcmePlannerTest {
 	 * e intentamos actualizar la base de datos con un threshold que no 
 	 * pase las restricciones, deberia saltarnos un errror
 	 */
+	
+	//como administrador, intentamos poner un threshold el cual, no pase nuestras restricciones
 	@ParameterizedTest
     @CsvFileSource(resources = "/UpdateSpamList/negative.csv", encoding = "utf-8", numLinesToSkip = 1)
     @Order(10)
@@ -52,6 +56,26 @@ public class SpamListUpdateTest extends AcmePlannerTest {
 		this.UpdateSpamWordList(threshold, lista);
 		super.checkErrorsExist();
     }
+	//como anonymous, nos da un error al acceder a la página de edicion
+	@ParameterizedTest
+    @CsvFileSource(resources = "/UpdateSpamList/negative.csv", encoding = "utf-8", numLinesToSkip = 1)
+    @Order(10)
+    public void negativeUpdateAnonymous(final String threshold, final String lista) {
+		super.driver.get("http://localhost:8080/Acme-Planner/administrator/spam/show");
+		super.checkErrorsExist();
+    }
+	//como manager, nos da un error al acceder a la página de edicion
+
+	@ParameterizedTest
+    @CsvFileSource(resources = "/UpdateSpamList/negative.csv", encoding = "utf-8", numLinesToSkip = 1)
+    @Order(10)
+    public void negativeUpdateManager(final String threshold, final String lista) {
+		this.signIn("manager", "manager");
+		super.driver.get("http://localhost:8080/Acme-Planner/administrator/spam/show");
+		super.checkErrorsExist();
+    }
+	
+	
 	// Ancillary methods ------------------------------------------------------
 
 	@Override

@@ -24,6 +24,7 @@ public class ShowTasksTest extends AcmePlannerTest {
 	 * Caso positivo:
 	 * En el que el usuario autenticado puede ver los detalles de las tasks de la lista de tareas
 	 * públicas finalizadas.
+	 * Al tratarse de uns vista de detalles, nos encontramos con que únicamente hay caso positivo.
 	 */
 	
 	@ParameterizedTest
@@ -31,9 +32,8 @@ public class ShowTasksTest extends AcmePlannerTest {
 	@Order(10)
 	public void positiveShowTask(final String title, final String executionPeriodInit, final String executionPeriodEnd,
 		final String description, final String optionalLink, final int iter) {
-		this.signUp("usser", "password", "name", "sur", "name@mail.com");
-		this.signIn("usser", "password");
-		super.clickAndGo(By.linkText("Account"));
+		this.signIn("authenticated", "authenticated");
+		super.clickAndGo(By.linkText("Authenticated"));
 		super.clickAndGo(By.linkText("Task list"));
 		super.clickOnListingRecord(iter);
 		super.checkInputBoxHasValue("title", title);
@@ -65,17 +65,6 @@ public class ShowTasksTest extends AcmePlannerTest {
 		super.clickAndGo(By.linkText("Sign out"));
 	}
 
-	protected void signUp(final String username, final String password, final String name, final String surname, final String email) {
-		super.navigateHome();
-		super.clickAndGo(By.linkText("Sign up"));
-		super.fill(By.id("username"), username);
-		super.fill(By.id("password"), password);
-		super.fill(By.id("confirmation"), password);
-		super.fill(By.id("identity.name"), name);
-		super.fill(By.id("identity.surname"), surname);
-		super.fill(By.id("identity.email"), email);
-		super.clickAndGo(By.id("accept$proxy"));
-		super.clickOnSubmitButton("Sign up");
-	}
+	
 
 }
