@@ -63,22 +63,7 @@ public class PublishShoutAnonymousTest extends AcmePlannerTest {
 	// Ancillary methods ------------------------------------------------------
 
 	
-	@Override
-	protected void signIn(final String username, final String password) {
-		super.navigateHome();
-		super.clickAndGo(By.linkText("Sign in"));
-		super.fill(By.id("username"), username);
-		super.fill(By.id("password"), password);
-		super.clickAndGo(By.id("remember$proxy"));
-		super.clickOnSubmitButton("Sign in");
-		
-	}
 
-	@Override
-	protected void signOut() {
-		super.navigateHome();
-		super.clickAndGo(By.linkText("Sign out"));
-	}
 
 
 
