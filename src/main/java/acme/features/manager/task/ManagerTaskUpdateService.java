@@ -63,7 +63,7 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 		assert model != null;
 
 
-		request.unbind(entity, model, "title", "executionPeriodInit", "executionPeriodEnd", "description", "optionalLink", "isPublic");
+		request.unbind(entity, model, "title", "executionPeriodInit", "executionPeriodEnd", "description", "optionalLink", "isPublic", "workLoad");
 	}
 
 	@Override
@@ -109,6 +109,7 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 		assert request != null;
 		assert entity != null;
 
+		entity.setWorkLoad(entity.workload());
 
 		this.repository.save(entity);
 	}

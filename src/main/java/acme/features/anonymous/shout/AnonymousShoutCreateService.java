@@ -114,7 +114,7 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 				}
 			
 	        pasaumbral= (autorWords.length+infoWords.length+textWords.length)*(threshold/100.00)>frecuency;
-			errors.state(request,  pasaumbral, "spam", "anonymous.shout.error.shout-spam");
+			errors.state(request,  pasaumbral, "spam", "acme.validation.spam");
 
 		}
 			
