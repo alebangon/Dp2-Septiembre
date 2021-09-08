@@ -76,12 +76,19 @@ public class PublishShoutAnonymousTest extends AcmePlannerTest {
 		final LocalDateTime fecha = LocalDateTime.now().plusDays(8);
 		String month = String.valueOf(fecha.getMonthValue());
 		String day = String.valueOf(fecha.getDayOfMonth());
+		String hour = String.valueOf(fecha.getHour());
+		String minutes = String.valueOf(fecha.getMinute());
 		if(fecha.getMonthValue()<10) {
 			month = "0"+fecha.getMonthValue();
 		}if(fecha.getDayOfMonth()<10) {
 			day = "0" + fecha.getDayOfMonth();
 		}
-		final String res = fecha.getYear()+"/" + month+"/" + day+ " "+fecha.getHour()+":"+fecha.getMinute();
+		if(fecha.getHour()<10) {
+			hour = "0" + hour;
+		}if(fecha.getMinute()<10) {
+			minutes = "0" + minutes;
+		}
+		final String res = fecha.getYear()+"/" + month+"/" + day+ " "+hour+":"+minutes;
 		return res;
 	}
 
