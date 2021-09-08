@@ -14,11 +14,9 @@ manager.task.form.label.executionPeriodEnd = Execution period end:
 manager.task.form.label.isPublic = Do you want this task to be public?:
 manager.task.form.label.description = Description:
 manager.task.form.label.optionalLink = URL:
+manager.task.form.label.workLoad = WorkLoad:
+
 manager.task.form.button.create = Create task
 manager.task.form.button.return = Return
 manager.task.form.button.update = Update
 manager.task.form.button.delete = Delete
- 
-manager.task.list.label.moment = Moment
-manager.task.list.label.author = Author
-manager.task.list.label.text = Text

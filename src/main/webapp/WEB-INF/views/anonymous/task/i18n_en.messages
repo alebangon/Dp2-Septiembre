@@ -14,9 +14,9 @@ anonymous.task.form.label.executionPeriodEnd = Execution period end:
 anonymous.task.form.label.isPublic = Do you want this task to be public?:
 anonymous.task.form.label.description = Description:
 anonymous.task.form.label.optionalLink = URL:
+anonymous.task.form.label.workLoad = WorkLoad:
+
 anonymous.task.form.button.create = Create task
 anonymous.task.form.button.return = Return
+
  
-anonymous.task.list.label.moment = Moment
-anonymous.task.list.label.author = Author
-anonymous.task.list.label.text = Text
