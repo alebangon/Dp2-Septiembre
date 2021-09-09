@@ -26,3 +26,11 @@ administrator.dashboard.form.label.minimum-task-workloads = Minimum task workloa
 administrator.dashboard.form.label.maximum-task-workloads = Maximum task workloads
 administrator.dashboard.form.title.application-statuses = Application statuses
 
+administrator.dashboard.form.label.averageUSD = average amount of USD
+administrator.dashboard.form.label.deviationUSD = standard deviation of USD
+administrator.dashboard.form.label.averageEUR = average amount of EUR
+administrator.dashboard.form.label.deviationEUR = standard deviation of EUR
+administrator.dashboard.form.label.averageGBP = average amount of GBP
+administrator.dashboard.form.label.deviationGBP = standard deviation of GBP
+administrator.dashboard.form.label.ratioShoutFlagged = Ratio of flagged shouts	
+administrator.dashboard.form.label.ratioBudgetZero = Ratio of shouts with budget 0
