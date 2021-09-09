@@ -119,4 +119,68 @@
 			<acme:print value="${maximumTaskWorloads}"/>
 		</td>
 	</tr>
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.deviationEUR"/>
+		</th>
+		<td>
+			<acme:print value="${deviationEUR}"/>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.deviationUSD"/>
+		</th>
+		<td>
+			<acme:print value="${deviationUSD}"/>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.deviationGBP"/>
+		</th>
+		<td>
+			<acme:print value="${deviationGBP}"/>
+		</td>
+	</tr>
+			<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.averageEUR"/>
+		</th>
+		<td>
+			<acme:print value="${averageEUR}"/>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.averageUSD"/>
+		</th>
+		<td>
+			<acme:print value="${averageUSD}"/>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.averageGBP"/>
+		</th>
+		<td>
+			<acme:print value="${averageGBP}"/>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.ratioShoutFlagged"/>
+		</th>
+		<td>
+			<acme:print value="${ratioShoutFlagged}"/>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.ratioBudgetZero"/>
+		</th>
+		<td>
+			<acme:print value="${ratioBudgetZero}"/>
+		</td>
+	</tr>
 </table>

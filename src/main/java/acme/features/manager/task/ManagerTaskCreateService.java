@@ -62,7 +62,7 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 		assert model != null;
 
 		request.unbind(entity, model, "title",  "executionPeriodInit",
-			"executionPeriodEnd","description","optionalLink", "isPublic");
+			"executionPeriodEnd","description","optionalLink", "isPublic","workLoad");
 	}
 
 	@Override
@@ -79,7 +79,7 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 		result.setTitle("Task");
 		result.setIsPublic(true);
 		result.setOptionalLink("https://www.google.com");
-		
+		result.setWorkLoad(100.0);
 
 		return result;
 	}
@@ -128,7 +128,10 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 	public void create(final Request<Task> request, final Task entity) {
 		assert request != null;
 		assert entity != null;
+		
 
+		entity.setWorkLoad(entity.workload());
+		
 		final Integer managerId= request.getPrincipal().getActiveRoleId();
 		entity.setManagerId(this.repository.findManagerById(managerId));
 		

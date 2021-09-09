@@ -1,16 +1,16 @@
 package acme.entities.tasks;
 
 import java.util.Date;
-import java.util.concurrent.TimeUnit;
 
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.validation.constraints.Digits;
+import javax.persistence.Transient;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Positive;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
@@ -53,6 +53,10 @@ public class Task extends DomainEntity {
 	@NotNull
 	protected Boolean isPublic;
 	
+	@NotNull
+	@Positive
+	protected Double workLoad;
+	
 	@ManyToOne
 	@JoinColumn(name = "managerId", referencedColumnName = "id")
 	protected Manager managerId;
@@ -61,11 +65,10 @@ public class Task extends DomainEntity {
 	
 	// Derived attributes -----------------------------------------------------
 
-	@Digits(fraction=2, integer=10)
-	public Double workload(){
-		final Long b = Math.abs(this.executionPeriodEnd.getTime()-this.executionPeriodInit.getTime());
-		final Long a = TimeUnit.MINUTES.convert(b, TimeUnit.MILLISECONDS);
-		return a.doubleValue()/60.0;
+	@Transient
+	public Double workload() {
+
+		return ((double) this.executionPeriodEnd.getTime() - this.executionPeriodInit.getTime()) / 3600000;
 	}
 
 }

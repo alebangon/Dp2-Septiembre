@@ -12,8 +12,9 @@ manager.task.form.label.title = Título:
 manager.task.form.label.executionPeriodInit = Inicio del periodo de ejecución:
 manager.task.form.label.executionPeriodEnd = Fin del periodo de ejecución:
 manager.task.form.label.isPublic = ¿Desea que esta tarea sea pública?:
-manager.form.label.description = Descripción:
+manager.task.form.label.description = Descripción:
 manager.task.form.label.optionalLink = URL:
+manager.task.form.label.workLoad = Carga de trabajo:
 
 manager.task.form.button.create = Crear tarea
 manager.task.form.button.update = Editar

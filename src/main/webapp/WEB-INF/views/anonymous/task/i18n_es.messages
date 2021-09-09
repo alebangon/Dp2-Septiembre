@@ -14,5 +14,8 @@ anonymous.task.form.label.executionPeriodEnd = Fin del periodo de ejecución:
 anonymous.task.form.label.isPublic = ¿Desea que esta tarea sea pública?:
 anonymous.task.form.label.description = Descripción:
 anonymous.task.form.label.optionalLink = URL:
+anonymous.task.form.label.workLoad = Carga de trabajo:
+
+
 anonymous.task.form.button.create = Crear tarea
 anonymous.task.form.button.return = Volver

@@ -21,6 +21,7 @@
 	<acme:list-column code="anonymous.task.form.label.executionPeriodEnd" path="executionPeriodEnd"/>
 	<acme:list-column code="anonymous.task.form.label.description" path="description"/>
 	<acme:list-column code="anonymous.task.form.label.optionalLink" path="optionalLink"/>
+	<acme:list-column code="anonymous.task.form.label.workLoad" path="workLoad"/>
 </acme:list>
 
 
