@@ -18,7 +18,12 @@
 <acme:list readonly="true">
 	<acme:list-column code="anonymous.shout.list.label.moment" path="moment" width="20%"/>
 	<acme:list-column code="anonymous.shout.list.label.author" path="author" width="20%"/>
-	<acme:list-column code="anonymous.shout.list.label.text" path="text" width="60%"/>
+	<acme:list-column code="anonymous.shout.list.label.text" path="text" width="60%"/>	
+	<acme:list-column code="anonymous.shout.list.label.aTRIBUTO1" path="XXXX.aTRIBUTO1"/>
+	<acme:list-column code="anonymous.shout.list.label.aTRIBUTO2" path="XXXX.aTRIBUTO2"/>
+	<acme:list-column code="anonymous.shout.list.label.amount" path="XXXX.aTRIBUTO3.amount"/>
+	<acme:list-column code="anonymous.shout.list.label.currency" path="XXXX.aTRIBUTO3.currency"/>
+	<acme:list-column code="anonymous.shout.list.label.aTRIBUTO4" path="XXXX.aTRIBUTO4"/>
 </acme:list>
 
 
