@@ -32,8 +32,8 @@ org.hibernate.validator.constraints.SafeHtml.message = El contenido HTML puede s
 org.hibernate.validator.constraints.ScriptAssert.message = La expresión "{script}" debe devolver true
 org.hibernate.validator.constraints.URL.message = No es una URL correcta
 
-acme.validation.spam = El shout no puede contener palabras spam
-acme.validation.spam.task = La task no puede contener palabras spam
+javax.validation.constraints.shout.spam = El grito no puede contener palabras spam
+javax.validation.constraints.task.spam = La tarea no puede contener palabras spam
 acme.validation.task.date = La task debe ser en el futuro
 acme.validation.decimal-max = Debe ser menor o igual que {0}
 acme.validation.decimal-min = Debe ser mayor o igual que {0}
