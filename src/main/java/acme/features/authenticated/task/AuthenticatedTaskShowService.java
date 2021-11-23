@@ -1,5 +1,7 @@
 package acme.features.authenticated.task;
 
+import java.util.Date;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,8 +23,19 @@ public class AuthenticatedTaskShowService implements AbstractShowService<Authent
 	@Override
 	public boolean authorise(final Request<Task> request) {
 		assert request != null;
-
-		return true;
+		
+		int taskId;
+		Task task;
+		taskId = request.getModel().getInteger("id");
+		task = this.repository.findById(taskId);
+		final Date fechaInicio = task.getExecutionPeriodInit();
+		final Date fechaFin = task.getExecutionPeriodEnd();
+		final Date now = new Date(System.currentTimeMillis());
+		if(task.getIsPublic()&&(fechaInicio.after(now)&&fechaFin.after(now))) {
+			return true;
+		}else{
+			return false;
+		}
 	}
 
 	// AbstractShowService<Authenticated, Job> interface --------------------------
