@@ -1,5 +1,7 @@
 package acme.features.anonymous.task;
 
+import java.util.Date;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,8 +23,20 @@ public class AnonymousTaskShowService implements AbstractShowService<Anonymous, 
 	@Override
 	public boolean authorise(final Request<Task> request) {
 		assert request != null;
+		
+		int taskId;
+		Task task;
+		taskId = request.getModel().getInteger("id");
+		task = this.repository.findById(taskId);
+		final Date fechaInicio = task.getExecutionPeriodInit();
+		final Date fechaFin = task.getExecutionPeriodEnd();
+		final Date now = new Date(System.currentTimeMillis());
+		if(task.getIsPublic()&&(fechaInicio.after(now)&&fechaFin.after(now))) {
+			return true;
+		}else{
+			return false;
+		}
 
-		return true;
 	}
 
 	// AbstractShowService<Anonymous, Task> interface --------------------------
