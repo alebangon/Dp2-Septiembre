@@ -1,36 +1,36 @@
-package acme.features.manager.task;
+package acme.features.officer.duty;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.roles.Manager;
-import acme.entities.tasks.Task;
+import acme.entities.duties.Duty;
+import acme.entities.roles.Officer;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.services.AbstractShowService;
 
 @Service
-public class ManagerTaskShowService implements AbstractShowService<Manager, Task> {
+public class OfficerDutyShowService implements AbstractShowService<Officer, Duty> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected ManagerTaskRepository repository;
+	protected OfficerDutyRepository repository;
 
 
 	@Override
-	public boolean authorise(final Request<Task> request) {
+	public boolean authorise(final Request<Duty> request) {
 		assert request != null;
 
 		boolean result = false;
-		int taskId;
+		int dutyId;
 
-		Task task;
-		taskId = request.getModel().getInteger("id");
-		task = this.repository.findById(taskId);
+		Duty duty;
+		dutyId = request.getModel().getInteger("id");
+		duty = this.repository.findById(dutyId);
 
-		final Manager manager = this.repository.findManagerById(request.getPrincipal().getActiveRoleId());
-		result = manager.equals(task.getManagerId());
+		final Officer officer = this.repository.findOfficerById(request.getPrincipal().getActiveRoleId());
+		result = officer.equals(duty.getOfficerId());
 
 
 
@@ -41,7 +41,7 @@ public class ManagerTaskShowService implements AbstractShowService<Manager, Task
 	// AbstractShowService<Anonymous, Job> interface --------------------------
 
 	@Override
-	public void unbind(final Request<Task> request, final Task entity, final Model model) {
+	public void unbind(final Request<Duty> request, final Duty entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
@@ -50,10 +50,10 @@ public class ManagerTaskShowService implements AbstractShowService<Manager, Task
 	}
 
 	@Override
-	public Task findOne(final Request<Task> request) {
+	public Duty findOne(final Request<Duty> request) {
 		assert request != null;
 
-		Task result;
+		Duty result;
 		int id;
 
 		id = request.getModel().getInteger("id");

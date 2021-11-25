@@ -25,98 +25,98 @@
 	</caption>	
 	<tr>
 		<th scope="row">
-			<acme:message code="administrator.dashboard.form.label.number-public-tasks"/>
+			<acme:message code="administrator.dashboard.form.label.number-public-duties"/>
 		</th>
 		<td>
-			<acme:print value="${totalNumberOfPublicTasks}"/>
+			<acme:print value="${totalNumberOfPublicDuties}"/>
 		</td>
 	</tr>
 	<tr>
 		<th scope="row">
-			<acme:message code="administrator.dashboard.form.label.number-private-tasks"/>
+			<acme:message code="administrator.dashboard.form.label.number-private-duties"/>
 		</th>
 		<td>
-			<acme:print value="${totalNumberOfPrivateTasks}"/>
+			<acme:print value="${totalNumberOfPrivateDuties}"/>
 		</td>
 	</tr>
 	<tr>
 		<th scope="row">
-			<acme:message code="administrator.dashboard.form.label.number-finished-task"/>
+			<acme:message code="administrator.dashboard.form.label.number-finished-duties"/>
 		</th>
 		<td>
-			<acme:print value="${totalNumberOfFinishedTasks}"/>
+			<acme:print value="${totalNumberOfFinishedDuties}"/>
 		</td>
 	</tr>
 	<tr>
 		<th scope="row">
-			<acme:message code="administrator.dashboard.form.label.number-non-finished-tasks"/>
+			<acme:message code="administrator.dashboard.form.label.number-non-finished-duties"/>
 		</th>
 		<td>
-			<acme:print value="${totalNumberOfNonFinishedTasks}"/>
+			<acme:print value="${totalNumberOfNonFinishedDuties}"/>
 		</td>
 	</tr>
 	<tr>
 		<th scope="row">
-			<acme:message code="administrator.dashboard.form.label.average-task-execution-period"/>
+			<acme:message code="administrator.dashboard.form.label.average-duty-execution-period"/>
 		</th>
 		<td>
-			<acme:print value="${averageTaskExecutionPeriods}"/>
+			<acme:print value="${averageDutyExecutionPeriods}"/>
 		</td>
 	</tr>
 	<tr>
 		<th scope="row">
-			<acme:message code="administrator.dashboard.form.label.deviation-task-execution-period"/>
+			<acme:message code="administrator.dashboard.form.label.deviation-duty-execution-period"/>
 		</th>
 		<td>
-			<acme:print value="${deviationTaskExecutionPeriods}"/>
+			<acme:print value="${deviationDutyExecutionPeriods}"/>
 		</td>
 	</tr>
 	<tr>
 		<th scope="row">
-			<acme:message code="administrator.dashboard.form.label.minimum-task-execution-period"/>
+			<acme:message code="administrator.dashboard.form.label.minimum-duty-execution-period"/>
 		</th>
 		<td>
-			<acme:print value="${minimumTaskExecutionPeriods}"/>
+			<acme:print value="${minimumDutyExecutionPeriods}"/>
 		</td>
 	</tr>
 	<tr>
 		<th scope="row">
-			<acme:message code="administrator.dashboard.form.label.maximum-task-execution-period"/>
+			<acme:message code="administrator.dashboard.form.label.maximum-duty-execution-period"/>
 		</th>
 		<td>
-			<acme:print value="${maximumTaskExecutionPeriods}"/>
+			<acme:print value="${maximumDutyExecutionPeriods}"/>
 		</td>
 	</tr>
 	<tr>
 		<th scope="row">
-			<acme:message code="administrator.dashboard.form.label.average-task-workloads"/>
+			<acme:message code="administrator.dashboard.form.label.average-duty-workloads"/>
 		</th>
 		<td>
-			<acme:print value="${averageTaskWorloads}"/>
+			<acme:print value="${averageDutyWorloads}"/>
 		</td>
 	</tr>
 	<tr>
 		<th scope="row">
-			<acme:message code="administrator.dashboard.form.label.deviation-task-workloads"/>
+			<acme:message code="administrator.dashboard.form.label.deviation-duty-workloads"/>
 		</th>
 		<td>
-			<acme:print value="${deviationTaskWorloads}"/>
+			<acme:print value="${deviationDutyWorloads}"/>
 		</td>
 	</tr>
 	<tr>
 		<th scope="row">
-			<acme:message code="administrator.dashboard.form.label.minimum-task-workloads"/>
+			<acme:message code="administrator.dashboard.form.label.minimum-duty-workloads"/>
 		</th>
 		<td>
-			<acme:print value="${minimumTaskWorloads}"/>
+			<acme:print value="${minimumDutyWorloads}"/>
 		</td>
 	</tr>
 	<tr>
 		<th scope="row">
-			<acme:message code="administrator.dashboard.form.label.maximum-task-workloads"/>
+			<acme:message code="administrator.dashboard.form.label.maximum-duty-workloads"/>
 		</th>
 		<td>
-			<acme:print value="${maximumTaskWorloads}"/>
+			<acme:print value="${maximumDutyWorloads}"/>
 		</td>
 	</tr>
 </table>

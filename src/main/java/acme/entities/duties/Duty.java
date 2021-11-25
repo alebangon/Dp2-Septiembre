@@ -1,4 +1,4 @@
-package acme.entities.tasks;
+package acme.entities.duties;
 
 import java.util.Date;
 
@@ -15,7 +15,7 @@ import javax.validation.constraints.Positive;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
-import acme.entities.roles.Manager;
+import acme.entities.roles.Officer;
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -23,7 +23,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Task extends DomainEntity {
+public class Duty extends DomainEntity {
 	
 	// Serialisation identifier -----------------------------------------------
 	
@@ -58,8 +58,8 @@ public class Task extends DomainEntity {
 	protected Double workLoad;
 	
 	@ManyToOne
-	@JoinColumn(name = "managerId", referencedColumnName = "id")
-	protected Manager managerId;
+	@JoinColumn(name = "officerId", referencedColumnName = "id")
+	protected Officer officerId;
 	
 
 	

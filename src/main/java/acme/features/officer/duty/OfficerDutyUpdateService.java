@@ -1,4 +1,4 @@
-package acme.features.manager.task;
+package acme.features.officer.duty;
 
 import java.util.Date;
 import java.util.List;
@@ -7,8 +7,8 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.roles.Manager;
-import acme.entities.tasks.Task;
+import acme.entities.duties.Duty;
+import acme.entities.roles.Officer;
 import acme.entities.words.Word;
 import acme.features.administrator.spam.AdministratorSpamShowService;
 import acme.framework.components.Errors;
@@ -17,12 +17,12 @@ import acme.framework.components.Request;
 import acme.framework.services.AbstractUpdateService;
 
 @Service
-public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, Task> {
+public class OfficerDutyUpdateService implements AbstractUpdateService<Officer, Duty> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected ManagerTaskRepository repository;
+	protected OfficerDutyRepository repository;
 	@Autowired
 	protected AdministratorSpamShowService spamService;
 	
@@ -30,25 +30,25 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 
 
 	@Override
-	public boolean authorise(final Request<Task> request) {
+	public boolean authorise(final Request<Duty> request) {
 		assert request != null;
 
 		boolean result;
-		int taskId;
+		int dutyId;
 
-		Task task;
+		Duty duty;
 		
 
-		taskId = request.getModel().getInteger("id");
-		task = this.repository.findById(taskId);
-		final Manager manager = this.repository.findManagerById(request.getPrincipal().getActiveRoleId());
+		dutyId = request.getModel().getInteger("id");
+		duty = this.repository.findById(dutyId);
+		final Officer officer = this.repository.findOfficerById(request.getPrincipal().getActiveRoleId());
 
-		result = manager.equals(task.getManagerId());
+		result = officer.equals(duty.getOfficerId());
 		return result;
 	}
 
 	@Override
-	public void bind(final Request<Task> request, final Task entity, final Errors errors) {
+	public void bind(final Request<Duty> request, final Duty entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
@@ -57,7 +57,7 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 	}
 
 	@Override
-	public void unbind(final Request<Task> request, final Task entity, final Model model) {
+	public void unbind(final Request<Duty> request, final Duty entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
@@ -67,10 +67,10 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 	}
 
 	@Override
-	public Task findOne(final Request<Task> request) {
+	public Duty findOne(final Request<Duty> request) {
 		assert request != null;
 
-		Task result;
+		Duty result;
 		int id;
 
 		id = request.getModel().getInteger("id");
@@ -80,7 +80,7 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 	}
 
 	@Override
-	public void validate(final Request<Task> request, final Task entity, final Errors errors) {
+	public void validate(final Request<Duty> request, final Duty entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
@@ -95,17 +95,17 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 					break;
 				}
 			}
-			errors.state(request,!containsSpam, "spam", "acme.validation.spam.task");
+			errors.state(request,!containsSpam, "spam", "acme.validation.spam.duty");
 			final Date start = request.getModel().getDate("executionPeriodEnd");
 			final Date end = request.getModel().getDate("executionPeriodInit");
 			final Date now = new Date(System.currentTimeMillis());
 			if(start.before(now)||end.before(now)) {
-				errors.state(request, !start.before(now), "executionPeriodEnd", "acme.validation.task.date");
-				errors.state(request, !end.before(now), "executionPeriodInit", "acme.validation.task.date");
+				errors.state(request, !start.before(now), "executionPeriodEnd", "acme.validation.duty.date");
+				errors.state(request, !end.before(now), "executionPeriodInit", "acme.validation.duty.date");
 			}
 	}
 	@Override
-	public void update(final Request<Task> request, final Task entity) {
+	public void update(final Request<Duty> request, final Duty entity) {
 		assert request != null;
 		assert entity != null;
 

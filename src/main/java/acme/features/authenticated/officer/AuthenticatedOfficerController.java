@@ -10,7 +10,7 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.features.authenticated.manager;
+package acme.features.authenticated.officer;
 
 import javax.annotation.PostConstruct;
 
@@ -18,22 +18,22 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import acme.entities.roles.Manager;
+import acme.entities.roles.Officer;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
 import acme.framework.entities.Authenticated;
 
 @Controller
-@RequestMapping("/authenticated/manager/")
-public class AuthenticatedManagerController extends AbstractController<Authenticated, Manager> {
+@RequestMapping("/authenticated/officer/")
+public class AuthenticatedOfficerController extends AbstractController<Authenticated, Officer> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected AuthenticatedManagerCreateService	createService;
+	protected AuthenticatedOfficerCreateService	createService;
 
 	@Autowired
-	protected AuthenticatedManagerUpdateService	updateService;
+	protected AuthenticatedOfficerUpdateService	updateService;
 
 	// Constructors -----------------------------------------------------------
 

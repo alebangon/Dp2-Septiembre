@@ -16,11 +16,11 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:list>
-	<acme:list-column code="anonymous.task.form.label.title" path="title"/>
-	<acme:list-column code="anonymous.task.form.label.executionPeriodInit" path="executionPeriodInit"/>
-	<acme:list-column code="anonymous.task.form.label.executionPeriodEnd" path="executionPeriodEnd"/>
-	<acme:list-column code="anonymous.task.form.label.description" path="description"/>
-	<acme:list-column code="anonymous.task.form.label.optionalLink" path="optionalLink"/>
+	<acme:list-column code="anonymous.duty.form.label.title" path="title"/>
+	<acme:list-column code="anonymous.duty.form.label.executionPeriodInit" path="executionPeriodInit"/>
+	<acme:list-column code="anonymous.duty.form.label.executionPeriodEnd" path="executionPeriodEnd"/>
+	<acme:list-column code="anonymous.duty.form.label.description" path="description"/>
+	<acme:list-column code="anonymous.duty.form.label.optionalLink" path="optionalLink"/>
 </acme:list>
 
 

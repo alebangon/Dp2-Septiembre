@@ -77,7 +77,7 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		result.setAuthor("John Doe");
 		result.setText("Lorem ipsum!");
 		result.setMoment(moment);
-		result.setInfo("http://example.org");
+		result.setOptionalLink("http://example.org");
 
 		return result;
 	}
@@ -89,7 +89,7 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		assert errors != null;
 		
 		final String[] autorWords = entity.getAuthor().split(" ");
-		final String[] infoWords = entity.getInfo().split(" ");
+		final String[] infoWords = entity.getOptionalLink().split(" ");
 		final String[] textWords = entity.getText().split(" ");
  		final List<Word> listSpam = this.spamService.findAll().getSpamWordsList();
  		final Double threshold= this.spamService.findAll().getThreshold();

@@ -10,7 +10,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Manager extends UserRole {
+public class Officer extends UserRole {
 
 	// Serialisation identifier -----------------------------------------------
 

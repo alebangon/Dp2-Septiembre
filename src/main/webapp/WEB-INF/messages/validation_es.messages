@@ -33,8 +33,8 @@ org.hibernate.validator.constraints.ScriptAssert.message = La expresión "{scrip
 org.hibernate.validator.constraints.URL.message = No es una URL correcta
 
 javax.validation.constraints.shout.spam = El grito no puede contener palabras spam
-javax.validation.constraints.task.spam = La tarea no puede contener palabras spam
-acme.validation.task.date = La task debe ser en el futuro
+javax.validation.constraints.duty.spam = El deber no puede contener palabras spam
+acme.validation.duty.date = El deber debe ser en el futuro
 acme.validation.decimal-max = Debe ser menor o igual que {0}
 acme.validation.decimal-min = Debe ser mayor o igual que {0}
 acme.validation.digits = Debe tener {0} dígitos y {1} decimales

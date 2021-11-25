@@ -1,5 +1,5 @@
 /*
- * AnonymousShoutListService.java
+ * ManagerShoutListService.java
  *
  * Copyright (C) 2012-2021 Rafael Corchuelo.
  *
@@ -10,39 +10,50 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.features.anonymous.task;
+package acme.features.officer.duty;
 
 import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.tasks.Task;
+import acme.entities.duties.Duty;
+import acme.entities.roles.Officer;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Anonymous;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class AnonymousTaskListService implements AbstractListService<Anonymous, Task> {
+public class OfficerDutyListService implements AbstractListService<Officer, Duty> {
 
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected AnonymousTaskRepository repository;
+	protected OfficerDutyRepository repository;
 
 
-	// AbstractListService<Anonymous, Task> interface --------------
+	// AbstractListService<Administrator, Task> interface --------------
 	@Override
-	public boolean authorise(final Request<Task> request) {
+	public boolean authorise(final Request<Duty> request) {
 		assert request != null;
+		
+		Collection<Duty> collection;
+		final int id = request.getPrincipal().getActiveRoleId();
+		collection = this.repository.findDutiesByOfficer(id);
+		final Officer officer = this.repository.findOfficerById(request.getPrincipal().getActiveRoleId());
+		boolean res = officer!=null;
 
-		return true;
+		for (final Duty d: collection) {
+			if (d.getOfficerId().getId()!=officer.getId()&&res)
+				res=false;
+			}
+
+		return res;
 	}
 
 	@Override
-	public void unbind(final Request<Task> request, final Task entity, final Model model) {
+	public void unbind(final Request<Duty> request, final Duty entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
@@ -51,16 +62,15 @@ public class AnonymousTaskListService implements AbstractListService<Anonymous, 
 	}
 
 	@Override
-	public Collection<Task> findMany(final Request<Task> request) {
+	public Collection<Duty> findMany(final Request<Duty> request) {
 		assert request != null;
 
-		Collection<Task> result;
-
-		result = this.repository.findMany();
+		Collection<Duty> result;
+		final int id = request.getPrincipal().getActiveRoleId();
+		result = this.repository.findDutiesByOfficer(id);
 
 
 		return result;
 	}
 
 }
-

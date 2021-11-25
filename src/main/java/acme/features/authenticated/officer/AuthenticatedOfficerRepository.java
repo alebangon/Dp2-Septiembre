@@ -1,5 +1,5 @@
 /*
- * AnonymousUserAccountRepository.java
+ * AuthenticatedManagerRepository.java
  *
  * Copyright (C) 2012-2021 Rafael Corchuelo.
  *
@@ -10,18 +10,22 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.features.manager.userAccount;
+package acme.features.authenticated.officer;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import acme.entities.roles.Officer;
 import acme.framework.entities.UserAccount;
 import acme.framework.repositories.AbstractRepository;
 
 @Repository
-public interface ManagerUserAccountRepository extends AbstractRepository {
+public interface AuthenticatedOfficerRepository extends AbstractRepository {
 
-	@Query("select ua from UserAccount ua where ua.username = ?1")
-	UserAccount findOneUserAccountByUsername(String username);
+	@Query("select o from Officer o where o.userAccount.id = ?1")
+	Officer findOneManagerByUserAccountId(int id);
+
+	@Query("select ua from UserAccount ua where ua.id = ?1")
+	UserAccount findOneUserAccountById(int id);
 
 }

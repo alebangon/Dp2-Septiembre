@@ -1,4 +1,4 @@
-package acme.features.manager.task;
+package acme.features.officer.duty;
 
 import javax.annotation.PostConstruct;
 
@@ -6,31 +6,31 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import acme.entities.roles.Manager;
-import acme.entities.tasks.Task;
+import acme.entities.duties.Duty;
+import acme.entities.roles.Officer;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
 
 @Controller
-@RequestMapping("/manager/task/")
-public class ManagerTaskController extends AbstractController<Manager, Task> { 
+@RequestMapping("/officer/duty/")
+public class OfficerDutyController extends AbstractController<Officer, Duty> { 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected ManagerTaskListService	listService;
+	protected OfficerDutyListService	listService;
 	
 	
 	@Autowired
-	protected ManagerTaskShowService	showService;
+	protected OfficerDutyShowService	showService;
 	
 	@Autowired
-	protected ManagerTaskUpdateService	updateService;
+	protected OfficerDutyUpdateService	updateService;
  
 	@Autowired
-	protected ManagerTaskCreateService createService;
+	protected OfficerDutyCreateService createService;
 	
 	@Autowired
-	protected ManagerTaskDeleteService deleteService;
+	protected OfficerDutyDeleteService deleteService;
 
 	// Constructors -----------------------------------------------------------
 
