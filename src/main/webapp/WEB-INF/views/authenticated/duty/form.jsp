@@ -16,10 +16,12 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:form>
-	<acme:form-textbox code="anonymous.shout.form.label.author" path="author"/>
-	<acme:form-textarea code="anonymous.shout.form.label.text" path="text"/>
-	<acme:form-textbox code="anonymous.shout.form.label.optionalLink" path="optionalLink"/>
+	<acme:form-textbox code="authenticated.duty.form.label.title" path="title"/>
+	<acme:form-moment code="authenticated.duty.form.label.executionPeriodInit" path="executionPeriodInit"/>
+	<acme:form-moment code="authenticated.duty.form.label.executionPeriodEnd" path="executionPeriodEnd"/>
+	<acme:form-textarea code="authenticated.duty.form.label.description" path="description"/>
+	<acme:form-url code="authenticated.duty.form.label.optionalLink" path="optionalLink"/>
 	
-	<acme:form-submit code="anonymous.shout.form.button.create" action="/anonymous/shout/create"/>
-  	<acme:form-return code="anonymous.shout.form.button.return"/>
+
+  	<acme:form-return code="authenticated.duty.form.button.return"/>
 </acme:form>

@@ -61,7 +61,7 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "author", "text", "info");
+		request.unbind(entity, model, "author", "text", "optionalLink");
 	}
 
 	@Override
@@ -122,7 +122,7 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 			if(frequencyAutor>0)
 				errors.state(request, !pasaumbral, "author", "acme.validation.shout.spam");
 			if(frequencyInfo>0)
-				errors.state(request, !pasaumbral, "info", "acme.validation.shout.spam");
+				errors.state(request, !pasaumbral, "optionalLink", "acme.validation.shout.spam");
 			if(frequencyText>0)
 				errors.state(request, !pasaumbral, "text", "acme.validation.shout.spam");
 

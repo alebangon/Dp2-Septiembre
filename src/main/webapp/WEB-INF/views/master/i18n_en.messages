@@ -30,20 +30,20 @@ master.menu.sign-out = Sign out
 
 master.menu.anonymous = Anonymous
 master.menu.anonymous.favourite-link = Favourite link
-master.menu.anonymous.list-task = List tasks
+master.menu.anonymous.list-duty = List duties
 master.menu.anonymous.list-shout = List shouts
 master.menu.anonymous.create-shout = Shout!
 
 # master.menu.authenticated #######################################################
 
-master.menu.authenticated.list-task = Task list
+master.menu.authenticated.list-duty = Duty list
 
 
-# master.menu.manager #######################################################
+# master.menu.officer #######################################################
 
-master.menu.manager = Manager
-master.menu.manager.my-tasks = My tasks
-master.menu.manager.create = Create Task
+master.menu.officer = Officer
+master.menu.officer.my-duties = My duties
+master.menu.officer.create = Create Duty
 
 # master.menu.administrator ###################################################
 
@@ -73,15 +73,15 @@ master.menu.user-account.general-data = General data
 master.menu.user-account.provider = Provider data
 master.menu.user-account.become-provider = Become a provider
 master.menu.user-account.consumer = Consumer data
-master.menu.user-account.become-manager = Become a manager
-master.menu.user-account.manager = Manager data
-master.menu.authenticated.list-task = Task list
+master.menu.user-account.become-officer = Become a officer
+master.menu.user-account.officer = Officer data
+master.menu.authenticated.list-duty = Duty list
 master.menu.user-account.become-consumer = Become a consumer
 
 # master.menu.authenticated ###############################################################
 
 master.menu.authenticated = Authenticated
-master.menu.authenticated.list-task = Task list
+master.menu.authenticated.list-duty = Duty list
 
 # master.footer ###############################################################
 

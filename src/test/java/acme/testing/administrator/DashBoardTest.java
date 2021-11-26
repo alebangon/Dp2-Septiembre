@@ -32,24 +32,24 @@ public class DashBoardTest extends AcmePlannerTest {
 	@ParameterizedTest
 	@CsvFileSource(resources = "/dashboard/positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(20)
-	public void positiveDashBoardList(final String totalNumberOfPublicTasks, final String totalNumberOfPrivateTasks, final String totalNumberOfFinishedTasks, final String totalNumberOfNonFinishedTasks, final String AverageTaskExecutionPeriods,
-		final String DeviationTaskExecutionPeriods, final String MinimumTaskExecutionPeriods, final String MaximumTaskExecutionPeriods, final String MaximumTaskWorkloads, final String MinimumTaskWorkload, final String DeviationTaskWorkloads,
-		final String AverageTaskWorkloads) {
+	public void positiveDashBoardList(final String totalNumberOfPublicDuties, final String totalNumberOfPrivateDuties, final String totalNumberOfFinishedDuties, final String totalNumberOfNonFinishedDuties, final String AverageDutyExecutionPeriods,
+		final String DeviationDutyExecutionPeriods, final String MinimumDutyExecutionPeriods, final String MaximumDutyExecutionPeriods, final String MaximumDutyWorkloads, final String MinimumDutyWorkload, final String DeviationDutyWorkloads,
+		final String AverageDutyWorkloads) {
 		this.signIn("administrator", "administrator");
 		super.clickAndGo(By.linkText("Administrator"));
 		super.clickAndGo(By.linkText("Dashboard"));
-		Assertions.assertEquals(super.locateOne(By.cssSelector("tr:nth-child(1) > td")).getText(), totalNumberOfPublicTasks);
-		Assertions.assertEquals(super.locateOne(By.cssSelector("tr:nth-child(2) > td")).getText(), totalNumberOfPrivateTasks);
-		Assertions.assertEquals(super.locateOne(By.cssSelector("tr:nth-child(3) > td")).getText(), totalNumberOfFinishedTasks);
-		Assertions.assertEquals(super.locateOne(By.cssSelector("tr:nth-child(4) > td")).getText(), totalNumberOfNonFinishedTasks);
-		Assertions.assertEquals(super.locateOne(By.cssSelector("tr:nth-child(5) > td")).getText(), AverageTaskExecutionPeriods);
-		Assertions.assertEquals(super.locateOne(By.cssSelector("tr:nth-child(6) > td")).getText(), DeviationTaskExecutionPeriods);
-		Assertions.assertEquals(super.locateOne(By.cssSelector("tr:nth-child(7) > td")).getText(), MinimumTaskExecutionPeriods);
-		Assertions.assertEquals(super.locateOne(By.cssSelector("tr:nth-child(8) > td")).getText(), MaximumTaskExecutionPeriods);
-		Assertions.assertEquals(super.locateOne(By.cssSelector("tr:nth-child(9) > td")).getText(), MaximumTaskWorkloads);
-		Assertions.assertEquals(super.locateOne(By.cssSelector("tr:nth-child(10) > td")).getText(), MinimumTaskWorkload);
-		Assertions.assertEquals(super.locateOne(By.cssSelector("tr:nth-child(11) > td")).getText(), DeviationTaskWorkloads);
-		Assertions.assertEquals(super.locateOne(By.cssSelector("tr:nth-child(12) > td")).getText(), AverageTaskWorkloads);
+		Assertions.assertEquals(super.locateOne(By.cssSelector("tr:nth-child(1) > td")).getText(), totalNumberOfPublicDuties);
+		Assertions.assertEquals(super.locateOne(By.cssSelector("tr:nth-child(2) > td")).getText(), totalNumberOfPrivateDuties);
+		Assertions.assertEquals(super.locateOne(By.cssSelector("tr:nth-child(3) > td")).getText(), totalNumberOfFinishedDuties);
+		Assertions.assertEquals(super.locateOne(By.cssSelector("tr:nth-child(4) > td")).getText(), totalNumberOfNonFinishedDuties);
+		Assertions.assertEquals(super.locateOne(By.cssSelector("tr:nth-child(5) > td")).getText(), AverageDutyExecutionPeriods);
+		Assertions.assertEquals(super.locateOne(By.cssSelector("tr:nth-child(6) > td")).getText(), DeviationDutyExecutionPeriods);
+		Assertions.assertEquals(super.locateOne(By.cssSelector("tr:nth-child(7) > td")).getText(), MinimumDutyExecutionPeriods);
+		Assertions.assertEquals(super.locateOne(By.cssSelector("tr:nth-child(8) > td")).getText(), MaximumDutyExecutionPeriods);
+		Assertions.assertEquals(super.locateOne(By.cssSelector("tr:nth-child(9) > td")).getText(), MaximumDutyWorkloads);
+		Assertions.assertEquals(super.locateOne(By.cssSelector("tr:nth-child(10) > td")).getText(), MinimumDutyWorkload);
+		Assertions.assertEquals(super.locateOne(By.cssSelector("tr:nth-child(11) > td")).getText(), DeviationDutyWorkloads);
+		Assertions.assertEquals(super.locateOne(By.cssSelector("tr:nth-child(12) > td")).getText(), AverageDutyWorkloads);
 
 	}
 
@@ -57,15 +57,15 @@ public class DashBoardTest extends AcmePlannerTest {
 	 * 
 	 * Caso Negativo:
 	 * 
-	 * El usuario manager no debería ver el dashboard
+	 * El usuario Officer no debería ver el dashboard
 	 * 
 	 */
-	//en este caso intentamos realizar una consulta como manager y nos da un error
+	//en este caso intentamos realizar una consulta como Officer y nos da un error
 	@Test
 	@Order(30)
-	protected void assertDashboardForManagerIsForbidden() {
+	protected void assertDashboardForOfficerIsForbidden() {
 		super.navigateHome();
-		this.signIn("manager", "manager");
+		this.signIn("officer", "officer");
 		super.driver.get("http://localhost:8080/Acme-Planner/administrator/dashboard/show");
 		super.checkErrorsExist();
 
