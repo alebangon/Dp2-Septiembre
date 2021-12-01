@@ -39,23 +39,23 @@
 		<property name="userAccount" ref="authenticatedUserAccount" />
 	</bean>	
 		
-	<!-- Manager user -->
+	<!-- officer user -->
 
 
-	<bean name="managerUserAccount" class="acme.framework.entities.UserAccount">
-		<property name="username" value="manager" />
-		<property name="password" value="manager" />
+	<bean name="officerUserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="officer" />
+		<property name="password" value="officer" />
 		<property name="enabled" value="true" />
 		<property name="identity">
 			<bean class="acme.datatypes.UserIdentity">
-				<property name="name" value="Man" />
-				<property name="surname" value="Ager" />
-				<property name="email" value="man.ager@acme.com" />
+				<property name="name" value="Offi" />
+				<property name="surname" value="Cer" />
+				<property name="email" value="offi.cer@acme.com" />
 			</bean>
 		</property>
 		<property name="roles">
 			<list>
-				<ref bean="manager" />
+				<ref bean="officer" />
 			</list>
 		</property>
 
@@ -64,61 +64,61 @@
 	
 
 	
-	<bean name="manager" class="acme.entities.roles.Manager">
-		<property name="userAccount" ref="managerUserAccount" />
-		<property name="company" value="managerCompany" />
-		<property name="sector" value="managerSector" />
+	<bean name="officer" class="acme.entities.roles.Officer">
+		<property name="userAccount" ref="officerUserAccount" />
+		<property name="company" value="officerCompany" />
+		<property name="sector" value="officerSector" />
 	</bean>
-	<bean name="authenticatedManager"
+	<bean name="authenticatedOfficer"
 		class="acme.framework.entities.Authenticated">
-		<property name="userAccount" ref="managerUserAccount" />
+		<property name="userAccount" ref="officerUserAccount" />
 	</bean>	
 	
 	
-	<!-- Tasks -->
-	<bean id="task01" class="acme.entities.tasks.Task">
-		<property name="title" value="Title of task 01" />
+	<!-- duties -->
+	<bean id="duty01" class="acme.entities.duties.Duty">
+		<property name="title" value="Title of duty 01" />
 		<property name="executionPeriodInit" value="2023/05/10 19:39" />
 		<property name="executionPeriodEnd" value="2023/05/11 19:39" />
 		<property name="isPublic" value="true" />
-		<property name="description" value="Description of task 01" />
+		<property name="description" value="Description of duty 01" />
 		<property name="optionalLink" value="https://www.google.com" />
 		<property name="workLoad" value="24.0"/>
-		<property name="managerId" ref="manager"/>
+		<property name="officerId" ref="officer"/>
 
 	</bean>
 
- 	<bean id="task02" class="acme.entities.tasks.Task">
-		<property name="title" value="Title of task 02" />
+ 	<bean id="duty02" class="acme.entities.duties.Duty">
+		<property name="title" value="Title of duty 02" />
 		<property name="executionPeriodInit" value="2023/05/21 19:39" />
 		<property name="executionPeriodEnd" value="2023/05/21 19:39" />
 		<property name="isPublic" value="true" />
-		<property name="description" value="Description of task 02" />
+		<property name="description" value="Description of duty 02" />
 		<property name="optionalLink" value="https://www.google.com" />
 		<property name="workLoad" value="0.1"/>
-		<property name="managerId" ref="manager"/>
+		<property name="officerId" ref="officer"/>
 	</bean>
 
-	<bean id="task03" class="acme.entities.tasks.Task">
-		<property name="title" value="Title of task 03" />
+	<bean id="duty03" class="acme.entities.duties.Duty">
+		<property name="title" value="Title of duty 03" />
 		<property name="executionPeriodInit" value="2023/05/10 23:30" />
 		<property name="executionPeriodEnd" value="2023/05/11 23:30" />
 		<property name="isPublic" value="true" />
-		<property name="description" value="Description of task 03" />
+		<property name="description" value="Description of duty 03" />
 		<property name="optionalLink" value="https://www.google.com" />
 		<property name="workLoad" value="24.0"/>
-		<property name="managerId" ref="manager"/>
+		<property name="officerId" ref="officer"/>
 	</bean> 
 	
-	<bean id="task04" class="acme.entities.tasks.Task">
-		<property name="title" value="Title of task 04" />
+	<bean id="duty04" class="acme.entities.duties.Duty">
+		<property name="title" value="Title of duty 04" />
 		<property name="executionPeriodInit" value="2021/05/24 14:17" />
 		<property name="executionPeriodEnd" value="2021/05/24 14:18" />
 		<property name="isPublic" value="true" />
-		<property name="description" value="Description of task 04" />
+		<property name="description" value="Description of duty 04" />
 		<property name="optionalLink" value="https://www.google.com" />
 		<property name="workLoad" value="0.0167"/>
-		<property name="managerId" ref="manager"/>
+		<property name="officerId" ref="officer"/>
 	</bean> 
 
 
@@ -127,14 +127,14 @@
 		<property name="moment" value="2021/11/24 19:39"/>
 		<property name="author" value="John Doe"/>
 		<property name="text" value="I'm happy!"/>
-		<property name="info"><null/></property>	
+		<property name="optionalLink"><null/></property>	
 	</bean>
 	
 	<bean id="shout02" class="acme.entities.shouts.Shout">
 		<property name="moment" value="2021/11/24 15:55"/>
 		<property name="author" value="Jane Doe"/>
 		<property name="text" value="I'm the master of my room!"/>
-		<property name="info" value="http://www.example.org"/>		
+		<property name="optionalLink" value="http://www.example.org"/>		
 	</bean>
 	
 </beans>

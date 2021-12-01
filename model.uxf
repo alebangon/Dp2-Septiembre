@@ -305,7 +305,7 @@ has v</panel_attributes>
       <h>90</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
-Task
+Duty
 --
 + title: String {NotBlank, Length}
 + executionPeriodInit: Date {Temporal(TIMESTAMP), NotNull}
@@ -329,7 +329,7 @@ Shout
 + moment: Date {NotNull, Temporal(TIMESTAMP), Past}
 + author: String {NotBlank}
 + text: String {NotBlank}
-+ info: String {URL}</panel_attributes>
++ optionalLink: String {URL}</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -341,7 +341,7 @@ Shout
       <h>60</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Role&gt;&gt;
-Manager
+Officer
 --
 + company: String {NotBlank}
 + sector: String {NotBlank}

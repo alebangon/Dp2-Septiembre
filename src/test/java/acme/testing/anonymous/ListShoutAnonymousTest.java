@@ -25,12 +25,12 @@ public class ListShoutAnonymousTest extends AcmePlannerTest {
 	@ParameterizedTest
 	@CsvFileSource(resources = "/listShout/positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
-	public void positiveListShout(final int recordIndex, final String moment, final String author, final String text) {
+	public void positiveListShout(final int recordIndex, final String moment, final String author, final String optionalLink) {
 		super.navigateHome();
 		super.clickOnMenu("Anonymous", "List shouts");
 		super.checkColumnHasValue(recordIndex, 0, moment);
 		super.checkColumnHasValue(recordIndex, 1, author);
-		super.checkColumnHasValue(recordIndex, 2, text);
+		super.checkColumnHasValue(recordIndex, 2, optionalLink);
 		super.navigateHome();
 		
 		

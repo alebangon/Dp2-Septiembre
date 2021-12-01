@@ -39,7 +39,7 @@ public class Shout extends DomainEntity {
 	@NotBlank
 	protected String			text;
 	@URL
-	protected String			info;
+	protected String			optionalLink;
 
 	// Derived attributes -----------------------------------------------------
 
