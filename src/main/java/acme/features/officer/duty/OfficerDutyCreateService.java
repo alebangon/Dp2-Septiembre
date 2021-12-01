@@ -119,12 +119,15 @@ public class OfficerDutyCreateService implements AbstractCreateService<Officer, 
 		if(frequencyDesc>0)
 			errors.state(request, !pasaumbral, "description", "acme.validation.duty.spam");
 		if (request.getModel().getDate("executionPeriodEnd") != null && request.getModel().getDate("executionPeriodInit") != null) {
-			final Date start = request.getModel().getDate("executionPeriodEnd");
-			final Date end = request.getModel().getDate("executionPeriodInit");
+			final Date start = request.getModel().getDate("executionPeriodInit");
+			final Date end = request.getModel().getDate("executionPeriodEnd");
 			final Date now = new Date(System.currentTimeMillis());
 			if (start.before(now) || end.before(now)) {
 				errors.state(request, !start.before(now), "executionPeriodEnd", "acme.validation.duty.date");
 				errors.state(request, !end.before(now), "executionPeriodInit", "acme.validation.duty.date");
+			}
+			if(start.after(end)) {
+				errors.state(request, !start.after(end), "executionPeriodInit", "acme.validation.task.workload");
 			}
 		}
 	}
@@ -134,7 +137,8 @@ public class OfficerDutyCreateService implements AbstractCreateService<Officer, 
 		assert request != null;
 		assert entity != null;
 
-		entity.setWorkLoad(entity.workload());
+		if(entity.workload()>0)
+			entity.setWorkLoad(entity.workload());
 
 		final Integer officerId = request.getPrincipal().getActiveRoleId();
 		entity.setOfficerId(this.repository.findOfficerById(officerId));

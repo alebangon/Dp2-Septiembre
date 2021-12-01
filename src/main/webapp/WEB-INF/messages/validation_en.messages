@@ -38,6 +38,7 @@ org.hibernate.validator.constraints.URL.message = Not a well-formed URL
 
 acme.validation.duty.spam = Duties can't contain spam words
 acme.validation.shout.spam = Shouts can't contain spam words
+acme.validation.task.workload = Start must be before end
 acme.validation.duty.date = A duty must be in the future
 acme.validation.decimal-max = Must be less than or equal to {0}
 acme.validation.decimal-min = Must be greater than or equal to {0}
