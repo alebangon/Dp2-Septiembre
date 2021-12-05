@@ -21,7 +21,7 @@
 	<acme:form-moment code="officer.duty.form.label.executionPeriodEnd" path="executionPeriodEnd"/>
 	<acme:form-textarea code="officer.duty.form.label.description" path="description"/>
 	<acme:form-url code="officer.duty.form.label.optionalLink" path="optionalLink"/>
-	
+	<acme:form-checkbox code="officer.duty.form.label.isPublic" path="isPublic"/>
 	<jstl:if test="${command == 'show'}">
 		<acme:form-textbox readonly="true" code="officer.duty.form.label.workLoad" path="workLoad"/>
 	</jstl:if>

@@ -1,6 +1,5 @@
 package acme.entities.duties;
 
-import java.sql.Time;
 import java.util.Date;
 
 import javax.persistence.Entity;
@@ -55,7 +54,7 @@ public class Duty extends DomainEntity {
 	
 	@NotNull
 //	@Temporal(TemporalType.TIME)
-	protected Time workLoad;
+	protected String workLoad;
 	
 	@ManyToOne
 	@JoinColumn(name = "officerId", referencedColumnName = "id")
@@ -65,26 +64,28 @@ public class Duty extends DomainEntity {
 	
 	// Derived attributes -----------------------------------------------------
 
-	public Time workload() {
+	public String workload() {
 		double hours = ((double) this.executionPeriodEnd.getTime() - this.executionPeriodInit.getTime()) / 3600000;
 		final Integer mins = (int) (((hours - Math.floor(hours))*100)*30/50);
 
 		hours = hours - (hours - Math.floor(hours));
-		System.out.println(mins);
+		if(hours<100) {
 		if(hours<10) {
 			if(mins<10) {
-				return Time.valueOf(String.format("0%s:0%s:00",(int) hours, mins));
+				return String.format("0%s:0%s",(int) hours, mins);
 			}else {
-				return Time.valueOf(String.format("0%s:%s:00",(int) hours, mins));
+				return String.format("0%s:%s",(int) hours, mins);
 			}
 		}else {
 			if(mins<10) {
-				return Time.valueOf(String.format("%s:0%s:00",(int) hours, mins));
+				return String.format("%s:0%s",(int) hours, mins);
 			}else {
-				return Time.valueOf(String.format("%s:%s:00",(int) hours, mins));
+				return String.format("%s:%s",(int) hours, mins);
 			}
 		}
-	
+		}else {
+			return "99:59";
+		}
 	}
 	@Transient
 	public Double workloadDouble() {

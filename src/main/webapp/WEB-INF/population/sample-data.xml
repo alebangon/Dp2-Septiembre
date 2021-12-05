@@ -83,7 +83,7 @@
 		<property name="isPublic" value="true" />
 		<property name="description" value="Description of duty 01" />
 		<property name="optionalLink" value="https://www.google.com" />
-		<property name="workLoad" value="SimpleDateFormat('24:00:00')"/>
+		<property name="workLoad" value="24:00"/>
 		<property name="officerId" ref="officer"/>
 
 	</bean>
@@ -95,7 +95,7 @@
 		<property name="isPublic" value="true" />
 		<property name="description" value="Description of duty 02" />
 		<property name="optionalLink" value="https://www.google.com" />
-		<property name="workLoad" value="00:00:00"/>
+		<property name="workLoad" value="00:00"/>
 		<property name="officerId" ref="officer"/>
 	</bean>
 
@@ -106,7 +106,7 @@
 		<property name="isPublic" value="true" />
 		<property name="description" value="Description of duty 03" />
 		<property name="optionalLink" value="https://www.google.com" />
-		<property name="workLoad" value="24:00:00"/>
+		<property name="workLoad" value="24:00"/>
 		<property name="officerId" ref="officer"/>
 	</bean> 
 	
@@ -117,7 +117,7 @@
 		<property name="isPublic" value="true" />
 		<property name="description" value="Description of duty 04" />
 		<property name="optionalLink" value="https://www.google.com" />
-		<property name="workLoad" value="00:01:00"/>
+		<property name="workLoad" value="00:01"/>
 		<property name="officerId" ref="officer"/>
 	</bean> 
 

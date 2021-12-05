@@ -92,7 +92,7 @@
 			<acme:message code="administrator.dashboard.form.label.average-duty-workloads"/>
 		</th>
 		<td>
-			<acme:print value="${averageDutyWorloads}"/>
+			<acme:print value="${averageDutyWorkloads}"/>
 		</td>
 	</tr>
 	<tr>
@@ -100,7 +100,7 @@
 			<acme:message code="administrator.dashboard.form.label.deviation-duty-workloads"/>
 		</th>
 		<td>
-			<acme:print value="${deviationDutyWorloads}"/>
+			<acme:print value="${deviationDutyWorkloads}"/>
 		</td>
 	</tr>
 	<tr>
@@ -108,7 +108,7 @@
 			<acme:message code="administrator.dashboard.form.label.minimum-duty-workloads"/>
 		</th>
 		<td>
-			<acme:print value="${minimumDutyWorloads}"/>
+			<acme:print value="${minimumDutyWorkloads}"/>
 		</td>
 	</tr>
 	<tr>
@@ -116,7 +116,7 @@
 			<acme:message code="administrator.dashboard.form.label.maximum-duty-workloads"/>
 		</th>
 		<td>
-			<acme:print value="${maximumDutyWorloads}"/>
+			<acme:print value="${maximumDutyWorkloads}"/>
 		</td>
 	</tr>
 </table>

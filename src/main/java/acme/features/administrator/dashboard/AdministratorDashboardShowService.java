@@ -12,7 +12,6 @@
 
 package acme.features.administrator.dashboard;
 
-import java.sql.Time;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,7 +49,7 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		assert model != null;
 
 		request.unbind(entity, model, "totalNumberOfPublicDuties", "totalNumberOfPrivateDuties", "totalNumberOfFinishedDuties", "totalNumberOfNonFinishedDuties", "averageDutyExecutionPeriods", "deviationDutyExecutionPeriods", "minimumDutyExecutionPeriods", "maximumDutyExecutionPeriods","averageDutyWorkloads", "averageDutyWorkloads", "deviationDutyWorkloads", "minimumDutyWorkloads", "maximumDutyWorkloads");
-	}
+		}
 
 	@Override
 	public Dashboard findOne(final Request<Dashboard> request) {
@@ -67,12 +66,12 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		Double						maximumDutyExecutionPeriods;
 		Double						averageDutyWorkloads;
 		Double						deviationDutyWorkloads;
-		Time						minimumDutyWorkloads;
-		Time						maximumDutyWorkloads;
+		Double						minimumDutyWorkloads;
+		Double						maximumDutyWorkloads;
 
 		final List<Duty> totalDuties = this.repository.allDuties();
-		averageDutyWorkloads = this.calculateWorkloadAverage(totalDuties);
-		deviationDutyWorkloads = this.calculateWorkloadDeviation(totalDuties);
+		averageDutyWorkloads = this.checkValue(this.calculateWorkloadAverage(totalDuties));
+		deviationDutyWorkloads = this.checkValue(this.calculateWorkloadDeviation(totalDuties));
 		totalNumberOfPublicDuties = this.repository.totalNumberOfPublicDuties();
 		totalNumberOfPrivateDuties = this.repository.totalNumberOfPrivateDuties();
 		totalNumberOfFinishedDuties = this.repository.totalNumberOfFinishedDuties();
@@ -81,8 +80,8 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		deviationDutyExecutionPeriods = this.checkValue(this.repository.deviationDutyExecutionPeriods());
 		minimumDutyExecutionPeriods = this.checkValue(this.repository.minimumDutyExecutionPeriods());
 		maximumDutyExecutionPeriods = this.checkValue(this.repository.maximumDutyExecutionPeriods());
-		minimumDutyWorkloads = this.takeMinimum(totalDuties);
-		maximumDutyWorkloads = this.takeMaximum(totalDuties);
+		minimumDutyWorkloads = this.checkValue(this.takeMinimum(totalDuties));
+		maximumDutyWorkloads = this.checkValue(this.takeMaximum(totalDuties));
 		
 		result = new Dashboard();
 		result.setTotalNumberOfPublicDuties(totalNumberOfPublicDuties);
@@ -109,32 +108,34 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		return res;
 	}
 
-	private Time takeMaximum(final List<Duty> totalDuties) {
+	private Double takeMaximum(final List<Duty> totalDuties) {
 		if (totalDuties.isEmpty()) {
-			return Time.valueOf("00:00:00");
+			return .0;
 		}else {
 			
-			Time res = totalDuties.get(0).getWorkLoad();
+		Double res = 0.;
 		for(final Duty t: totalDuties) {
-			if(t.getWorkLoad().after(res))
-				res=t.getWorkLoad();
+			if (res < t.workloadDouble()) {
+				res = t.workloadDouble();
+			}
 		}
 		return res;
 		}
 	}
 
-	private Time takeMinimum(final List<Duty> totalDuties) {
+	private Double takeMinimum(final List<Duty> totalDuties) {
 		if (totalDuties.isEmpty()) {
-			return Time.valueOf("00:00:00");
+			return .0;
 		}else {
 			
-			Time res = totalDuties.get(0).getWorkLoad();
-			for(final Duty t: totalDuties) {
-				if(t.getWorkLoad().before(res))
-					res=t.getWorkLoad();
+		Double res = totalDuties.get(0).workloadDouble();
+		for(final Duty t: totalDuties) {
+			if (res > t.workloadDouble()) {
+				res = t.workloadDouble();
 			}
-			return res;
-			}
+		}
+		return res;
+		}
 	}
 
 	private Double calculateWorkloadDeviation(final List<Duty> totalDuties) {

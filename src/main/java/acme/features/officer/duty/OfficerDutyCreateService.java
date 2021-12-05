@@ -12,7 +12,6 @@
 
 package acme.features.officer.duty;
 
-import java.sql.Time;
 import java.util.Date;
 import java.util.List;
 
@@ -79,7 +78,7 @@ public class OfficerDutyCreateService implements AbstractCreateService<Officer, 
 		result.setTitle("Duty");
 		result.setIsPublic(true);
 		result.setOptionalLink("https://www.google.com");
-		result.setWorkLoad(Time.valueOf("10:00:00"));
+		result.setWorkLoad("10:00:00");
 
 		return result;
 	}
