@@ -12,6 +12,7 @@
 
 package acme.features.officer.duty;
 
+import java.sql.Time;
 import java.util.Date;
 import java.util.List;
 
@@ -78,7 +79,7 @@ public class OfficerDutyCreateService implements AbstractCreateService<Officer, 
 		result.setTitle("Duty");
 		result.setIsPublic(true);
 		result.setOptionalLink("https://www.google.com");
-		result.setWorkLoad(1.0);
+		result.setWorkLoad(Time.valueOf("10:00:00"));
 
 		return result;
 	}
@@ -125,9 +126,9 @@ public class OfficerDutyCreateService implements AbstractCreateService<Officer, 
 			if (start.before(now) || end.before(now)) {
 				errors.state(request, !start.before(now), "executionPeriodEnd", "acme.validation.duty.date");
 				errors.state(request, !end.before(now), "executionPeriodInit", "acme.validation.duty.date");
-			}
+				}
 			if(start.after(end)) {
-				errors.state(request, !start.after(end), "executionPeriodInit", "acme.validation.task.workload");
+				errors.state(request, !start.after(end), "executionPeriodInit", "acme.validation.duty.workload");
 			}
 		}
 	}
@@ -136,10 +137,7 @@ public class OfficerDutyCreateService implements AbstractCreateService<Officer, 
 	public void create(final Request<Duty> request, final Duty entity) {
 		assert request != null;
 		assert entity != null;
-
-		if(entity.workload()>0)
-			entity.setWorkLoad(entity.workload());
-
+		entity.setWorkLoad(entity.workload());
 		final Integer officerId = request.getPrincipal().getActiveRoleId();
 		entity.setOfficerId(this.repository.findOfficerById(officerId));
 

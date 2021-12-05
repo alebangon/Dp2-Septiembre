@@ -13,6 +13,7 @@
 package acme.forms;
 
 import java.io.Serializable;
+import java.sql.Time;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -35,10 +36,10 @@ public class Dashboard implements Serializable {
 	Double						deviationDutyExecutionPeriods;
 	Double						minimumDutyExecutionPeriods;
 	Double						maximumDutyExecutionPeriods;
-	Double						averageDutyWorloads;
-	Double						deviationDutyWorloads;
-	Double						minimumDutyWorloads;
-	Double						maximumDutyWorloads;
+	Double						averageDutyWorkloads;
+	Double						deviationDutyWorkloads;
+	Time						minimumDutyWorkloads;
+	Time						maximumDutyWorkloads;
 
 
 	// Derived attributes -----------------------------------------------------
