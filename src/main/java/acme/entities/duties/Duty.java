@@ -10,7 +10,6 @@ import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Positive;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
@@ -54,8 +53,7 @@ public class Duty extends DomainEntity {
 	protected Boolean isPublic;
 	
 	@NotNull
-	@Positive
-	protected Double workLoad;
+	protected String workLoad;
 	
 	@ManyToOne
 	@JoinColumn(name = "officerId", referencedColumnName = "id")
@@ -65,8 +63,31 @@ public class Duty extends DomainEntity {
 	
 	// Derived attributes -----------------------------------------------------
 
+	public String workload() {
+		double hours = ((double) this.executionPeriodEnd.getTime() - this.executionPeriodInit.getTime()) / 3600000;
+		final Integer mins = (int) (((hours - Math.floor(hours))*100)*30/50);
+
+		hours = hours - (hours - Math.floor(hours));
+		if(hours<100) {
+		if(hours<10) {
+			if(mins<10) {
+				return String.format("0%s:0%s",(int) hours, mins);
+			}else {
+				return String.format("0%s:%s",(int) hours, mins);
+			}
+		}else {
+			if(mins<10) {
+				return String.format("%s:0%s",(int) hours, mins);
+			}else {
+				return String.format("%s:%s",(int) hours, mins);
+			}
+		}
+		}else {
+			return "99:59";
+		}
+	}
 	@Transient
-	public Double workload() {
+	public Double workloadDouble() {
 
 		return ((double) this.executionPeriodEnd.getTime() - this.executionPeriodInit.getTime()) / 3600000;
 	}
