@@ -15,6 +15,8 @@ administrator.dashboard.form.title.general-indicators = Indicadores generales
 administrator.dashboard.form.label.number-private-duties = Número de deberes privados
 administrator.dashboard.form.label.number-public-duties = Número de deberes públicos
 administrator.dashboard.form.label.number-finished-duty = Número de deberes finalizados
+administrator.dashboard.form.label.number-finished-duties = Número de deberes finalizados
+
 administrator.dashboard.form.label.number-non-finished-duties = Número de deberes no finalizados
 administrator.dashboard.form.label.average-duty-execution-period = Periodo medio de ejecución de deberes
 administrator.dashboard.form.label.deviation-duty-execution-period= Desviación en la ejecución de deberes
