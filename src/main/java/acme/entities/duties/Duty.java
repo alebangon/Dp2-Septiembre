@@ -53,7 +53,6 @@ public class Duty extends DomainEntity {
 	protected Boolean isPublic;
 	
 	@NotNull
-//	@Temporal(TemporalType.TIME)
 	protected String workLoad;
 	
 	@ManyToOne
