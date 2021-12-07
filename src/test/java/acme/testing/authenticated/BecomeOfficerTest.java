@@ -29,7 +29,7 @@ public class BecomeOfficerTest extends AcmePlannerTest {
 		super.clickOnSubmitButton("Sign up");
 		
 		super.signIn("username", "password");
-		super.clickOnMenu("Account", "Become Officer");
+		super.clickOnMenu("Account", "Become a officer");
 
 		super.fillInputBoxIn("company", company); 
 		super.fillInputBoxIn("sector", sector);
