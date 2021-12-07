@@ -33,7 +33,7 @@ public class UpdateDutyOfficerTest extends AcmePlannerTest {
 		
 		this.signIn("officer", "officer");
 		super.navigateHome();
-		super.clickOnMenu("officer", "My duties");
+		super.clickOnMenu("Officer", "My duties");
 		super.clickOnListingRecord(iter);
 		super.fill(By.id("title"), title);
 
