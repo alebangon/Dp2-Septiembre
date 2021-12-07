@@ -14,7 +14,7 @@ administrator.dashboard.form.title.general-indicators = General indicators
 
 administrator.dashboard.form.label.number-private-duties = Number of private duties
 administrator.dashboard.form.label.number-public-duties = Number of public duties
-administrator.dashboard.form.label.number-finished-duty = Number of finished duties
+administrator.dashboard.form.label.number-finished-duties = Number of finished duties
 administrator.dashboard.form.label.number-non-finished-duties = Number of non finished duties
 administrator.dashboard.form.label.average-duty-execution-period = Average duty execution period
 administrator.dashboard.form.label.deviation-duty-execution-period= Deviation-duty-execution period

@@ -33,8 +33,8 @@ public class DashBoardTest extends AcmePlannerTest {
 	@CsvFileSource(resources = "/dashboard/positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(20)
 	public void positiveDashBoardList(final String totalNumberOfPublicDuties, final String totalNumberOfPrivateDuties, final String totalNumberOfFinishedDuties, final String totalNumberOfNonFinishedDuties, final String AverageDutyExecutionPeriods,
-		final String DeviationDutyExecutionPeriods, final String MinimumDutyExecutionPeriods, final String MaximumDutyExecutionPeriods, final String MaximumDutyWorkloads, final String MinimumDutyWorkload, final String DeviationDutyWorkloads,
-		final String AverageDutyWorkloads) {
+		final String DeviationDutyExecutionPeriods, final String MinimumDutyExecutionPeriods, final String MaximumDutyExecutionPeriods,final String AverageDutyWorkloads, final String DeviationDutyWorkloads,  final String MaximumDutyWorkloads, final String MinimumDutyWorkload
+		) {
 		this.signIn("administrator", "administrator");
 		super.clickAndGo(By.linkText("Administrator"));
 		super.clickAndGo(By.linkText("Dashboard"));
@@ -46,10 +46,11 @@ public class DashBoardTest extends AcmePlannerTest {
 		Assertions.assertEquals(super.locateOne(By.cssSelector("tr:nth-child(6) > td")).getText(), DeviationDutyExecutionPeriods);
 		Assertions.assertEquals(super.locateOne(By.cssSelector("tr:nth-child(7) > td")).getText(), MinimumDutyExecutionPeriods);
 		Assertions.assertEquals(super.locateOne(By.cssSelector("tr:nth-child(8) > td")).getText(), MaximumDutyExecutionPeriods);
-		Assertions.assertEquals(super.locateOne(By.cssSelector("tr:nth-child(9) > td")).getText(), MaximumDutyWorkloads);
-		Assertions.assertEquals(super.locateOne(By.cssSelector("tr:nth-child(10) > td")).getText(), MinimumDutyWorkload);
-		Assertions.assertEquals(super.locateOne(By.cssSelector("tr:nth-child(11) > td")).getText(), DeviationDutyWorkloads);
-		Assertions.assertEquals(super.locateOne(By.cssSelector("tr:nth-child(12) > td")).getText(), AverageDutyWorkloads);
+		Assertions.assertEquals(super.locateOne(By.cssSelector("tr:nth-child(9) > td")).getText(), AverageDutyWorkloads);
+		Assertions.assertEquals(super.locateOne(By.cssSelector("tr:nth-child(10) > td")).getText(), DeviationDutyWorkloads);
+		Assertions.assertEquals(super.locateOne(By.cssSelector("tr:nth-child(11) > td")).getText(), MaximumDutyWorkloads);
+		Assertions.assertEquals(super.locateOne(By.cssSelector("tr:nth-child(12) > td")).getText(), MinimumDutyWorkload);
+
 
 	}
 
