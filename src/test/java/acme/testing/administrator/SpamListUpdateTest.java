@@ -69,8 +69,8 @@ public class SpamListUpdateTest extends AcmePlannerTest {
 	@ParameterizedTest
     @CsvFileSource(resources = "/UpdateSpamList/negative.csv", encoding = "utf-8", numLinesToSkip = 1)
     @Order(10)
-    public void negativeUpdateManager(final String threshold, final String lista) {
-		this.signIn("manager", "manager");
+    public void negativeUpdateOfficer(final String threshold, final String lista) {
+		this.signIn("officer", "officer");
 		super.driver.get("http://localhost:8080/Acme-Planner/administrator/spam/show");
 		super.checkErrorsExist();
     }

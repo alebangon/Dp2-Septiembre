@@ -17,29 +17,29 @@ import java.util.List;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import acme.entities.tasks.Task;
+import acme.entities.duties.Duty;
 import acme.framework.repositories.AbstractRepository;
 
 @Repository
 public interface AdministratorDashboardRepository extends AbstractRepository {
-	@Query ("select count(t) from Task t where t.isPublic = true")
-	Integer totalNumberOfPublicTasks();
-	@Query ("select count(t) from Task t where t.isPublic = false")
-	Integer totalNumberOfPrivateTasks();
-	@Query ("select count(t) from Task t where t.executionPeriodEnd < CURRENT_TIMESTAMP")
-	Integer totalNumberOfFinishedTasks();
-	@Query ("select count(t) from Task t where t.executionPeriodEnd > CURRENT_TIMESTAMP")
-	Integer totalNumberOfNonFinishedTasks();
-	@Query("select avg(datediff(t.executionPeriodEnd,t.executionPeriodInit)) from Task t")
-	Double averageTaskExecutionPeriods();
-	@Query ("select stddev(datediff(t.executionPeriodInit, t.executionPeriodEnd)) from Task t")
-	Double deviationTaskExecutionPeriods();
+	@Query ("select count(d) from Duty d where d.isPublic = true")
+	Integer totalNumberOfPublicDuties();
+	@Query ("select count(d) from Duty d where d.isPublic = false")
+	Integer totalNumberOfPrivateDuties();
+	@Query ("select count(d) from Duty d where d.executionPeriodEnd < CURRENT_TIMESTAMP")
+	Integer totalNumberOfFinishedDuties();
+	@Query ("select count(d) from Duty d where d.executionPeriodEnd > CURRENT_TIMESTAMP")
+	Integer totalNumberOfNonFinishedDuties();
+	@Query("select avg(datediff(d.executionPeriodEnd,d.executionPeriodInit)) from Duty d")
+	Double averageDutyExecutionPeriods();
+	@Query ("select stddev(datediff(d.executionPeriodInit, d.executionPeriodEnd)) from Duty d")
+	Double deviationDutyExecutionPeriods();
 
-	@Query ("select min(datediff(t.executionPeriodEnd,t.executionPeriodInit)) from Task t")
-	Double minimumTaskExecutionPeriods();
+	@Query ("select min(datediff(d.executionPeriodEnd,d.executionPeriodInit)) from Duty d")
+	Double minimumDutyExecutionPeriods();
 
-	@Query ("select max(datediff(t.executionPeriodEnd,t.executionPeriodInit)) from Task t")
-	Double maximumTaskExecutionPeriods();
-	@Query ("select t from Task t")
-	List<Task> allTasks();
+	@Query ("select max(datediff(d.executionPeriodEnd,d.executionPeriodInit)) from Duty d")
+	Double maximumDutyExecutionPeriods();
+	@Query ("select d from Duty d")
+	List<Duty> allDuties();
 }

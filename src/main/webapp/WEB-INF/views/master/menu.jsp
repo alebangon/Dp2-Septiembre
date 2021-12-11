@@ -21,7 +21,7 @@
 	<acme:menu-left>
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="http://www.example.com/"/>
-			<acme:menu-suboption code="master.menu.anonymous.list-task" action="/anonymous/task/list"/>
+			<acme:menu-suboption code="master.menu.anonymous.list-duty" action="/anonymous/duty/list"/>
 			<acme:menu-suboption code="master.menu.anonymous.create-shout" action="/anonymous/shout/create"/>
 			<acme:menu-suboption code="master.menu.anonymous.list-shout" action="/anonymous/shout/list"/>
 		</acme:menu-option>
@@ -32,22 +32,21 @@
 			<acme:menu-suboption code="master.menu.administrator.dashboard" action="/administrator/dashboard/show"/>
 			<acme:menu-suboption code="master.menu.administrator.user-accounts" action="/administrator/user-account/list"/>
 			<acme:menu-suboption code="master.menu.administrator.spam" action="/administrator/spam/show"/>
-			<acme:menu-suboption code="master.menu.authenticated.list-task" action="/authenticated/task/list" access="isAuthenticated()" />
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.populate-initial" action="/master/populate-initial"/>
 			<acme:menu-suboption code="master.menu.administrator.populate-sample" action="/master/populate-sample"/>			
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.shutdown" action="/master/shutdown"/>
 		</acme:menu-option>
-		<acme:menu-option code="master.menu.authenticated" access="hasRole('Authenticated') and not hasRole('Administrator')">
-			<acme:menu-suboption code="master.menu.authenticated.list-task" action="/authenticated/task/list"/>
+		<acme:menu-option code="master.menu.authenticated" access="hasRole('Authenticated')">
+			<acme:menu-suboption code="master.menu.authenticated.list-duty" action="/authenticated/duty/list"/>
 		</acme:menu-option>
-		<acme:menu-option code="master.menu.manager"
-			access="hasRole('Manager')">
-			<acme:menu-suboption code="master.menu.manager.my-tasks"
-				action="/manager/task/list" />
-			<acme:menu-suboption code="master.menu.manager.create"
-				action="/manager/task/create" />
+		<acme:menu-option code="master.menu.officer"
+			access="hasRole('Officer')">
+			<acme:menu-suboption code="master.menu.officer.my-duties"
+				action="/officer/duty/list" />
+			<acme:menu-suboption code="master.menu.officer.create"
+				action="/officer/duty/create" />
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.provider"
@@ -83,11 +82,11 @@
 				access="!hasRole('Consumer')" />
 			<acme:menu-suboption code="master.menu.user-account.consumer"
 				action="/authenticated/consumer/update" access="hasRole('Consumer')" />
-			<acme:menu-suboption code="master.menu.user-account.become-manager"
-				action="/authenticated/manager/create"
-				access="!hasRole('Manager')" />
-			<acme:menu-suboption code="master.menu.user-account.manager"
-				action="/authenticated/manager/update" access="hasRole('Manager')" />
+			<acme:menu-suboption code="master.menu.user-account.become-officer"
+				action="/authenticated/officer/create"
+				access="!hasRole('Officer')" />
+			<acme:menu-suboption code="master.menu.user-account.officer"
+				action="/authenticated/officer/update" access="hasRole('Officer')" />
 
 		</acme:menu-option>
 

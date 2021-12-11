@@ -17,7 +17,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.tasks.Task;
+import acme.entities.duties.Duty;
 import acme.forms.Dashboard;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -48,54 +48,54 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "totalNumberOfPublicTasks", "totalNumberOfPrivateTasks", "totalNumberOfFinishedTasks", "totalNumberOfNonFinishedTasks", "averageTaskExecutionPeriods", "deviationTaskExecutionPeriods", "minimumTaskExecutionPeriods", "maximumTaskExecutionPeriods","averageTaskWorloads", "averageTaskWorloads", "deviationTaskWorloads", "minimumTaskWorloads", "maximumTaskWorloads");
-	}
+		request.unbind(entity, model, "totalNumberOfPublicDuties", "totalNumberOfPrivateDuties", "totalNumberOfFinishedDuties", "totalNumberOfNonFinishedDuties", "averageDutyExecutionPeriods", "deviationDutyExecutionPeriods", "minimumDutyExecutionPeriods", "maximumDutyExecutionPeriods","averageDutyWorkloads", "averageDutyWorkloads", "deviationDutyWorkloads", "minimumDutyWorkloads", "maximumDutyWorkloads");
+		}
 
 	@Override
 	public Dashboard findOne(final Request<Dashboard> request) {
 		assert request != null;
 
 		Dashboard result;
-		Integer 					totalNumberOfPublicTasks;
-		Integer						totalNumberOfPrivateTasks;
-		Integer						totalNumberOfFinishedTasks;
-		Integer						totalNumberOfNonFinishedTasks;
-		Double						averageTaskExecutionPeriods;
-		Double						deviationTaskExecutionPeriods;
-		Double						minimumTaskExecutionPeriods;
-		Double						maximumTaskExecutionPeriods;
-		Double						averageTaskWorloads;
-		Double						deviationTaskWorloads;
-		Double						minimumTaskWorloads;
-		Double						maximumTaskWorloads;
+		Integer 					totalNumberOfPublicDuties;
+		Integer						totalNumberOfPrivateDuties;
+		Integer						totalNumberOfFinishedDuties;
+		Integer						totalNumberOfNonFinishedDuties;
+		Double						averageDutyExecutionPeriods;
+		Double						deviationDutyExecutionPeriods;
+		Double						minimumDutyExecutionPeriods;
+		Double						maximumDutyExecutionPeriods;
+		Double						averageDutyWorkloads;
+		Double						deviationDutyWorkloads;
+		Double						minimumDutyWorkloads;
+		Double						maximumDutyWorkloads;
 
-		final List<Task> totalTasks = this.repository.allTasks();
-		averageTaskWorloads = this.checkValue(this.calculateWorkloadAverage(totalTasks));
-		deviationTaskWorloads = this.checkValue(this.calculateWorkloadDeviation(totalTasks));
-		totalNumberOfPublicTasks = this.repository.totalNumberOfPublicTasks();
-		totalNumberOfPrivateTasks = this.repository.totalNumberOfPrivateTasks();
-		totalNumberOfFinishedTasks = this.repository.totalNumberOfFinishedTasks();
-		totalNumberOfNonFinishedTasks = this.repository.totalNumberOfNonFinishedTasks();
-		averageTaskExecutionPeriods= this.checkValue(this.repository.averageTaskExecutionPeriods());
-		deviationTaskExecutionPeriods = this.checkValue(this.repository.deviationTaskExecutionPeriods());
-		minimumTaskExecutionPeriods = this.checkValue(this.repository.minimumTaskExecutionPeriods());
-		maximumTaskExecutionPeriods = this.checkValue(this.repository.maximumTaskExecutionPeriods());
-		minimumTaskWorloads = this.checkValue(this.takeMinimum(totalTasks));
-		maximumTaskWorloads = this.checkValue(this.takeMaximum(totalTasks));
+		final List<Duty> totalDuties = this.repository.allDuties();
+		averageDutyWorkloads = this.checkValue(this.calculateWorkloadAverage(totalDuties));
+		deviationDutyWorkloads = this.checkValue(this.calculateWorkloadDeviation(totalDuties));
+		totalNumberOfPublicDuties = this.repository.totalNumberOfPublicDuties();
+		totalNumberOfPrivateDuties = this.repository.totalNumberOfPrivateDuties();
+		totalNumberOfFinishedDuties = this.repository.totalNumberOfFinishedDuties();
+		totalNumberOfNonFinishedDuties = this.repository.totalNumberOfNonFinishedDuties();
+		averageDutyExecutionPeriods= this.checkValue(this.repository.averageDutyExecutionPeriods());
+		deviationDutyExecutionPeriods = this.checkValue(this.repository.deviationDutyExecutionPeriods());
+		minimumDutyExecutionPeriods = this.checkValue(this.repository.minimumDutyExecutionPeriods());
+		maximumDutyExecutionPeriods = this.checkValue(this.repository.maximumDutyExecutionPeriods());
+		minimumDutyWorkloads = this.checkValue(this.takeMinimum(totalDuties));
+		maximumDutyWorkloads = this.checkValue(this.takeMaximum(totalDuties));
 		
 		result = new Dashboard();
-		result.setTotalNumberOfPublicTasks(totalNumberOfPublicTasks);
-		result.setTotalNumberOfPrivateTasks(totalNumberOfPrivateTasks);
-		result.setTotalNumberOfFinishedTasks(totalNumberOfFinishedTasks);
-		result.setTotalNumberOfNonFinishedTasks(totalNumberOfNonFinishedTasks);
-		result.setAverageTaskExecutionPeriods(averageTaskExecutionPeriods);
-		result.setDeviationTaskExecutionPeriods(deviationTaskExecutionPeriods);
-		result.setMaximumTaskExecutionPeriods(maximumTaskExecutionPeriods);
-		result.setMinimumTaskExecutionPeriods(minimumTaskExecutionPeriods);
-		result.setAverageTaskWorloads(averageTaskWorloads);
-		result.setDeviationTaskWorloads(deviationTaskWorloads);
-		result.setMinimumTaskWorloads(minimumTaskWorloads);
-		result.setMaximumTaskWorloads(maximumTaskWorloads);
+		result.setTotalNumberOfPublicDuties(totalNumberOfPublicDuties);
+		result.setTotalNumberOfPrivateDuties(totalNumberOfPrivateDuties);
+		result.setTotalNumberOfFinishedDuties(totalNumberOfFinishedDuties);
+		result.setTotalNumberOfNonFinishedDuties(totalNumberOfNonFinishedDuties);
+		result.setAverageDutyExecutionPeriods(averageDutyExecutionPeriods);
+		result.setDeviationDutyExecutionPeriods(deviationDutyExecutionPeriods);
+		result.setMaximumDutyExecutionPeriods(maximumDutyExecutionPeriods);
+		result.setMinimumDutyExecutionPeriods(minimumDutyExecutionPeriods);
+		result.setAverageDutyWorkloads(averageDutyWorkloads);
+		result.setDeviationDutyWorkloads(deviationDutyWorkloads);
+		result.setMinimumDutyWorkloads(minimumDutyWorkloads);
+		result.setMaximumDutyWorkloads(maximumDutyWorkloads);
 		return result;
 	}
 
@@ -108,57 +108,57 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		return res;
 	}
 
-	private Double takeMaximum(final List<Task> totalTasks) {
-		if (totalTasks.isEmpty()) {
+	private Double takeMaximum(final List<Duty> totalDuties) {
+		if (totalDuties.isEmpty()) {
 			return .0;
 		}else {
 			
-		Double res = Double.MAX_VALUE;
-		for(final Task t: totalTasks) {
-			if (res > t.workload()) {
-				res = t.workload();
+		Double res = 0.;
+		for(final Duty t: totalDuties) {
+			if (res < t.workloadDouble()) {
+				res = t.workloadDouble();
 			}
 		}
 		return res;
 		}
 	}
 
-	private Double takeMinimum(final List<Task> totalTasks) {
-		if (totalTasks.isEmpty()) {
+	private Double takeMinimum(final List<Duty> totalDuties) {
+		if (totalDuties.isEmpty()) {
 			return .0;
 		}else {
 			
-		Double res = Double.MIN_VALUE;
-		for(final Task t: totalTasks) {
-			if (res < t.workload()) {
-				res = t.workload();
+		Double res = totalDuties.get(0).workloadDouble();
+		for(final Duty t: totalDuties) {
+			if (res > t.workloadDouble()) {
+				res = t.workloadDouble();
 			}
 		}
 		return res;
 		}
 	}
 
-	private Double calculateWorkloadDeviation(final List<Task> totalTasks) {
+	private Double calculateWorkloadDeviation(final List<Duty> totalDuties) {
 		Double totalWorkload = .0;
 		Double deviation = .0;
-		final Integer numberOfTasks = totalTasks.size();
-		for(final Task task: totalTasks){
-			totalWorkload += task.workload();
+		final Integer numberOfDuties = totalDuties.size();
+		for(final Duty Duty: totalDuties){
+			totalWorkload += Duty.workloadDouble();
 		}
-		final Double mean = totalWorkload/numberOfTasks;
-		for(final Task task: totalTasks){
-			deviation += Math.pow(task.workload()-mean, 2);
+		final Double mean = totalWorkload/numberOfDuties;
+		for(final Duty Duty: totalDuties){
+			deviation += Math.pow(Duty.workloadDouble()-mean, 2);
 
 		}
-		return Math.sqrt(deviation/numberOfTasks);
+		return Math.sqrt(deviation/numberOfDuties);
 	}
 
-	private Double calculateWorkloadAverage(final List<Task> totalTasks) {
+	private Double calculateWorkloadAverage(final List<Duty> totalDuties) {
 		Double average = .0;
-		for (int i = 0; i < totalTasks.size(); i++) {
-			average += totalTasks.get(i).workload();
+		for (int i = 0; i < totalDuties.size(); i++) {
+			average += totalDuties.get(i).workloadDouble();
 		}
-		average /= totalTasks.size();
+		average /= totalDuties.size();
 		return average;
 	}
 	

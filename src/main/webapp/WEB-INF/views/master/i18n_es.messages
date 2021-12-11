@@ -16,7 +16,7 @@ master.banner.background = #FFE97F
 
 master.welcome.title = ¡Bienvenidos!
 master.welcome.text = \
-	Bienvenidos a Acme Planner!  Nunca antes ha sido tan sencillo desarrollar un \
+	Bienvenidos a Acme Endeavours!  Nunca antes ha sido tan sencillo desarrollar un \
 	proyecto y hacerlo funcionar.
 
 # master.menu #################################################################
@@ -30,20 +30,20 @@ master.menu.sign-out = Salir
 
 master.menu.anonymous = Anónimo
 master.menu.anonymous.favourite-link = Enlace favorito
-master.menu.anonymous.list-task = Ver tareas
+master.menu.anonymous.list-duty = Ver deberes
 master.menu.anonymous.list-shout = Ver gritos
 master.menu.anonymous.create-shout = ¡Dar un grito!
 
 
 # master.menu.authenticated #######################################################
 
-master.menu.authenticated.list-task =Lista Tareas
+master.menu.authenticated.list-duty =Lista Deberes
 
-# master.menu.manager #######################################################
+# master.menu.officer #######################################################
 
-master.menu.manager = Mánager
-master.menu.manager.my-tasks = Mis tareas
-master.menu.manager.create = Crear tarea
+master.menu.officer = Oficial
+master.menu.officer.my-duties = Mis deberes
+master.menu.officer.create = Crear deber
 
 # master.menu.administrator ###################################################
 
@@ -72,16 +72,16 @@ master.menu.user-account = Cuenta
 master.menu.user-account.general-data = Datos generales
 master.menu.user-account.provider = Datos de proveedor
 master.menu.user-account.become-provider = Hazte proveedor
-master.menu.user-account.become-manager = Hazte manager
-master.menu.user-account.manager = Datos de manager
+master.menu.user-account.become-officer = Hazte oficial
+master.menu.user-account.officer = Datos de oficial
 master.menu.user-account.consumer = Datos de consumidor
-master.menu.authenticated.list-task = Listar tareas
+master.menu.authenticated.list-duty = Listar tareas
 master.menu.user-account.become-consumer = Hazte consumidor
 
 # master.menu.authenticated ###############################################################
 
 master.menu.authenticated = Autenticado
-master.menu.authenticated.list-task = Listar tareas
+master.menu.authenticated.list-duty = Listar deberes
 
 ﻿# master.footer ###############################################################
 
@@ -99,10 +99,10 @@ master.footer.label.spanish = Español
 
 master.company.title = La compañía
 master.company.text = \
-	Acme Planner, Inc. es una compañía fictícia que proporciona un proyecto \
+	Acme Endeavours, Inc. es una compañía fictícia que proporciona un proyecto \
 	plantilla para los estudiantes de la asignatura Diseño y Pruebas, en el Grado \
 	en Ingeniería del Software de la Universidad de Sevilla.
-master.company.name = Acme Planner, Inc.
+master.company.name = Acme Endeavours, Inc.
 master.company.address = Calle, número, Ciudad, Estado, País
 master.company.phone = +000 123 456
 master.company.email = contact@acme.com

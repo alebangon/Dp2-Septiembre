@@ -1,0 +1,22 @@
+# i18n_en.messages
+#
+# Copyright (C) 2012-2021 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+anonymous.duty.form.label.title = Title:
+anonymous.duty.form.label.executionPeriodInit = Execution period start:
+anonymous.duty.form.label.executionPeriodEnd = Execution period end:
+anonymous.duty.form.label.isPublic = Do you want this duty to be public?:
+anonymous.duty.form.label.description = Description:
+anonymous.duty.form.label.optionalLink = URL:
+anonymous.duty.form.label.workLoad = WorkLoad:
+
+anonymous.duty.form.button.create = Create duty
+anonymous.duty.form.button.return = Return
+
+ 

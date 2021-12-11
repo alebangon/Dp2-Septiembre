@@ -12,17 +12,16 @@ administrator.dashboard.form.title.show = Dashboard
 
 administrator.dashboard.form.title.general-indicators = General indicators
 
-administrator.dashboard.form.label.number-private-tasks = Number of private tasks
-administrator.dashboard.form.label.number-public-tasks = Number of public tasks
-administrator.dashboard.form.label.number-finished-task = Number of finished tasks
-administrator.dashboard.form.label.number-non-finished-tasks = Number of non finished tasks
-administrator.dashboard.form.label.average-task-execution-period = Average task execution period
-administrator.dashboard.form.label.deviation-task-execution-period= Deviation-task-execution period
-administrator.dashboard.form.label.minimum-task-execution-period = Minimum task execution period
-administrator.dashboard.form.label.maximum-task-execution-period = Maximum task execution period
-administrator.dashboard.form.label.average-task-workloads = Average task workloads
-administrator.dashboard.form.label.deviation-task-workloads = Deviation task workloads
-administrator.dashboard.form.label.minimum-task-workloads = Minimum task workloads
-administrator.dashboard.form.label.maximum-task-workloads = Maximum task workloads
+administrator.dashboard.form.label.number-private-duties = Number of private duties
+administrator.dashboard.form.label.number-public-duties = Number of public duties
+administrator.dashboard.form.label.number-finished-duties = Number of finished duties
+administrator.dashboard.form.label.number-non-finished-duties = Number of non finished duties
+administrator.dashboard.form.label.average-duty-execution-period = Average duty execution period
+administrator.dashboard.form.label.deviation-duty-execution-period= Deviation-duty-execution period
+administrator.dashboard.form.label.minimum-duty-execution-period = Minimum duty execution period
+administrator.dashboard.form.label.maximum-duty-execution-period = Maximum duty execution period
+administrator.dashboard.form.label.average-duty-workloads = Average duty workloads
+administrator.dashboard.form.label.deviation-duty-workloads = Deviation duty workloads
+administrator.dashboard.form.label.minimum-duty-workloads = Minimum duty workloads
+administrator.dashboard.form.label.maximum-duty-workloads = Maximum duty workloads
 administrator.dashboard.form.title.application-statuses = Application statuses
-

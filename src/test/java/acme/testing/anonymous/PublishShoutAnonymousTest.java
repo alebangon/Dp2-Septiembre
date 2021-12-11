@@ -25,12 +25,12 @@ public class PublishShoutAnonymousTest extends AcmePlannerTest {
 	@ParameterizedTest
 	@CsvFileSource(resources = "/publishShout/positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
-	public void positivePublishShout(final String author, final String text, final String info) {
+	public void positivePublishShout(final String author, final String text, final String optionalLink) {
 		super.navigateHome();
 		super.clickOnMenu("Anonymous", "Shout!");
 		super.fill(By.id("author"), author);
 		super.fill(By.id("text"), text);
-		super.fill(By.id("info"), info);
+		super.fill(By.id("optionalLink"), optionalLink);
 		super.clickOnSubmitButton("Shout!");
 		super.clickOnMenu("Anonymous", "List shouts");
 		super.checkColumnHasValue(2, 1, author);
@@ -49,12 +49,12 @@ public class PublishShoutAnonymousTest extends AcmePlannerTest {
 	@ParameterizedTest
 	@CsvFileSource(resources = "/publishShout/negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
-	public void negativePublishShout(final String author, final String text, final String info) {
+	public void negativePublishShout(final String author, final String text, final String optionalLink) {
 		super.navigateHome();
 		super.clickOnMenu("Anonymous", "Shout!");
 		super.fill(By.id("author"), author);
 		super.fill(By.id("text"), text);
-		super.fill(By.id("info"), info);
+		super.fill(By.id("optionalLink"), optionalLink);
 		super.clickOnSubmitButton("Shout!");
 		super.checkErrorsExist();
 		

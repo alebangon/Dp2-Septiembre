@@ -61,7 +61,7 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "author", "text", "info");
+		request.unbind(entity, model, "author", "text", "optionalLink");
 	}
 
 	@Override
@@ -77,7 +77,7 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		result.setAuthor("John Doe");
 		result.setText("Lorem ipsum!");
 		result.setMoment(moment);
-		result.setInfo("http://example.org");
+		result.setOptionalLink("http://example.org");
 
 		return result;
 	}
@@ -89,32 +89,42 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		assert errors != null;
 		
 		final String[] autorWords = entity.getAuthor().split(" ");
-		final String[] infoWords = entity.getInfo().split(" ");
+		final String[] infoWords = entity.getOptionalLink().split(" ");
 		final String[] textWords = entity.getText().split(" ");
  		final List<Word> listSpam = this.spamService.findAll().getSpamWordsList();
  		final Double threshold= this.spamService.findAll().getThreshold();
  		Double frecuency=0.0;
+		Double frequencyAutor = 0.0;
+		Double frequencyInfo = 0.0;
+		Double frequencyText = 0.0;
  		Boolean pasaumbral= false;
-			for(Word word: listSpam) {
-				for (String st : autorWords) {
-					if(st.contains(word.getSpamWord())){
-						frecuency=1.0+frecuency;
+			for(final Word word: listSpam) {
+				for (final String st : autorWords) {
+					if(st.toLowerCase().contains(word.getSpamWord().toLowerCase())){
+						frecuency++;
+						frequencyAutor++;
 						}
 					}
-				for (String st : infoWords) {
-					if(st.contains(word.getSpamWord())){
-						frecuency=1.0+frecuency;
+				for (final String st : infoWords) {
+					if(st.toLowerCase().contains(word.getSpamWord().toLowerCase())){
+						frecuency++;
+						frequencyInfo++;
 						}
 					}
-				for (String st : textWords) {
-					if(st.contains(word.getSpamWord())){
-						frecuency=1.0+frecuency;
+				for (final String st : textWords) {
+					if(st.toLowerCase().contains(word.getSpamWord().toLowerCase())){
+						frecuency++;
+						frequencyText++;
 						}
 				}
 				}
-			
-	        pasaumbral= (autorWords.length+infoWords.length+textWords.length)*(threshold/100.00)>frecuency;
-			errors.state(request,  pasaumbral, "spam", "acme.validation.spam");
+	        pasaumbral= (autorWords.length+infoWords.length+textWords.length)*(threshold/100.00)<frecuency;
+			if(frequencyAutor>0)
+				errors.state(request, !pasaumbral, "author", "acme.validation.shout.spam");
+			if(frequencyInfo>0)
+				errors.state(request, !pasaumbral, "optionalLink", "acme.validation.shout.spam");
+			if(frequencyText>0)
+				errors.state(request, !pasaumbral, "text", "acme.validation.shout.spam");
 
 		}
 			
