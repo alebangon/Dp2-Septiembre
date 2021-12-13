@@ -48,7 +48,7 @@ public class DeleteDutyOfficerTest extends AcmePlannerTest {
     public void negativeUpdate(final String title, final String executionPeriodInit, final String executionPeriodEnd,
 		final String description, final String optionalLink, final int iter) {
 		super.navigateHome();
-		super.navigate("/Acme-Planner/officer/duty/list", "");
+		super.navigate("/Acme-Endeavours/officer/duty/list", "");
 		super.checkPanicExists();
     }
 	// Ancillary methods ------------------------------------------------------
