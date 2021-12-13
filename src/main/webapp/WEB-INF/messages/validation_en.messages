@@ -35,7 +35,7 @@ org.hibernate.validator.constraints.ScriptAssert.message = Script expression "{s
 org.hibernate.validator.constraints.URL.message = Not a well-formed URL
 
 
-
+acme.validation.shout.X2 = X2 must be a week in the future
 acme.validation.duty.spam = Duties can't contain spam words
 acme.validation.shout.spam = Shouts can't contain spam words
 acme.validation.duty.workload = Start must be before end

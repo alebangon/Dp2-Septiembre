@@ -25,3 +25,7 @@ administrator.dashboard.form.label.deviation-duty-workloads = Desviación en la 
 administrator.dashboard.form.label.minimum-duty-workloads = Mínima carga de trabajo en los deberes
 administrator.dashboard.form.label.maximum-duty-workloads = Máxima carga de trabajo en los deberes
 administrator.dashboard.form.title.application-statuses = Estado de las solicitudes
+
+administrator.dashboard.form.label.ratioFlagged = Razón de gritos marcados como importantes
+administrator.dashboard.form.label.ratioBudgetZero = Razón de gritos con presupuesto 0
+administrator.dashboard.form.label.deviationShoutCurrency = Desviación estándar de los gritos con EUR

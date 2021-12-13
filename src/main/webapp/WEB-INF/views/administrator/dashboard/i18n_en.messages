@@ -25,3 +25,7 @@ administrator.dashboard.form.label.deviation-duty-workloads = Deviation duty wor
 administrator.dashboard.form.label.minimum-duty-workloads = Minimum duty workloads
 administrator.dashboard.form.label.maximum-duty-workloads = Maximum duty workloads
 administrator.dashboard.form.title.application-statuses = Application statuses
+
+administrator.dashboard.form.label.ratioFlagged = Ratio of shouts flagged as important
+administrator.dashboard.form.label.ratioBudgetZero = Ratio of shouts with budget 0
+administrator.dashboard.form.label.deviationShoutCurrency = Standard deviation for the shouts with EUR

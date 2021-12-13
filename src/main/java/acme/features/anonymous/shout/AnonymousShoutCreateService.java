@@ -21,6 +21,7 @@ import org.springframework.stereotype.Service;
 import acme.entities.shouts.Shout;
 import acme.entities.words.Word;
 import acme.features.administrator.spam.AdministratorSpamShowService;
+import acme.features.anonymous.X.AnonymousXRepository;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -34,6 +35,8 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 
 	@Autowired
 	protected AnonymousShoutRepository repository;
+	@Autowired
+	protected AnonymousXRepository Xrepository;
 	@Autowired
 	protected AdministratorSpamShowService spamService;
 
@@ -61,25 +64,21 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "author", "text", "optionalLink");
+		request.unbind(entity, model, "author", "text", "optionalLink","X.X1","X.X2","X.X3","X.isImportant");
 	}
 
 	@Override
 	public Shout instantiate(final Request<Shout> request) {
 		assert request != null;
-
 		Shout result;
 		Date moment;
 
 		moment = new Date(System.currentTimeMillis() - 1);
-
 		result = new Shout();
-		result.setAuthor("John Doe");
-		result.setText("Lorem ipsum!");
 		result.setMoment(moment);
-		result.setOptionalLink("http://example.org");
 
 		return result;
+
 	}
 
 	@Override
@@ -125,7 +124,11 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 				errors.state(request, !pasaumbral, "optionalLink", "acme.validation.shout.spam");
 			if(frequencyText>0)
 				errors.state(request, !pasaumbral, "text", "acme.validation.shout.spam");
-
+			final Date week = new Date(System.currentTimeMillis()+604800000);
+			if(entity.getX().getX2()!=null) {
+				if(entity.getX().getX2().before(week))
+					errors.state(request, !entity.getX().getX2().before(week), "X.X2", "acme.validation.shout.X2");
+			}
 		}
 			
 	@Override
@@ -136,6 +139,7 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 
 		moment = new Date(System.currentTimeMillis() - 1);
 		entity.setMoment(moment);
+		this.Xrepository.save(entity.getX());
 		this.repository.save(entity);
 
 		

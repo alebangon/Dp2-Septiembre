@@ -18,6 +18,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import acme.entities.duties.Duty;
+import acme.entities.shouts.Shout;
 import acme.framework.repositories.AbstractRepository;
 
 @Repository
@@ -42,4 +43,16 @@ public interface AdministratorDashboardRepository extends AbstractRepository {
 	Double maximumDutyExecutionPeriods();
 	@Query ("select d from Duty d")
 	List<Duty> allDuties();
+	
+	@Query ("select s from Shout s")
+	List<Shout> allShouts();
+	
+	@Query ("select s from Shout s where s.X.isImportant = true")
+	List<Shout> flaggedShouts();
+	
+	@Query ("select s from Shout s where s.X.X3.amount = 0")
+	List<Shout> zeroBudget();
+	
+	@Query ("select stddev(i.X3.amount) from X i where i.X3.currency=?1")
+	Double deviationShoutCurrency(String currency);
 }

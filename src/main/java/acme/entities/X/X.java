@@ -1,22 +1,17 @@
+package acme.entities.X;
 
-package acme.entities.shouts;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.Valid;
-import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Past;
+import javax.validation.constraints.Pattern;
 
-import org.hibernate.validator.constraints.Length;
-import org.hibernate.validator.constraints.URL;
-
-import acme.entities.X.X;
+import acme.framework.datatypes.Money;
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -24,34 +19,29 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Shout extends DomainEntity {
+public class X extends DomainEntity {
 
 	// Serialisation identifier -----------------------------------------------
 
 	protected static final long	serialVersionUID	= 1L;
 
 	// Attributes -------------------------------------------------------------
-
+	@Column(unique=true)
+	@Pattern(regexp = "^[a-zA-Z]{5}-[0-9]{2}/[0-9]{2}/[0-9]{2}$")
+	protected String X1;
+	
 	@Temporal(TemporalType.TIMESTAMP)
-	@Past
 	@NotNull
-	protected Date				moment;
-	@Length(min=5,max=25)
-	@NotBlank
-	protected String			author;
-	@Length(max=100)
-	@NotBlank
-	protected String			text;
-	@URL
-	protected String			optionalLink;
+	protected Date				X2;
+	@Valid
+	protected Money			X3;
 
+	@NotNull
+	protected Boolean			isImportant;
 
 	
 	// Derived attributes -----------------------------------------------------
 
 	// Relationships ----------------------------------------------------------
-	@ManyToOne
-	@JoinColumn(name = "XId", referencedColumnName = "id")
-	@Valid
-	protected X 				X;
+
 }

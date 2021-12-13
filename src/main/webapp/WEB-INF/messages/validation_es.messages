@@ -32,6 +32,7 @@ org.hibernate.validator.constraints.SafeHtml.message = El contenido HTML puede s
 org.hibernate.validator.constraints.ScriptAssert.message = La expresión "{script}" debe devolver true
 org.hibernate.validator.constraints.URL.message = No es una URL correcta
 
+acme.validation.shout.X2 = X2 debe ser 1 semana en el futuro
 acme.validation.duty.date = El deber debe ser en el futuro
 acme.validation.duty.workload = El comienzo debe ser antes del fin
 javax.validation.constraints.duty.spam = El deber no puede contener palabras spam

@@ -11,6 +11,11 @@
 anonymous.shout.form.label.author = Autor:
 anonymous.shout.form.label.text = Texto:
 anonymous.shout.form.label.optionalLink= Link opcional:
+anonymous.shout.form.label.X1 = X1
+anonymous.shout.form.label.X2 = X2
+anonymous.shout.form.label.X3 = X3
+anonymous.shout.form.label.isImportant = Es importante?
+
 anonymous.shout.form.button.create = Gritar
 anonymous.shout.form.button.return = Volver
  

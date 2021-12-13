@@ -118,5 +118,28 @@
 		<td>
 			<acme:print value="${maximumDutyWorkloads}"/>
 		</td>
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.ratioFlagged"/>
+		</th>
+		<td>
+			<acme:print value="${ratioFlagged}"/>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.ratioBudgetZero"/>
+		</th>
+		<td>
+			<acme:print value="${ratioBudgetZero}"/>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.deviationShoutCurrency"/>
+		</th>
+		<td>
+			<acme:print value="${deviationShoutCURRENCY}"/>
+		</td>
 	</tr>
 </table>

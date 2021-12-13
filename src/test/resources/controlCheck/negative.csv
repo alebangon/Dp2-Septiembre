@@ -1,0 +1,11 @@
+author,text,link,X1,X2,X3
+,I'm happy!,,aaaaa-12/12/12,2022/12/12 20:00,EUR 200.00
+Jane Doe,,https://www.google.com,abaaa-12/12/12, 2022/12/12 20:00,
+John Doe,I'm happy!,,aaaaaa-12/12/12,2022/12/12 20:00,EUR 200.00
+Jane Doe,I'm the master of my room!,https://www.google.com,, 2022/12/12 20:00,
+John Doe,I'm happy!,,aaaaa-12/12/12,,EUR 200.00
+Jane Doe,I'm the master of my room!,https://www.google.com,abaaa-12/12/12, 2020/12/12 20:00,
+John Doe,I'm happy!,,aaaaa-12/12/12,2021/12/19 20:00,EUR 200.00
+Jane Doe,I'm the master of my room!,https://www.google.com,abaaa-12/12/12, 2022/12/12 20:00,EUR -10
+John Doe,I'm happy!,,aaaaa-12/12/12,2022/12/12 20:00,ER 200.00
+

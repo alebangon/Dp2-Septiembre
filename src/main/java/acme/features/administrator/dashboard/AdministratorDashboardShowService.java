@@ -48,7 +48,8 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "totalNumberOfPublicDuties", "totalNumberOfPrivateDuties", "totalNumberOfFinishedDuties", "totalNumberOfNonFinishedDuties", "averageDutyExecutionPeriods", "deviationDutyExecutionPeriods", "minimumDutyExecutionPeriods", "maximumDutyExecutionPeriods","averageDutyWorkloads", "averageDutyWorkloads", "deviationDutyWorkloads", "minimumDutyWorkloads", "maximumDutyWorkloads");
+		request.unbind(entity, model, "totalNumberOfPublicDuties", "totalNumberOfPrivateDuties", "totalNumberOfFinishedDuties", "totalNumberOfNonFinishedDuties", "averageDutyExecutionPeriods", "deviationDutyExecutionPeriods", "minimumDutyExecutionPeriods", "maximumDutyExecutionPeriods","averageDutyWorkloads", "averageDutyWorkloads", "deviationDutyWorkloads", "minimumDutyWorkloads", "maximumDutyWorkloads"
+			,"ratioFlagged", "ratioBudgetZero", "deviationShoutCURRENCY");
 		}
 
 	@Override
@@ -68,7 +69,11 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		Double						deviationDutyWorkloads;
 		Double						minimumDutyWorkloads;
 		Double						maximumDutyWorkloads;
-
+		
+		Double						ratioFlagged;
+		final Double						ratioBudgetZero;
+		Double						deviationShoutCURRENCY;
+		
 		final List<Duty> totalDuties = this.repository.allDuties();
 		averageDutyWorkloads = this.checkValue(this.calculateWorkloadAverage(totalDuties));
 		deviationDutyWorkloads = this.checkValue(this.calculateWorkloadDeviation(totalDuties));
@@ -83,6 +88,10 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		minimumDutyWorkloads = this.checkValue(this.takeMinimum(totalDuties));
 		maximumDutyWorkloads = this.checkValue(this.takeMaximum(totalDuties));
 		
+		ratioFlagged =  this.checkValue(((double)this.repository.flaggedShouts().size()/this.repository.allShouts().size()));
+		ratioBudgetZero = this.checkValue(((double) this.repository.zeroBudget().size()/this.repository.allShouts().size()));
+		deviationShoutCURRENCY = this.checkValue(this.repository.deviationShoutCurrency("EUR"));
+		
 		result = new Dashboard();
 		result.setTotalNumberOfPublicDuties(totalNumberOfPublicDuties);
 		result.setTotalNumberOfPrivateDuties(totalNumberOfPrivateDuties);
@@ -96,6 +105,11 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		result.setDeviationDutyWorkloads(deviationDutyWorkloads);
 		result.setMinimumDutyWorkloads(minimumDutyWorkloads);
 		result.setMaximumDutyWorkloads(maximumDutyWorkloads);
+		
+		result.setRatioFlagged(ratioFlagged);
+		result.setRatioBudgetZero(ratioBudgetZero);
+		result.setDeviationShoutCURRENCY(deviationShoutCURRENCY);
+		
 		return result;
 	}
 

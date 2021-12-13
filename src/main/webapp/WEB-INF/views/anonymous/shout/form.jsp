@@ -19,7 +19,10 @@
 	<acme:form-textbox code="anonymous.shout.form.label.author" path="author"/>
 	<acme:form-textarea code="anonymous.shout.form.label.text" path="text"/>
 	<acme:form-textbox code="anonymous.shout.form.label.optionalLink" path="optionalLink"/>
-	
+	<acme:form-textbox code="anonymous.shout.form.label.X1" path="X.X1"/>
+	<acme:form-moment code="anonymous.shout.form.label.X2" path="X.X2"/>
+	<acme:form-money code="anonymous.shout.form.label.X3" path="X.X3"/>
+	<acme:form-checkbox code="anonymous.shout.form.label.isImportant" path="X.isImportant"/>
 	<acme:form-submit code="anonymous.shout.form.button.create" action="/anonymous/shout/create"/>
   	<acme:form-return code="anonymous.shout.form.button.return"/>
 </acme:form>
