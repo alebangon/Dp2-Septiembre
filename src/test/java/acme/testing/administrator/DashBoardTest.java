@@ -67,7 +67,7 @@ public class DashBoardTest extends AcmePlannerTest {
 	protected void assertDashboardForOfficerIsForbidden() {
 		super.navigateHome();
 		this.signIn("officer", "officer");
-		super.driver.get("http://localhost:8080/Acme-Planner/administrator/dashboard/show");
+		super.driver.get("http://localhost:8080/Acme-Endeavours/administrator/dashboard/show");
 		super.checkErrorsExist();
 
 	}
@@ -85,7 +85,7 @@ public class DashBoardTest extends AcmePlannerTest {
 	@Order(30)
 	protected void assertDashboardForAnonymousIsForbidden() {
 		super.navigateHome();
-		super.driver.get("http://localhost:8080/Acme-Planner/administrator/dashboard/show");
+		super.driver.get("http://localhost:8080/Acme-Endeavours/administrator/dashboard/show");
 		super.checkErrorsExist();
 
 	}
@@ -106,7 +106,7 @@ public class DashBoardTest extends AcmePlannerTest {
 		super.navigateHome();
 		this.signUp("username", "password", "name", "surname", "email@example.com");
 		this.signIn("username", "password");
-		super.driver.get("http://localhost:8080/Acme-Planner/administrator/dashboard/show");
+		super.driver.get("http://localhost:8080/Acme-Endeavours/administrator/dashboard/show");
 		super.checkErrorsExist();
 
 	}

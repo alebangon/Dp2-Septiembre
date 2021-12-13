@@ -61,7 +61,7 @@ public class SpamListUpdateTest extends AcmePlannerTest {
     @CsvFileSource(resources = "/UpdateSpamList/negative.csv", encoding = "utf-8", numLinesToSkip = 1)
     @Order(10)
     public void negativeUpdateAnonymous(final String threshold, final String lista) {
-		super.driver.get("http://localhost:8080/Acme-Planner/administrator/spam/show");
+		super.driver.get("http://localhost:8080/Acme-Endeavours/administrator/spam/show");
 		super.checkErrorsExist();
     }
 	//como manager, nos da un error al acceder a la página de edicion
@@ -71,7 +71,7 @@ public class SpamListUpdateTest extends AcmePlannerTest {
     @Order(10)
     public void negativeUpdateOfficer(final String threshold, final String lista) {
 		this.signIn("officer", "officer");
-		super.driver.get("http://localhost:8080/Acme-Planner/administrator/spam/show");
+		super.driver.get("http://localhost:8080/Acme-Endeavours/administrator/spam/show");
 		super.checkErrorsExist();
     }
 	
