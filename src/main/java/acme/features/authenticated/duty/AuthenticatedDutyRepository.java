@@ -11,7 +11,7 @@ import acme.framework.repositories.AbstractRepository;
 
 @Repository
 public interface AuthenticatedDutyRepository extends AbstractRepository {
-	@Query("select d from Duty d where d.isPublic=true AND d.executionPeriodInit > now()")
+	@Query("select d from Duty d where d.isPublic=true AND d.executionPeriodInit < now()")
 	Collection<Duty> findPublicDuties();
 	
 	@Query("select d from Duty d where d.id=?1")

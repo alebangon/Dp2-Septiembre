@@ -31,7 +31,7 @@ public class AuthenticatedDutyShowService implements AbstractShowService<Authent
 		final Date fechaInicio = duty.getExecutionPeriodInit();
 		final Date fechaFin = duty.getExecutionPeriodEnd();
 		final Date now = new Date(System.currentTimeMillis());
-		if(duty.getIsPublic()&&(fechaInicio.after(now)&&fechaFin.after(now))) {
+		if(duty.getIsPublic()&&(fechaInicio.before(now)&&fechaFin.before(now))) {
 			return true;
 		}else{
 			return false;
